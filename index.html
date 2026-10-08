@@ -237,6 +237,8 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
 .contents_div .oc26-pick--wide .oc26-fig::before{ padding-top:72.2222%; }
 
 /* 슬라이드 (메인 축제) */
+.contents_div .oc26-slide{ touch-action:pan-y; -webkit-user-select:none; user-select:none; }
+.contents_div .oc26-slide__item img{ -webkit-user-drag:none; pointer-events:none; }
 .contents_div .oc26-slide__track{ position:absolute; inset:0; display:flex; transform:translate3d(0,0,0); }
 .contents_div .oc26-slide__item{ position:relative; flex:0 0 100%; width:100%; height:100%; overflow:hidden; }
 .contents_div .oc26-slide__dots{ position:absolute; left:50%; bottom:10px; z-index:2; display:flex; align-items:center; gap:6px; padding:6px 10px; border-radius:999px; background:rgba(0,0,0,.32); transform:translateX(-50%); }
@@ -514,10 +516,6 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
 </style>
 
 <div class="oc26-wrap">
-
-  <!-- TEST: 히어로 진입 테스트용 빈 프레임 (테스트 후 삭제) -->
-  <div class="jngj-test-spacer" style="height:1200px;background:#fffdef;" aria-hidden="true"></div>
-  <!-- /TEST 뷰포트 진입 애니메이션 확인용, 확인 후 삭제 -->
 
   <!-- 히어로 -->
   <header class="oc26-hero">
@@ -1133,6 +1131,35 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
     Array.prototype.forEach.call(dots,function(d,i){
       d.addEventListener('click',function(){ if(i!==idx%n){ go(i,true); } start(); });
     });
+    /* 터치 스와이프(모바일) */
+    var tx=0, ty=0, dx=0, lock=0, W=1;
+    function setX(px){ track.style.transition='none'; track.style.transform='translate3d(calc('+(-100*idx)+'% + '+px+'px),0,0)'; }
+    box.addEventListener('touchstart',function(e){
+      if(e.touches.length!==1 || moving){ lock=-1; return; }
+      tx=e.touches[0].clientX; ty=e.touches[0].clientY; dx=0; lock=0; W=box.offsetWidth||1;
+    },{passive:true});
+    box.addEventListener('touchmove',function(e){
+      if(lock===-1) return;
+      var x=e.touches[0].clientX-tx, y=e.touches[0].clientY-ty;
+      if(lock===0){
+        if(Math.abs(x)<8 && Math.abs(y)<8) return;
+        if(Math.abs(x)<=Math.abs(y)){ lock=-1; return; }
+        lock=1; stop();
+      }
+      if(idx===0 && x>0){ idx=n; }
+      else if(idx===n && x<0){ idx=0; }
+      dx=Math.max(-W,Math.min(W,x)); setX(dx);
+    },{passive:true});
+    function endTouch(){
+      if(lock!==1){ lock=0; return; }
+      lock=0; void track.offsetWidth;
+      if(dx<=-Math.min(50,W*0.15)) go(idx+1,true);
+      else if(dx>=Math.min(50,W*0.15)) go(idx-1,true);
+      else go(idx,true);
+      start();
+    }
+    box.addEventListener('touchend',endTouch);
+    box.addEventListener('touchcancel',endTouch);
     document.addEventListener('visibilitychange',function(){ if(document.hidden) stop(); else start(); });
     go(0,false); start();
   });
