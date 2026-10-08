@@ -1,0 +1,1226 @@
+<!-- 모바일 좌우 패딩 16 -->
+<script>
+if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
+  var s=document.createElement('style');
+  s.textContent='body{margin:0}@media(max-width:700px){.contents_div{padding:0 16px}}@media(max-width:576px){.contents_div br{display:inline!important}}';
+  document.head.appendChild(s);
+}
+</script>
+<script>
+(function(){
+  try{
+    if(!document.querySelector('meta[name="viewport"]')){
+      var m=document.createElement('meta');
+      m.setAttribute('name','viewport');
+      m.setAttribute('content','width=device-width, initial-scale=1');
+      (document.head||document.getElementsByTagName('head')[0]||document.documentElement).appendChild(m);
+    }
+  }catch(e){}
+})();
+</script>
+<div class="contents_div">
+<style>
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');font-weight:100;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2');font-weight:200;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');font-weight:300;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');font-weight:800;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2') format('woff2');font-weight:900;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Thin.woff2') format('woff2');font-weight:100;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-2ExtraLight.woff2') format('woff2');font-weight:200;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2') format('woff2');font-weight:300;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');font-weight:800;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2') format('woff2');font-weight:900;font-display:swap}
+
+/* ===== 토큰 ===== */
+.contents_div .oc26-wrap{
+  /* 기준: 히어로 이미지 (타이틀 브라운 #4A2E13 · 가을축제 오렌지 #E87A46 · 하단 대지 #FEC065) */
+  --oc26-ink:#4A2E13; --oc26-ink2:#7A5838; --oc26-hero:#E87A46; --oc26-hero-d:#C2541F; --oc26-cream:#FFF9E8; --oc26-band:#FEC065; --oc26-card:#FFFDF6;
+  --oc26-card-g:linear-gradient(180deg,#FFFFFF 0%,#F5F5F3 100%); /* 흰색 카드 그라데이션 */
+  --oc26-bd:#DCC3A9; --oc26-bd-l:#EBDBC4; /* 보더: 카드 외곽 / 내부 구분선 */
+  /* 테마 아이콘 */
+  --oc26-flower:#FF8599; --oc26-food:#5B5651; --oc26-art:#8CC63F; --oc26-nature:#F2B600; /* 캘린더 아이콘 색 */
+  --oc26-acc:#C2541F; --oc26-acc-bg:#FFEEE2;
+  --oc26-fs-h2:31px; --oc26-fs-h3:21px; --oc26-fs-body:17px; --oc26-fs-lead:16px;
+  --oc26-fs-nav:15px; --oc26-fs-info:16px; --oc26-fs-cta:16px; --oc26-fs-tag:13.5px; --oc26-fs-lb:13px; --oc26-fs-kick:15px; --oc26-fs-num:14px; --oc26-fs-tbl:16px;
+  --oc26-gut:clamp(22px,6.25%,50px);
+}
+
+/* ===== Reset ===== */
+.contents_div .oc26-wrap, .contents_div .oc26-wrap *,
+.contents_div .oc26-wrap *::before, .contents_div .oc26-wrap *::after{ box-sizing:border-box; }
+.contents_div .oc26-wrap :where(h1,h2,h3,p,ul,ol,li,figure){ margin:0; padding:0; }
+.contents_div .oc26-wrap :where(ul,ol){ list-style:none; }
+.contents_div .oc26-wrap :where(img){ max-width:100%; display:block; border:0; }
+.contents_div .oc26-wrap :where(a){ color:inherit; text-decoration:none; }
+.contents_div .oc26-wrap :where(button){ font:inherit; color:inherit; background:none; border:0; margin:0; cursor:pointer; -webkit-appearance:none; appearance:none; }
+
+/* ===== 래퍼 ===== */
+.contents_div .oc26-wrap{
+  max-width:800px; margin:0 auto; color:var(--oc26-ink);
+  font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  font-size:var(--oc26-fs-body); line-height:1.75; letter-spacing:-0.02em; word-break:keep-all; overflow-wrap:break-word;
+}
+.contents_div .oc26-wrap p{ line-height:1.56; }
+.contents_div .oc26-wrap :where(h1,h2,h3){ font-family:'Paperozi','Pretendard',sans-serif; word-break:keep-all; }
+.contents_div .oc26-br::before{ content:'\A'; white-space:pre; }
+.contents_div .oc26-br--mo{ display:none; }
+.contents_div .oc26-br--m420{ display:none; }
+.contents_div .oc26-sec{ width:100%; padding:70px var(--oc26-gut); }
+
+/* ===== 히어로 ===== */
+.contents_div .oc26-hero{ position:relative; width:100%; max-width:800px; margin:0 auto; background:linear-gradient(180deg,#FFDB8D 0%,#FEE8AB 20%,#FFF8CF 40%,#FFFFE6 58%,#FFF4CC 64%,#FBC878 68%,#FFC065 100%); }
+.contents_div .oc26-hero__img{ display:block; width:100%; height:auto; }
+.contents_div .oc26-hero [data-oc26-in]{ opacity:0; transition:opacity .8s ease; }
+.contents_div .oc26-hero.is-in [data-oc26-in]{ opacity:1; }
+.contents_div .oc26-hero{ overflow:hidden; }
+.contents_div .oc26-hero__txt{ position:absolute; left:0; top:0; width:100%; height:auto; max-width:none; opacity:0; pointer-events:none; }
+.contents_div .oc26-hero__txt--arc{ clip-path:inset(0 0 80.5% 0); transform-origin:50% 13.5%; }
+.contents_div .oc26-hero__txt--main{ clip-path:inset(19.5% 0 0 0); transform-origin:50% 32%; }
+.contents_div .oc26-hero__bg{ transform-origin:50% 60%; }
+.contents_div .oc26-hero.is-in .oc26-hero__bg{ animation:oc26-hero-bg .8s cubic-bezier(.2,.7,.2,1) both; }
+.contents_div .oc26-hero.is-in .oc26-hero__txt--arc{ animation:oc26-hero-wipe .75s cubic-bezier(.33,.1,.25,1) .4s both; }
+.contents_div .oc26-hero.is-in .oc26-hero__txt--main{ animation:oc26-hero-rise .75s cubic-bezier(.33,.1,.25,1) .4s both; }
+@keyframes oc26-hero-bg{ from{ opacity:0; transform:scale(1.2); filter:blur(2px); } to{ opacity:1; transform:scale(1); filter:blur(0); } }
+@keyframes oc26-hero-wipe{ from{ opacity:1; clip-path:inset(0 100% 80.5% 0); } to{ opacity:1; clip-path:inset(0 0 80.5% 0); } }
+@keyframes oc26-hero-rise{ from{ opacity:0; transform:translate3d(0,3.5%,0); } to{ opacity:1; transform:translate3d(0,0,0); } }
+.contents_div .oc26-hero__gar{ position:absolute; left:0; top:0; width:100%; height:auto; max-width:none; opacity:0; transform-origin:0 13%; pointer-events:none; }
+.contents_div .oc26-hero.is-in .oc26-hero__gar{ animation:oc26-hero-gar-in 1.6s linear .2s both; }
+@keyframes oc26-hero-gar-in{ 0%{ opacity:0; transform:rotate(-7deg); animation-timing-function:cubic-bezier(.45,0,.75,.6); } 15%{ opacity:1; } 35%{ opacity:1; transform:rotate(0); animation-timing-function:cubic-bezier(.2,.6,.4,1); } 52%{ transform:rotate(-2.2deg); animation-timing-function:cubic-bezier(.5,0,.8,.6); } 70%{ transform:rotate(0); animation-timing-function:cubic-bezier(.2,.6,.4,1); } 82%{ transform:rotate(-.7deg); animation-timing-function:cubic-bezier(.5,0,.8,.6); } 100%{ opacity:1; transform:rotate(0); } }
+.contents_div .oc26-rv{ opacity:0; transform:translate3d(0,28px,0); transition:opacity .7s cubic-bezier(.33,.1,.25,1), transform .7s cubic-bezier(.33,.1,.25,1); will-change:opacity,transform; }
+.contents_div .oc26-rv.is-show{ opacity:1; transform:none; will-change:auto; }
+@media (prefers-reduced-motion:reduce){ .contents_div .oc26-rv{ opacity:1; transform:none; transition:none; } }
+.contents_div h1.oc26-sr{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0; }
+
+/* ===== 앵커 내비 (티켓) ===== */
+.contents_div .oc26-nav{ width:100%; padding:4px var(--oc26-gut) 44px; background:linear-gradient(180deg,var(--oc26-band) 0%,#F6B252 100%); }
+.contents_div .oc26-nav__grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:0; }
+.contents_div .oc26-nav__btn:not(:last-child){ border-right-width:0; }
+.contents_div .oc26-nav__btn{ border-radius:0; }
+.contents_div .oc26-nav__btn:first-child{ border-radius:6px 0 0 6px; }
+.contents_div .oc26-nav__btn:last-child{ border-radius:0 6px 6px 0; }
+.contents_div .oc26-nav__btn{
+  --oc26-tk-line:#D9875A;
+  position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px;
+  min-height:76px; padding:12px 8px; background:var(--oc26-cream); color:var(--oc26-ink);
+  border:1px solid var(--oc26-tk-line); transition:background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+.contents_div .oc26-nav__btn::before, .contents_div .oc26-nav__btn::after{
+  content:''; position:absolute; top:50%; width:16px; height:16px; margin-top:-8px; border-radius:50%;
+  background:#FCBC5F; border:1px solid var(--oc26-tk-line); box-sizing:border-box;
+}
+.contents_div .oc26-nav__btn::before{ left:-8.5px; }
+.contents_div .oc26-nav__btn::after{ right:-8.5px; }
+/* 가장자리 홈: 바깥 반쪽은 잘라 반원만, 맞닿는 홈: 온전한 원이 경계 실선을 덮음 */
+.contents_div .oc26-nav__btn:first-child::before{ clip-path:inset(-1px -1px -1px calc(50% - 1px)); }
+.contents_div .oc26-nav__btn:last-child::after{ clip-path:inset(-1px calc(50% - 1px) -1px -1px); }
+.contents_div .oc26-nav__btn:not(:last-child)::after{ display:none; }
+.contents_div .oc26-nav__sep{ display:block; width:46%; height:0; border-top:1px solid var(--oc26-tk-line); }
+.contents_div .oc26-nav__btn + .oc26-nav__btn{ border-left-style:dashed; }
+.contents_div .oc26-nav__num{ font-family:'Paperozi',sans-serif; font-size:var(--oc26-fs-num); font-weight:800; line-height:1; color:var(--oc26-hero-d); letter-spacing:0; }
+.contents_div .oc26-nav__txt{ font-family:'Paperozi','Pretendard',sans-serif; font-size:var(--oc26-fs-nav); font-weight:700; line-height:1.4; letter-spacing:-0.03em; white-space:nowrap; }
+.contents_div .oc26-nav__btn.is-on{ --oc26-tk-line:var(--oc26-ink); background:var(--oc26-ink); color:var(--oc26-cream); }
+.contents_div .oc26-nav__btn.is-on .oc26-nav__sep{ border-top-color:rgba(255,249,232,.45); }
+.contents_div .oc26-nav__btn.is-on .oc26-nav__num{ color:var(--oc26-band); }
+.contents_div .oc26-nav__btn:active{ background:#FFE9CC; }
+.contents_div .oc26-nav__btn:focus-visible{ outline:3px solid var(--oc26-ink); outline-offset:2px; }
+
+/* ===== 인트로 ===== */
+.contents_div .oc26-intro{ background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2256%22%20height%3D%2256%22%20viewBox%3D%220%200%2056%2056%22%3E%3Cg%20fill%3D%22%234A2B16%22%20fill-opacity%3D%22.55%22%3E%3Crect%20y%3D%220%22%20width%3D%2256%22%20height%3D%222%22/%3E%3Crect%20y%3D%2228%22%20width%3D%2256%22%20height%3D%222%22/%3E%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%222%22%20height%3D%2228%22/%3E%3Crect%20x%3D%2228%22%20y%3D%2228%22%20width%3D%222%22%20height%3D%2228%22/%3E%3C/g%3E%3C/svg%3E") repeat 0 0 / 56px 56px, linear-gradient(180deg,#8A5532 0%,#6B3F22 100%); --oc26-bd:#EECEB0; --oc26-bd-l:#F6E2CB;  position:relative; }
+.contents_div .oc26-intro::before{ content:''; position:absolute; left:0; right:0; top:0; height:2px; background:#C48549; }
+.contents_div .oc26-intro::after{ content:''; position:absolute; left:0; right:0; bottom:0; height:2px; background:#C48549; }
+.contents_div .oc26-intro .oc26-h2{ color:var(--oc26-ink); }
+.contents_div .oc26-intro__ttl{ position:relative; display:inline-block; }
+.contents_div .oc26-spark{ position:absolute; display:block; background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cg%20stroke%3D%22%23E39A3B%22%20stroke-width%3D%223.2%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M10%202.5v15%22/%3E%3Cpath%20d%3D%22M3.5%206.25l13%207.5%22/%3E%3Cpath%20d%3D%22M3.5%2013.75l13-7.5%22/%3E%3C/g%3E%3C/svg%3E") no-repeat center/contain; pointer-events:none; }
+.contents_div .oc26-spark--l1{ width:15px; height:15px; left:-36px; top:2px; transform:rotate(12deg); }
+.contents_div .oc26-spark--l2{ width:9px; height:9px; left:-20px; bottom:0; }
+.contents_div .oc26-spark--r1{ width:11px; height:11px; right:-22px; top:-4px; transform:rotate(-10deg); }
+.contents_div .oc26-spark--r2{ width:16px; height:16px; right:-42px; top:12px; transform:rotate(20deg); }
+.contents_div .oc26-spark--r3{ width:9px; height:9px; right:-20px; bottom:-2px; }
+.contents_div .oc26-intro__lead{ padding-top:16px; font-size:var(--oc26-fs-lead); line-height:1.56; color:var(--oc26-ink2); }
+.contents_div .oc26-note{
+  position:relative; padding:44px 36px 36px; border-radius:0; background:var(--oc26-card-g);
+  border:1.5px solid var(--oc26-bd);
+}
+.contents_div .oc26-note__in{ display:grid; grid-template-columns:1fr; text-align:center; }
+.contents_div .oc26-note__in > .oc26-note__txt{ padding-top:24px; margin-top:24px; border-top:1.5px dashed var(--oc26-bd); }
+/* 테이프: 카드 네 모서리 대각선 */
+.contents_div .oc26-note::before, .contents_div .oc26-note::after, .contents_div .oc26-note__in::before, .contents_div .oc26-note__in::after{
+  content:''; position:absolute; z-index:1; width:77px; height:24px; pointer-events:none;
+  background:
+    linear-gradient(180deg, transparent, rgba(255,255,255,.55) 35%, rgba(150,60,20,.22) 65%, transparent) 10% 34% / 64% 4px no-repeat,
+    linear-gradient(180deg, transparent, rgba(255,255,255,.5) 35%, rgba(150,60,20,.2) 65%, transparent) 88% 70% / 38% 4px no-repeat,
+    linear-gradient(180deg, rgba(255,255,255,.2), transparent 55%, rgba(150,60,20,.08)),
+    rgba(246,172,124,.88);
+  clip-path:polygon(0 4%, 4% 0, 96% 3%, 100% 0, 97% 18%, 100% 34%, 96% 50%, 100% 66%, 97% 82%, 100% 100%, 95% 97%, 5% 100%, 0 96%, 3% 80%, 0 64%, 4% 48%, 0 32%, 3% 16%);
+}
+.contents_div .oc26-note::before{ left:-30.5px; top:-4px; transform:rotate(-45deg); }
+.contents_div .oc26-note::after{ right:-30.5px; top:-4px; transform:rotate(45deg); }
+.contents_div .oc26-note__in::before{ left:-30.5px; bottom:-4px; transform:rotate(45deg); }
+.contents_div .oc26-note__in::after{ right:-30.5px; bottom:-4px; transform:rotate(-45deg); }
+.contents_div .oc26-note__txt{ font-size:var(--oc26-fs-body); font-weight:600; line-height:1.56; color:var(--oc26-ink); }
+.contents_div .oc26-note__txt strong{ display:block; padding-top:6px; font-family:'Paperozi','Pretendard',sans-serif; font-size:21px; font-weight:800; line-height:1.4; color:var(--oc26-hero-d); }
+
+/* ===== 테마 섹션 공통 ===== */
+.contents_div .oc26-sec--food, .contents_div .oc26-sec--art, .contents_div .oc26-sec--nature, .contents_div .oc26-chk{ border-top:2px solid var(--oc26-bd); }
+.contents_div .oc26-sec--art{ border-top-color:#DC8E9E; }
+.contents_div .oc26-sec--flower{ background:linear-gradient(180deg,#FDF1C9 0%,#FAE095 100%); --oc26-acc:#A36A00; --oc26-acc-bg:#FFF5D6; --oc26-bd:#E9CE94; --oc26-bd-l:#F3E4B8; }
+.contents_div .oc26-sec--food{ background:linear-gradient(180deg,#FFD9AE 0%,#FBB273 100%); --oc26-acc:#B5461A; --oc26-acc-bg:#FFEEE2; --oc26-bd:#EDB07A; --oc26-bd-l:#F6D0A8; }
+.contents_div .oc26-sec--art{ background:linear-gradient(180deg,#FCE6E9 0%,#F5C5CC 100%); --oc26-acc:#B23A4F; --oc26-acc-bg:#FDEEF0; --oc26-bd:#EABBC3; --oc26-bd-l:#F4D5DA; }
+.contents_div .oc26-sec--nature{ background:linear-gradient(180deg,#F2F6DB 0%,#D2E49F 100%); --oc26-acc:#5A8024; --oc26-acc-bg:#F5F8E4; --oc26-bd:#C1D58E; --oc26-bd-l:#DDE8BB; }
+.contents_div .oc26-head{ margin-bottom:26px; }
+.contents_div .oc26-kicker{ display:flex; align-items:center; gap:14px; margin-bottom:14px; }
+.contents_div .oc26-kicker__num{
+  flex:0 0 auto; font-family:'Paperozi','Pretendard',sans-serif; font-size:34px; font-weight:900; line-height:1; letter-spacing:-0.02em; color:var(--oc26-acc);
+}
+.contents_div .oc26-kicker__txt{
+  display:inline-flex; align-items:center; gap:7px; padding-left:14px; border-left:1.5px solid var(--oc26-acc);
+  font-family:'Paperozi','Pretendard',sans-serif; font-size:var(--oc26-fs-kick); font-weight:700; line-height:1.2; letter-spacing:0.01em; color:var(--oc26-acc);
+}
+.contents_div .oc26-kicker__txt .oc26-cal__dot{ width:18px; height:18px; background:currentColor; -webkit-mask:no-repeat center/contain; mask:no-repeat center/contain; }
+.contents_div .oc26-kicker__txt .oc26-cal__dot--check{ -webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M4.5%201.5h7a3%203%200%200%201%203%203v7a3%203%200%200%201-3%203h-7a3%203%200%200%201-3-3v-7a3%203%200%200%201%203-3zm6.6%204.1a.95.95%200%200%200-1.34.05L6.9%208.73%205.67%207.5a.95.95%200%201%200-1.34%201.34l1.93%201.93a.95.95%200%200%200%201.37-.03l3.5-3.8a.95.95%200%200%200-.03-1.34z%22%20fill%3D%22%23000%22/%3E%3C/svg%3E"); mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M4.5%201.5h7a3%203%200%200%201%203%203v7a3%203%200%200%201-3%203h-7a3%203%200%200%201-3-3v-7a3%203%200%200%201%203-3zm6.6%204.1a.95.95%200%200%200-1.34.05L6.9%208.73%205.67%207.5a.95.95%200%201%200-1.34%201.34l1.93%201.93a.95.95%200%200%200%201.37-.03l3.5-3.8a.95.95%200%200%200-.03-1.34z%22%20fill%3D%22%23000%22/%3E%3C/svg%3E"); }
+.contents_div .oc26-kicker__txt .oc26-cal__dot--cal{ -webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M5%201.2a.9.9%200%200%201%20.9.9V3h4.2v-.9a.9.9%200%200%201%201.8%200V3h.6A2%202%200%200%201%2014.5%205v7.5a2%202%200%200%201-2%202h-9a2%202%200%200%201-2-2V5a2%202%200%200%201%202-2h.6v-.9A.9.9%200%200%201%205%201.2zM3.2%207v5.5c0%20.2.1.3.3.3h9c.2%200%20.3-.1.3-.3V7z%22%20fill%3D%22%23000%22/%3E%3C/svg%3E"); mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M5%201.2a.9.9%200%200%201%20.9.9V3h4.2v-.9a.9.9%200%200%201%201.8%200V3h.6A2%202%200%200%201%2014.5%205v7.5a2%202%200%200%201-2%202h-9a2%202%200%200%201-2-2V5a2%202%200%200%201%202-2h.6v-.9A.9.9%200%200%201%205%201.2zM3.2%207v5.5c0%20.2.1.3.3.3h9c.2%200%20.3-.1.3-.3V7z%22%20fill%3D%22%23000%22/%3E%3C/svg%3E"); }
+.contents_div .oc26-kicker__txt .oc26-cal__dot--flower{ -webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Ccircle%20cx%3D%228.00%22%20cy%3D%224.00%22%20r%3D%223.1%22%20fill%3D%22%23FF8599%22/%3E%3Ccircle%20cx%3D%2211.80%22%20cy%3D%226.76%22%20r%3D%223.1%22%20fill%3D%22%23FF8599%22/%3E%3Ccircle%20cx%3D%2210.35%22%20cy%3D%2211.24%22%20r%3D%223.1%22%20fill%3D%22%23FF8599%22/%3E%3Ccircle%20cx%3D%225.65%22%20cy%3D%2211.24%22%20r%3D%223.1%22%20fill%3D%22%23FF8599%22/%3E%3Ccircle%20cx%3D%224.20%22%20cy%3D%226.76%22%20r%3D%223.1%22%20fill%3D%22%23FF8599%22/%3E%3C/svg%3E"); mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Ccircle%20cx%3D%228.00%22%20cy%3D%224.00%22%20r%3D%223.1%22%20fill%3D%22%23FF8599%22/%3E%3Ccircle%20cx%3D%2211.80%22%20cy%3D%226.76%22%20r%3D%223.1%22%20fill%3D%22%23FF8599%22/%3E%3Ccircle%20cx%3D%2210.35%22%20cy%3D%2211.24%22%20r%3D%223.1%22%20fill%3D%22%23FF8599%22/%3E%3Ccircle%20cx%3D%225.65%22%20cy%3D%2211.24%22%20r%3D%223.1%22%20fill%3D%22%23FF8599%22/%3E%3Ccircle%20cx%3D%224.20%22%20cy%3D%226.76%22%20r%3D%223.1%22%20fill%3D%22%23FF8599%22/%3E%3C/svg%3E"); }
+.contents_div .oc26-kicker__txt .oc26-cal__dot--food{ -webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cellipse%20cx%3D%228%22%20cy%3D%224.5%22%20rx%3D%223.5%22%20ry%3D%224%22%20fill%3D%22%235B5651%22/%3E%3Cellipse%20cx%3D%227%22%20cy%3D%223.7%22%20rx%3D%221%22%20ry%3D%221.5%22%20fill%3D%22%23fff%22%20opacity%3D%22.35%22/%3E%3Crect%20x%3D%226.9%22%20y%3D%227.6%22%20width%3D%222.2%22%20height%3D%228%22%20rx%3D%221.1%22%20fill%3D%22%235B5651%22/%3E%3C/svg%3E"); mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cellipse%20cx%3D%228%22%20cy%3D%224.5%22%20rx%3D%223.5%22%20ry%3D%224%22%20fill%3D%22%235B5651%22/%3E%3Cellipse%20cx%3D%227%22%20cy%3D%223.7%22%20rx%3D%221%22%20ry%3D%221.5%22%20fill%3D%22%23fff%22%20opacity%3D%22.35%22/%3E%3Crect%20x%3D%226.9%22%20y%3D%227.6%22%20width%3D%222.2%22%20height%3D%228%22%20rx%3D%221.1%22%20fill%3D%22%235B5651%22/%3E%3C/svg%3E"); }
+.contents_div .oc26-kicker__txt .oc26-cal__dot--art{ -webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M8%2014.2S1.6%2010.4%201.6%205.9A3.4%203.4%200%200%201%208%204.2a3.4%203.4%200%200%201%206.4%201.7C14.4%2010.4%208%2014.2%208%2014.2z%22%20fill%3D%22%234FA34A%22/%3E%3C/svg%3E"); mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M8%2014.2S1.6%2010.4%201.6%205.9A3.4%203.4%200%200%201%208%204.2a3.4%203.4%200%200%201%206.4%201.7C14.4%2010.4%208%2014.2%208%2014.2z%22%20fill%3D%22%234FA34A%22/%3E%3C/svg%3E"); }
+.contents_div .oc26-kicker__txt .oc26-cal__dot--nature{ -webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M8%2010.6C6%209.6%202.3%206.8%201.2%204.2%203.7%201.4%206%201%207.4%201.8L8%203.9%208.6%201.8C10%201%2012.3%201.4%2014.8%204.2%2013.7%206.8%2010%209.6%208%2010.6Z%22%20fill%3D%22%23F2B600%22/%3E%3Crect%20x%3D%227.35%22%20y%3D%229.6%22%20width%3D%221.3%22%20height%3D%225.8%22%20rx%3D%22.65%22%20fill%3D%22%23F2B600%22/%3E%3C/svg%3E"); mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M8%2010.6C6%209.6%202.3%206.8%201.2%204.2%203.7%201.4%206%201%207.4%201.8L8%203.9%208.6%201.8C10%201%2012.3%201.4%2014.8%204.2%2013.7%206.8%2010%209.6%208%2010.6Z%22%20fill%3D%22%23F2B600%22/%3E%3Crect%20x%3D%227.35%22%20y%3D%229.6%22%20width%3D%221.3%22%20height%3D%225.8%22%20rx%3D%22.65%22%20fill%3D%22%23F2B600%22/%3E%3C/svg%3E"); }
+.contents_div .oc26-h2{ font-size:var(--oc26-fs-h2); font-weight:800; line-height:1.35; letter-spacing:-0.01em; }
+
+/* Pick 카드 */
+.contents_div .oc26-pick{
+  display:grid; grid-template-columns:41% 1fr; align-items:stretch;
+  background:var(--oc26-card-g); border-radius:14px; border:1.5px solid var(--oc26-bd); position:relative;
+}
+.contents_div .oc26-fig{ position:relative; width:100%; min-height:100%; overflow:hidden; background:#eee; }
+.contents_div .oc26-fig::before{ content:''; display:block; padding-top:125%; }
+.contents_div .oc26-fig img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; }
+.contents_div .oc26-pick__body{ padding:30px 28px 30px; }
+.contents_div .oc26-sticker{
+  position:absolute; z-index:4; top:-47px; right:11px; width:91px; height:91px; transform:rotate(-12deg);
+  display:flex; align-items:center; justify-content:center; background:var(--oc26-ink); clip-path:polygon(50.0% 0.0%, 59.1% 16.2%, 75.0% 6.7%, 74.7% 25.3%, 93.3% 25.0%, 83.8% 40.9%, 100.0% 50.0%, 83.8% 59.1%, 93.3% 75.0%, 74.7% 74.7%, 75.0% 93.3%, 59.1% 83.8%, 50.0% 100.0%, 40.9% 83.8%, 25.0% 93.3%, 25.3% 74.7%, 6.7% 75.0%, 16.2% 59.1%, 0.0% 50.0%, 16.2% 40.9%, 6.7% 25.0%, 25.3% 25.3%, 25.0% 6.7%, 40.9% 16.2%);
+}
+.contents_div .oc26-sticker::before{ content:''; position:absolute; inset:1px; background:#fff; clip-path:polygon(50.0% 0.0%, 59.1% 16.2%, 75.0% 6.7%, 74.7% 25.3%, 93.3% 25.0%, 83.8% 40.9%, 100.0% 50.0%, 83.8% 59.1%, 93.3% 75.0%, 74.7% 74.7%, 75.0% 93.3%, 59.1% 83.8%, 50.0% 100.0%, 40.9% 83.8%, 25.0% 93.3%, 25.3% 74.7%, 6.7% 75.0%, 16.2% 59.1%, 0.0% 50.0%, 16.2% 40.9%, 6.7% 25.0%, 25.3% 25.3%, 25.0% 6.7%, 40.9% 16.2%); }
+.contents_div .oc26-sticker__txt{ position:relative; font-family:'Paperozi','Pretendard',sans-serif; font-size:15px; font-weight:800; line-height:1.12; letter-spacing:-0.01em; text-align:center; color:var(--oc26-ink); }
+.contents_div .oc26-h3{ font-size:var(--oc26-fs-h3); font-weight:800; line-height:1.45; color:var(--oc26-ink); }
+.contents_div .oc26-pick__hook{ margin-top:10px; font-weight:700; color:var(--oc26-acc); font-size:var(--oc26-fs-lead); line-height:1.56; }
+.contents_div .oc26-pick__desc{ margin-top:10px; font-size:var(--oc26-fs-lead); line-height:1.56; color:var(--oc26-ink2); }
+.contents_div .oc26-info{ margin-top:18px; padding:14px 0; border-top:1px solid var(--oc26-bd-l); border-bottom:1px solid var(--oc26-bd-l); display:grid; gap:10px; }
+.contents_div .oc26-info li{ display:flex; align-items:flex-start; gap:10px; font-size:var(--oc26-fs-info); line-height:1.5; }
+.contents_div .oc26-tk{ white-space:nowrap; }
+.contents_div .oc26-tk::before{ content:''; display:none; width:12px; height:12px; margin-right:5px; vertical-align:-1px; background:var(--oc26-acc); -webkit-mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M3%208.4l3.2%203.2L13%204.8%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E") no-repeat center/contain; mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M3%208.4l3.2%203.2L13%204.8%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E") no-repeat center/contain; }
+.contents_div .oc26-pick__body .oc26-h3, .contents_div .oc26-pick__body .oc26-info li{ line-height:1.62; }
+.contents_div .oc26-pick__body p{ line-height:1.7; }
+.contents_div .oc26-intro p{ line-height:1.6; }
+.contents_div .oc26-lb{
+  flex:0 0 auto; display:inline-flex; align-items:center; height:24px; margin-top:0; padding:0 11px; border-radius:999px;
+  background:#fff; color:var(--oc26-acc); border:1px solid currentColor; font-size:var(--oc26-fs-lb); font-weight:700; line-height:1; white-space:nowrap; letter-spacing:0;
+}
+.contents_div .oc26-info__txt{ padding-top:0; min-width:0; }
+.contents_div .oc26-cta{
+  margin-top:18px; display:flex; align-items:center; justify-content:space-between; gap:10px; min-height:48px; padding:0 18px;
+  border-radius:8px; background:var(--oc26-ink); color:#fff; font-size:var(--oc26-fs-cta); font-weight:700; line-height:1.45;
+  transition:background-color .2s ease;
+}
+.contents_div .oc26-cta__arr{ flex:0 0 auto; width:17px; height:17px; background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.5%208h10.5M9%204l4%204-4%204%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E") no-repeat center/contain; transition:transform .2s ease; }
+.contents_div .oc26-cta:active{ background:var(--oc26-acc); }
+
+/* 가로형 프레임 (메인 축제 18:13) */
+.contents_div .oc26-pick--wide{ grid-template-columns:1fr; }
+.contents_div .oc26-pick--wide .oc26-fig{ min-height:0; border-radius:12.5px 12.5px 0 0; }
+.contents_div .oc26-pick--wide .oc26-fig::before{ padding-top:72.2222%; }
+
+/* 슬라이드 (메인 축제) */
+.contents_div .oc26-slide__track{ position:absolute; inset:0; display:flex; transform:translate3d(0,0,0); }
+.contents_div .oc26-slide__item{ position:relative; flex:0 0 100%; width:100%; height:100%; overflow:hidden; }
+.contents_div .oc26-slide__dots{ position:absolute; left:50%; bottom:10px; z-index:2; display:flex; align-items:center; gap:6px; padding:6px 10px; border-radius:999px; background:rgba(0,0,0,.32); transform:translateX(-50%); }
+.contents_div .oc26-slide__dot{ width:8px; height:8px; padding:0; border-radius:4px; background:rgba(255,255,255,.55); border:0; transition:width .3s ease, background-color .3s ease; }
+.contents_div .oc26-slide__dot.is-on{ width:22px; background:#fff; }
+.contents_div .oc26-credit{
+  position:absolute; right:7px; bottom:7px; z-index:3; padding:5px 9px; border-radius:4px;
+  background:rgba(0,0,0,.6); color:#fff; font-size:11px; font-weight:400; line-height:1.56; letter-spacing:-0.01em; pointer-events:none;
+}
+.contents_div .oc26-slide__arrow{
+  position:absolute; top:50%; z-index:2; width:44px; height:44px; margin-top:-22px; padding:0; border-radius:50%;
+  background:rgba(255,255,255,.92) no-repeat center/20px; border:1.5px solid #D2D2D2; transition:background-color .2s ease;
+}
+.contents_div .oc26-slide__arrow--prev{ left:16px; background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20d%3D%22M12%204.5L6.5%2010l5.5%205.5%22%20fill%3D%22none%22%20stroke%3D%22%23444444%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E"); }
+.contents_div .oc26-slide__arrow--next{ right:16px; background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20d%3D%22M8%204.5l5.5%205.5L8%2015.5%22%20fill%3D%22none%22%20stroke%3D%22%23444444%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E"); }
+.contents_div .oc26-slide__arrow:active{ background-color:#EDEDED; }
+.contents_div .oc26-slide__arrow:focus-visible{ outline:3px solid #888; outline-offset:2px; }
+
+/* 축제 목록 (번호 인덱스) */
+.contents_div .oc26-idx{ margin-top:22px; padding:9px 26px; background:var(--oc26-card-g); border-radius:14px; border:1.5px solid var(--oc26-bd); }
+.contents_div .oc26-idx__grid{ display:grid; grid-template-columns:repeat(2,1fr); column-gap:36px; }
+.contents_div .oc26-idx__item{ display:flex; align-items:flex-start; gap:12px; padding:16px 0; border-bottom:1px solid var(--oc26-bd-l); }
+.contents_div .oc26-idx__item:last-child,
+.contents_div .oc26-idx__item:nth-last-child(2):nth-child(odd){ border-bottom:0; }
+.contents_div .oc26-idx__num{
+  flex:0 0 auto; display:inline-flex; align-items:center; justify-content:center; width:26px; height:26px; margin-top:-1px; border-radius:50%;
+  background:var(--oc26-acc); color:#fff; font-family:'Paperozi',sans-serif; font-size:var(--oc26-fs-num); font-weight:800; line-height:1; letter-spacing:0;
+}
+.contents_div .oc26-idx__txt{ flex:1 1 auto; min-width:0; }
+.contents_div .oc26-idx__name{ padding-bottom:6px; font-size:var(--oc26-fs-tbl); font-weight:700; line-height:1.56; color:var(--oc26-ink); }
+.contents_div .oc26-idx__meta{ position:relative; padding-left:19px; font-size:14px; line-height:1.56; color:var(--oc26-ink2); }
+.contents_div .oc26-idx__meta + .oc26-idx__meta{ padding-top:2px; }
+.contents_div .oc26-idx__meta::before{ content:''; position:absolute; left:0; top:.22em; width:14px; height:14px; background:no-repeat center/contain; }
+.contents_div .oc26-idx__meta + .oc26-idx__meta::before{ top:calc(.22em + 2px); }
+.contents_div .oc26-idx__meta--date::before{ background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Crect%20x%3D%222.5%22%20y%3D%223.5%22%20width%3D%2211%22%20height%3D%2210%22%20rx%3D%222%22%20fill%3D%22none%22%20stroke%3D%22%238A6A55%22%20stroke-width%3D%221.4%22/%3E%3Cpath%20d%3D%22M2.5%206.8h11M5.5%202v3M10.5%202v3%22%20stroke%3D%22%238A6A55%22%20stroke-width%3D%221.4%22%20stroke-linecap%3D%22round%22/%3E%3C/svg%3E"); }
+.contents_div .oc26-idx__meta--place::before{ background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M8%2014.5s4.5-4.2%204.5-7.8A4.5%204.5%200%200%200%203.5%206.7c0%203.6%204.5%207.8%204.5%207.8z%22%20fill%3D%22none%22%20stroke%3D%22%238A6A55%22%20stroke-width%3D%221.4%22/%3E%3Ccircle%20cx%3D%228%22%20cy%3D%226.6%22%20r%3D%221.6%22%20fill%3D%22%238A6A55%22/%3E%3C/svg%3E"); }
+.contents_div .oc26-idx__link{ color:inherit; text-decoration:none; }
+.contents_div .oc26-idx__last{ white-space:nowrap; }
+.contents_div .oc26-idx__last::after{ content:''; display:inline-block; width:13px; height:13px; margin-left:3px; vertical-align:-1px; background:currentColor; -webkit-mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.5%208h10.5M9%204l4%204-4%204%22%20fill%3D%22none%22%20stroke%3D%22%233B2416%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E") no-repeat center/contain; mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.5%208h10.5M9%204l4%204-4%204%22%20fill%3D%22none%22%20stroke%3D%22%233B2416%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E") no-repeat center/contain; }
+
+/* ===== 체크리스트 ===== */
+.contents_div .oc26-chk{ background:linear-gradient(180deg,#FFF0DA 0%,#FFD7A6 100%); --oc26-bd:#EDBB8A; --oc26-bd-l:#F6D6B2; }
+.contents_div .oc26-chk{ --oc26-acc:#B5461A; }
+.contents_div .oc26-chk .oc26-h2{ color:var(--oc26-ink); }
+.contents_div .oc26-chk .oc26-h2 em{ font-style:normal; color:#8F3812; }
+.contents_div .oc26-chk__list{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.contents_div .oc26-chk__item{
+  display:flex; align-items:center; gap:10px; min-height:62px; padding:14px 14px; border-radius:10px;
+  background:var(--oc26-card-g); border:1.5px solid var(--oc26-bd); font-size:var(--oc26-fs-info); font-weight:600; line-height:1.5;
+}
+.contents_div .oc26-chk__txt{ flex:1 1 0; min-width:0; white-space:nowrap; overflow:hidden; font-size:calc(var(--oc26-fs-info) - 1.5px); }
+.contents_div .oc26-chk__item::before{
+  content:''; flex:0 0 auto; width:24px; height:24px; border-radius:6px; background:var(--oc26-ink) url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20d%3D%22M5%2010.5l3.2%203.2L15%207%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222.4%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E") no-repeat center/18px;
+}
+
+/* ===== 아웃트로 · 태그 ===== */
+.contents_div .oc26-outro{ background:linear-gradient(180deg,#FFD7A6 0%,#F8A960 100%); --oc26-bd:#E9A56A; --oc26-bd-l:#F5CDA2; color:var(--oc26-ink); --oc26-acc:#B5461A; position:relative; overflow:hidden; }
+.contents_div .oc26-outro::before{ content:''; position:absolute; top:0; left:var(--oc26-gut); right:var(--oc26-gut); border-top:2px dashed #E3955A; }
+.contents_div .oc26-outro .oc26-h2{ position:relative; font-size:34px; line-height:1.4; }
+.contents_div .oc26-outro .oc26-h2 em{ font-style:normal; color:#8F3812; }
+.contents_div .oc26-outro__lead{ position:relative; margin-top:16px; font-size:var(--oc26-fs-lead); line-height:1.56; color:var(--oc26-ink); }
+.contents_div .oc26-tags{ position:relative; margin-top:36px; padding-top:38px; border-top:1px solid var(--oc26-bd); display:flex; flex-wrap:wrap; justify-content:center; gap:13px 16px; }
+.contents_div .oc26-tags li{ font-size:13.5px; font-weight:400; line-height:1.35; color:#fff; }
+
+/* ===== 축제 캘린더 ===== */
+.contents_div .oc26-cal{ position:relative; margin-bottom:15px; padding:26px 24px 24px; border-radius:16px; background:var(--oc26-card-g); border:1.5px solid var(--oc26-bd); color:var(--oc26-ink); text-align:left; }
+.contents_div .oc26-cal__head{ display:flex; align-items:center; justify-content:space-between; gap:10px 16px; flex-wrap:wrap; padding-bottom:16px; }
+.contents_div .oc26-cal__title{ font-size:21px; font-weight:800; line-height:1.45; color:var(--oc26-ink); }
+.contents_div .oc26-cal__legend{ display:flex; flex-wrap:wrap; gap:6px 14px; }
+.contents_div .oc26-cal__legend li{ display:flex; align-items:center; gap:5px; font-size:13px; font-weight:600; line-height:1.3; color:var(--oc26-ink2); }
+.contents_div .oc26-cal__dot{ flex:0 0 auto; display:inline-block; width:15px; height:15px; background:no-repeat center/contain; }
+.contents_div .oc26-cal__dot--flower{ background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Ccircle%20cx%3D%228.00%22%20cy%3D%224.00%22%20r%3D%223.1%22%20fill%3D%22%23FF8599%22/%3E%3Ccircle%20cx%3D%2211.80%22%20cy%3D%226.76%22%20r%3D%223.1%22%20fill%3D%22%23FF8599%22/%3E%3Ccircle%20cx%3D%2210.35%22%20cy%3D%2211.24%22%20r%3D%223.1%22%20fill%3D%22%23FF8599%22/%3E%3Ccircle%20cx%3D%225.65%22%20cy%3D%2211.24%22%20r%3D%223.1%22%20fill%3D%22%23FF8599%22/%3E%3Ccircle%20cx%3D%224.20%22%20cy%3D%226.76%22%20r%3D%223.1%22%20fill%3D%22%23FF8599%22/%3E%3Ccircle%20cx%3D%228%22%20cy%3D%228%22%20r%3D%223%22%20fill%3D%22%23FF8599%22/%3E%3C/svg%3E"); }
+.contents_div .oc26-cal__dot--food{ background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cellipse%20cx%3D%228%22%20cy%3D%224.5%22%20rx%3D%223.5%22%20ry%3D%224%22%20fill%3D%22%235B5651%22/%3E%3Cellipse%20cx%3D%227%22%20cy%3D%223.7%22%20rx%3D%221%22%20ry%3D%221.5%22%20fill%3D%22%23fff%22%20opacity%3D%22.35%22/%3E%3Crect%20x%3D%226.9%22%20y%3D%227.6%22%20width%3D%222.2%22%20height%3D%228%22%20rx%3D%221.1%22%20fill%3D%22%235B5651%22/%3E%3C/svg%3E"); }
+.contents_div .oc26-cal__dot--art{ background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M8%2014.2S1.6%2010.4%201.6%205.9A3.4%203.4%200%200%201%208%204.2a3.4%203.4%200%200%201%206.4%201.7C14.4%2010.4%208%2014.2%208%2014.2z%22%20fill%3D%22%238CC63F%22/%3E%3C/svg%3E"); }
+.contents_div .oc26-cal__dot--nature{ background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M8%2010.6C6%209.6%202.3%206.8%201.2%204.2%203.7%201.4%206%201%207.4%201.8L8%203.9%208.6%201.8C10%201%2012.3%201.4%2014.8%204.2%2013.7%206.8%2010%209.6%208%2010.6Z%22%20fill%3D%22%23F2B600%22/%3E%3Crect%20x%3D%227.35%22%20y%3D%229.6%22%20width%3D%221.3%22%20height%3D%225.8%22%20rx%3D%22.65%22%20fill%3D%22%23F2B600%22/%3E%3C/svg%3E"); }
+.contents_div .oc26-cal__week, .contents_div .oc26-cal__grid{ display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:6px; }
+.contents_div .oc26-cal__week{ padding:10px 0 8px; border-top:1.5px solid var(--oc26-bd-l); font-size:13px; font-weight:700; line-height:1.3; text-align:center; color:var(--oc26-ink2); }
+.contents_div .oc26-cal__w--sun{ color:#C2412D; }
+.contents_div .oc26-cal__w--sat{ color:#2F64A8; }
+.contents_div .oc26-cal__cell{
+  position:relative; display:flex; flex-direction:column; align-items:flex-start; justify-content:space-between; min-height:66px; padding:8px 9px;
+  border-radius:8px; background:#FFF6EA; border:1px solid var(--oc26-bd-l); text-align:left; transition:background-color .2s ease, border-color .2s ease;
+}
+.contents_div .oc26-cal__cell--empty{ background:transparent; border-color:transparent; }
+.contents_div .oc26-cal__d{ font-family:'Paperozi','Pretendard',sans-serif; font-size:16px; font-weight:700; line-height:1; color:var(--oc26-ink); }
+.contents_div .oc26-cal__cell--sun .oc26-cal__d{ color:#C2412D; }
+.contents_div .oc26-cal__cell--sat .oc26-cal__d{ color:#2F64A8; }
+.contents_div .oc26-cal__dots{ display:flex; gap:2px; }
+.contents_div .oc26-cal__n{ position:absolute; right:8px; top:8px; font-size:11px; font-weight:700; line-height:1; color:rgba(74,46,19,.45); }
+.contents_div .oc26-cal__cell.is-on{ background:var(--oc26-ink); border-color:var(--oc26-ink); }
+.contents_div .oc26-cal__cell.is-on .oc26-cal__d, .contents_div .oc26-cal__cell.is-on .oc26-cal__n{ color:#fff; }
+.contents_div .oc26-cal__cell.is-on .oc26-cal__dots{ margin:-2px -3px; padding:2px 3px; border-radius:5px; background:var(--oc26-card); }
+.contents_div .oc26-cal__cell:active{ background:#FFE9CC; }
+.contents_div .oc26-cal__cell:focus-visible{ outline:3px solid var(--oc26-hero); outline-offset:1px; }
+.contents_div .oc26-cal__panel{ margin-top:18px; padding-top:18px; border-top:1.5px solid var(--oc26-bd); }
+.contents_div .oc26-cal__sel{ display:flex; align-items:center; gap:8px; padding-bottom:12px; font-size:16px; line-height:1.56; }
+.contents_div .oc26-cal__sel-date{ font-family:'Paperozi','Pretendard',sans-serif; font-size:18px; font-weight:800; color:var(--oc26-hero-d); }
+.contents_div .oc26-cal__sel-cnt{ display:inline-flex; align-items:center; height:24px; padding:0 10px; border-radius:999px; background:var(--oc26-ink); color:#fff; font-size:13px; font-weight:700; line-height:1; }
+.contents_div .oc26-cal__list{ display:grid; grid-template-columns:repeat(2,1fr); gap:8px; }
+.contents_div .oc26-cal__item{ display:flex; align-items:flex-start; gap:10px; padding:12px 14px; border-radius:10px; background:#FFF6EA; border:1px solid var(--oc26-bd-l); }
+.contents_div .oc26-cal__item .oc26-cal__dot{ width:16px; height:16px; margin-top:3px; }
+.contents_div .oc26-cal__item-txt{ min-width:0; }
+.contents_div .oc26-cal__item-name{ font-size:15px; font-weight:700; line-height:1.56; color:var(--oc26-ink); }
+.contents_div .oc26-cal__item-meta{ padding-top:2px; font-size:13px; line-height:1.56; color:var(--oc26-ink2); }
+
+/* ===== hover (마우스 전용) ===== */
+@media (hover:hover) and (pointer:fine){
+  .contents_div .oc26-nav__btn:hover{ background:#FFE9CC; }
+  .contents_div .oc26-nav__btn.is-on:hover{ background:var(--oc26-ink); }
+  .contents_div .oc26-cta:hover{ background:var(--oc26-acc); }
+  .contents_div .oc26-cta:hover .oc26-cta__arr{ transform:translateX(3px); }
+  .contents_div .oc26-slide__arrow:hover{ background-color:#fff; }
+  .contents_div .oc26-cal__cell:not(.oc26-cal__cell--empty):not(.is-on):hover{ border-color:var(--oc26-hero); }
+}
+@media (prefers-reduced-motion:reduce){
+  .contents_div .oc26-hero [data-oc26-in]{ opacity:1; transition:none; }
+  .contents_div .oc26-hero__txt, .contents_div .oc26-hero.is-in .oc26-hero__txt{ opacity:1; transform:none; filter:none; animation:none; }
+  .contents_div .oc26-hero.is-in .oc26-hero__bg{ animation:none; }
+  .contents_div .oc26-hero__gar, .contents_div .oc26-hero.is-in .oc26-hero__gar{ opacity:1; transform:none; animation:none; }
+}
+
+/* ===== 반응형 ===== */
+@media (max-width:767px){
+  .contents_div .oc26-wrap{ --oc26-fs-h2:29px; }
+  .contents_div .oc26-pick{ grid-template-columns:1fr; }
+  .contents_div .oc26-fig{ min-height:0; }
+  .contents_div .oc26-fig::before{ padding-top:62.5%; }
+  .contents_div .oc26-idx__grid{ grid-template-columns:1fr; }
+  .contents_div .oc26-chk__list{ grid-template-columns:minmax(0,1fr); }
+  .contents_div .oc26-cal__list{ grid-template-columns:1fr; }
+  .contents_div .oc26-idx__item:nth-last-child(2):nth-child(odd){ border-bottom:1px solid var(--oc26-bd-l); }
+}
+@media (max-width:650px){
+  .contents_div .oc26-wrap{
+    --oc26-fs-h2:22px; --oc26-fs-h3:17px; --oc26-fs-body:14px; --oc26-fs-lead:13.5px;
+    --oc26-fs-nav:11px; --oc26-fs-info:14px; --oc26-fs-cta:14px; --oc26-fs-tag:10px; --oc26-fs-lb:10px; --oc26-fs-kick:10px; --oc26-fs-num:9.5px; --oc26-fs-tbl:14px;
+    line-height:1.7;
+  }
+  .contents_div .oc26-sec{ padding-top:40px; padding-bottom:40px; padding-left:22px; padding-right:22px; }
+  .contents_div .oc26-chk{ padding-bottom:25px; }
+  .contents_div .oc26-outro{ padding-top:25px; }
+  .contents_div .oc26-outro::before{ left:22px; right:22px; }
+  .contents_div .oc26-nav{ padding:4px 22px 29px; }
+  .contents_div .oc26-nav__btn{ min-height:62px; padding:10px 4px; }
+  .contents_div .oc26-br--mo{ display:inline; }
+  .contents_div .oc26-br--web{ display:none; }
+  .contents_div .oc26-head{ margin-bottom:18px; }
+  .contents_div .oc26-intro__lead{ padding-top:12px; }
+  .contents_div .oc26-note{ padding:34px 18px 22px; }
+  .contents_div .oc26-spark--l1{ width:11px; height:11px; left:-24px; top:0; }
+  .contents_div .oc26-spark--l2{ width:7px; height:7px; left:-13px; top:22px; bottom:auto; }
+  .contents_div .oc26-spark--r1{ width:8px; height:8px; right:-14px; top:-3px; }
+  .contents_div .oc26-spark--r2{ width:11px; height:11px; right:-26px; top:11px; }
+  .contents_div .oc26-spark--r3{ width:7px; height:7px; right:-12px; top:26px; bottom:auto; }
+  .contents_div .oc26-note__in > .oc26-note__txt{ padding-top:18px; margin-top:18px; }
+  .contents_div .oc26-note::before, .contents_div .oc26-note::after, .contents_div .oc26-note__in::before, .contents_div .oc26-note__in::after{ width:61px; height:20px; }
+  .contents_div .oc26-note::before{ left:-16.5px; top:4px; }
+  .contents_div .oc26-note::after{ right:-16.5px; top:4px; }
+  .contents_div .oc26-note__in::before{ left:-16.5px; bottom:4px; }
+  .contents_div .oc26-note__in::after{ right:-16.5px; bottom:4px; }
+  .contents_div .oc26-note__txt strong{ font-size:17px; }
+  .contents_div .oc26-kicker{ gap:10px; margin-bottom:10px; }
+  .contents_div .oc26-kicker__num{ font-size:24px; }
+  .contents_div .oc26-kicker__txt{ gap:5px; padding-left:10px; border-left-width:1px; font-size:13px; }
+  .contents_div .oc26-kicker__txt .oc26-cal__dot{ width:14px; height:14px; }
+  .contents_div .oc26-h2{ line-height:1.4; }
+  .contents_div .oc26-h3{ line-height:1.5; }
+  .contents_div .oc26-fig::before{ padding-top:75%; }
+  .contents_div .oc26-slide__arrow{ display:none; }
+  .contents_div .oc26-credit{ padding:4px 7px; font-size:10px; }
+  .contents_div .oc26-slide__dots{ left:7px; bottom:7px; gap:4px; padding:5px 8px; transform:none; }
+  .contents_div .oc26-slide__dot{ width:6px; height:6px; }
+  .contents_div .oc26-slide__dot.is-on{ width:16px; }
+  .contents_div .oc26-pick__body{ padding:22px 17px 22px; }
+  .contents_div .oc26-sticker{ top:-36px; right:3px; width:65px; height:65px; }
+  .contents_div .oc26-sticker__txt{ font-size:11px; }
+  .contents_div .oc26-info{ padding:12px 0; gap:9px; }
+  .contents_div .oc26-info li{ gap:8px; }
+  .contents_div .oc26-tk{ display:block; }
+  .contents_div .oc26-tk::before{ display:inline-block; }
+  .contents_div .oc26-tk__sep{ display:none; }
+  .contents_div .oc26-lb{ height:18px; padding:0 7px; font-weight:400; margin-top:1px; }
+  .contents_div .oc26-cta{ padding:0 16px; }
+  .contents_div .oc26-cta__arr{ width:15px; height:15px; }
+  /* 축제 목록: 모바일 표 형식 (왼쪽 축제명 / 오른쪽 기간·장소) */
+  .contents_div .oc26-idx{ padding:0; border-radius:12px; }
+  .contents_div .oc26-idx__item{ padding:11px 17px; }
+  .contents_div .oc26-idx__num{ display:none; }
+  .contents_div .oc26-idx__grid{ grid-template-columns:minmax(0,1fr) max-content; column-gap:15px; }
+  .contents_div .oc26-idx__item{ display:grid; grid-column:1 / -1; grid-template-columns:minmax(0,1fr) max-content; column-gap:15px; row-gap:1px; align-items:center; }
+  @supports (grid-template-columns:subgrid){ .contents_div .oc26-idx__item{ grid-template-columns:subgrid; } }
+  .contents_div .oc26-idx__txt{ display:contents; }
+  .contents_div .oc26-idx__name{ grid-row:1 / span 2; padding-bottom:0; font-size:13.5px; line-height:1.45; overflow-wrap:anywhere; }
+  .contents_div .oc26-idx__meta{ grid-column:2; padding-left:16px; font-size:12px; line-height:1.5; letter-spacing:-0.03em; }
+  .contents_div .oc26-idx__meta--date{ white-space:nowrap; }
+  .contents_div .oc26-idx__meta--place{ white-space:nowrap; }
+  .contents_div .oc26-idx__meta + .oc26-idx__meta{ padding-top:0; }
+  .contents_div .oc26-idx__meta::before, .contents_div .oc26-idx__meta + .oc26-idx__meta::before{ top:.2em; width:12px; height:12px; }
+  .contents_div .oc26-idx__last{ white-space:normal; }
+  .contents_div .oc26-idx__last::after{ width:11px; height:11px; }
+  .contents_div .oc26-chk__list{ grid-template-columns:minmax(0,1fr); gap:6px; }
+  .contents_div .oc26-chk__item{ min-height:46px; padding:9px 14px; gap:10px; }
+  .contents_div .oc26-chk__item::before{ width:20px; height:20px; border-radius:5px; background-size:15px; }
+  .contents_div .oc26-outro .oc26-h2{ font-size:21px; line-height:1.42; }
+  .contents_div .oc26-cal{ padding:18px 12px 14px; border-radius:12px; }
+  .contents_div .oc26-cal__head{ padding:0 4px 12px; }
+  .contents_div .oc26-cal__title{ font-size:17px; line-height:1.5; }
+  .contents_div .oc26-cal__legend{ gap:4px 10px; }
+  .contents_div .oc26-cal__legend li{ font-size:11px; gap:4px; }
+  .contents_div .oc26-cal__legend .oc26-cal__dot{ width:12px; height:12px; }
+  .contents_div .oc26-cal__dot{ width:9px; height:9px; }
+  .contents_div .oc26-cal__week, .contents_div .oc26-cal__grid{ gap:3px; }
+  .contents_div .oc26-cal__week{ padding:8px 0 6px; font-size:11px; }
+  .contents_div .oc26-cal__cell{ align-items:center; justify-content:flex-start; gap:5px; min-height:54px; padding:7px 2px 6px; border-radius:6px; }
+  .contents_div .oc26-cal__d{ font-size:14px; }
+  .contents_div .oc26-cal__dots{ display:grid; grid-template-columns:repeat(2,9px); gap:2px; justify-content:center; }
+  .contents_div .oc26-cal__n{ display:none; }
+  .contents_div .oc26-cal__panel{ margin-top:14px; padding-top:14px; }
+  .contents_div .oc26-cal__sel{ padding:0 4px 10px; font-size:14px; }
+  .contents_div .oc26-cal__sel-date{ font-size:16px; }
+  .contents_div .oc26-cal__sel-cnt{ height:20px; padding:0 8px; font-size:10px; font-weight:400; }
+  .contents_div .oc26-cal__list{ gap:6px; }
+  .contents_div .oc26-cal__item{ gap:8px; padding:10px 12px; }
+  .contents_div .oc26-cal__item .oc26-cal__dot{ width:14px; height:14px; margin-top:2px; }
+  .contents_div .oc26-cal__item-name{ font-size:14px; }
+  .contents_div .oc26-cal__item-meta{ font-size:12px; }
+  .contents_div .oc26-tags{ margin-top:26px; padding-top:32px; gap:11px 12px; }
+  .contents_div .oc26-tags li{ font-size:12px; }
+}
+@media (max-width:650px) and (min-width:541px){
+  .contents_div .oc26-idx__grid, .contents_div .oc26-idx__item{ grid-template-columns:minmax(0,1.15fr) max-content minmax(0,1fr); column-gap:20px; }
+  @supports (grid-template-columns:subgrid){ .contents_div .oc26-idx__item{ grid-template-columns:subgrid; } }
+  .contents_div .oc26-idx__name{ grid-row:1; grid-column:1; }
+  .contents_div .oc26-idx__meta--date{ grid-row:1; grid-column:2; }
+  .contents_div .oc26-idx__meta--place{ grid-row:1; grid-column:3; }
+}
+@media (max-width:650px) and (min-width:431px){
+  .contents_div .oc26-intro p{ padding-left:30px; padding-right:30px; }
+}
+@media (max-width:500px){
+  .contents_div .oc26-nav__num, .contents_div .oc26-nav__sep{ display:none; }
+  .contents_div .oc26-nav__btn{ min-height:48px; padding:8px 2px; }
+  .contents_div .oc26-nav__btn::before, .contents_div .oc26-nav__btn::after{ width:12px; height:12px; margin-top:-6px; }
+  .contents_div .oc26-nav__btn::before{ left:-6.5px; }
+  .contents_div .oc26-nav__btn::after{ right:-6.5px; }
+}
+@media (max-width:480px){
+  .contents_div .oc26-wrap{ --oc26-fs-nav:11.5px; }
+  .contents_div .oc26-sec{ padding-left:15px; padding-right:15px; }
+  .contents_div .oc26-outro::before{ left:15px; right:15px; }
+  .contents_div .oc26-nav{ padding-left:15px; padding-right:15px; }
+}
+@media (max-width:420px){
+  .contents_div .oc26-br--m420{ display:inline; }
+  .contents_div .oc26-nav{ padding-bottom:24px; }
+}
+@media (max-width:380px){
+  .contents_div .oc26-wrap{
+    --oc26-fs-h2:21.5px; --oc26-fs-h3:16px; --oc26-fs-body:13.5px; --oc26-fs-lead:13px;
+    --oc26-fs-nav:10.5px; --oc26-fs-info:13.5px; --oc26-fs-cta:13.5px; --oc26-fs-tbl:13.5px;
+  }
+  .contents_div .oc26-outro .oc26-h2{ font-size:18px; }
+}
+@media (max-width:375px){
+  .contents_div .oc26-idx__meta--place{ font-size:11px; }
+}
+@media (max-width:350px){
+  .contents_div .oc26-idx__grid, .contents_div .oc26-idx__item{ grid-template-columns:minmax(0,1fr); row-gap:2px; }
+  @supports (grid-template-columns:subgrid){ .contents_div .oc26-idx__item{ grid-template-columns:minmax(0,1fr); } }
+  .contents_div .oc26-idx__name{ grid-row:auto; padding-bottom:2px; }
+  .contents_div .oc26-idx__meta{ grid-column:1; }
+  .contents_div .oc26-idx__meta--date{ white-space:normal; }
+  .contents_div .oc26-idx__meta--place{ width:auto; min-width:0; }
+}
+</style>
+
+<div class="oc26-wrap">
+
+  <!-- TEST: 히어로 진입 테스트용 빈 프레임 (테스트 후 삭제) -->
+  <div class="jngj-test-spacer" style="height:1200px;background:#fffdef;" aria-hidden="true"></div>
+  <!-- /TEST 뷰포트 진입 애니메이션 확인용, 확인 후 삭제 -->
+
+  <!-- 히어로 -->
+  <header class="oc26-hero">
+    <h1 class="oc26-sr">우리가 10월을 기다린 이유 – 취향 따라 즐기는 전남광주 가을축제</h1>
+    <img class="oc26-hero__img oc26-hero__bg" data-oc26-in width="1600" height="1400" fetchpriority="high" loading="eager" decoding="async" alt="" src="img/히어로배경.webp">
+    <img class="oc26-hero__gar" width="1600" height="1400" fetchpriority="high" loading="eager" decoding="async" alt="" aria-hidden="true" src="img/히어로_가랜드.webp">
+    <img class="oc26-hero__txt oc26-hero__txt--arc" width="1600" height="1400" fetchpriority="high" loading="eager" decoding="async"
+      alt="우리가 10월을 기다린 이유, 취향 따라 즐기는 전남광주 가을축제" src="img/히어로_텍스트.webp">
+    <img class="oc26-hero__txt oc26-hero__txt--main" width="1600" height="1400" fetchpriority="high" loading="eager" decoding="async"
+      alt="" aria-hidden="true" src="img/히어로_텍스트.webp">
+  </header>
+
+  <!-- 앵커 내비 -->
+  <nav class="oc26-nav" aria-label="10월 축제 테마 바로가기">
+    <div class="oc26-nav__grid">
+        <button type="button" class="oc26-nav__btn" data-go="oc26-flower"><span class="oc26-nav__num">01</span><i class="oc26-nav__sep" aria-hidden="true"></i><span class="oc26-nav__txt">꽃 테마</span></button>
+        <button type="button" class="oc26-nav__btn" data-go="oc26-food"><span class="oc26-nav__num">02</span><i class="oc26-nav__sep" aria-hidden="true"></i><span class="oc26-nav__txt">가을 식도락</span></button>
+        <button type="button" class="oc26-nav__btn" data-go="oc26-art"><span class="oc26-nav__num">03</span><i class="oc26-nav__sep" aria-hidden="true"></i><span class="oc26-nav__txt">문화예술</span></button>
+        <button type="button" class="oc26-nav__btn" data-go="oc26-nature"><span class="oc26-nav__num">04</span><i class="oc26-nav__sep" aria-hidden="true"></i><span class="oc26-nav__txt">자연 테마</span></button>
+    </div>
+  </nav>
+
+  <!-- 인트로 -->
+  <section class="oc26-sec oc26-intro" aria-labelledby="oc26-h-intro">
+    <div class="oc26-note">
+      <div class="oc26-note__in">
+        <div class="oc26-intro__txt">
+          <h2 class="oc26-h2" id="oc26-h-intro"><span class="oc26-intro__ttl"><i class="oc26-spark oc26-spark--l1" aria-hidden="true"></i><i class="oc26-spark oc26-spark--l2" aria-hidden="true"></i>전남광주통합특별시의 <span class="oc26-br oc26-br--mo"></span>10월은 축제다!<i class="oc26-spark oc26-spark--r1" aria-hidden="true"></i><i class="oc26-spark oc26-spark--r2" aria-hidden="true"></i><i class="oc26-spark oc26-spark--r3" aria-hidden="true"></i></span></h2>
+          <p class="oc26-intro__lead">전남광주통합특별시에 있는 시군구는 모두 27개. <span class="oc26-br oc26-br--web"></span>축제의 계절 가을, 그 정점인 10월을 맞아 <span class="oc26-br oc26-br--web"></span>27개 시군구가 다양한 축제를 준비하고 있어요.</p>
+        </div>
+        <p class="oc26-note__txt">골라가는 재미가 있는 전남광주통합특별시의 <span class="oc26-br oc26-br--m420"></span>10월 축제를 정리했습니다.<strong>여러분의 취향은 무엇인가요?</strong></p>
+      </div>
+    </div>
+  </section>
+
+    <!-- 01 꽃 테마 축제 -->
+    <section class="oc26-sec oc26-sec--flower" id="oc26-flower" aria-labelledby="oc26-h-flower">
+      <div class="oc26-head">
+        <p class="oc26-kicker"><span class="oc26-kicker__num">01</span><span class="oc26-kicker__txt"><i class="oc26-cal__dot oc26-cal__dot--flower" aria-hidden="true"></i>꽃 테마 축제</span></p>
+        <h2 class="oc26-h2" id="oc26-h-flower">만개하는 가을꽃을<span class="oc26-br oc26-br--mo"></span> 축제로 만나요</h2>
+      </div>
+      <article class="oc26-pick oc26-pick--wide">
+        <p class="oc26-sticker"><span class="oc26-sticker__txt">모전광<br>Pick!</span></p>
+        <div class="oc26-fig oc26-slide" data-oc26-slide aria-roledescription="carousel" aria-label="대한민국 국향대전 사진">
+          <div class="oc26-slide__track">
+            <div class="oc26-slide__item"><img src="img/국향대전1.webp" alt="" loading="eager" decoding="async"></div>
+            <div class="oc26-slide__item"><img src="img/국향대전2.webp" alt="" loading="lazy" decoding="async"></div>
+            <div class="oc26-slide__item"><img src="img/국향대전3.webp" alt="" loading="lazy" decoding="async"></div>
+            <div class="oc26-slide__item"><img src="img/국향대전4.webp" alt="" loading="lazy" decoding="async"></div>
+            <div class="oc26-slide__item"><img src="img/국향대전5.webp" alt="" loading="lazy" decoding="async"></div>
+          </div>
+          <button type="button" class="oc26-slide__arrow oc26-slide__arrow--prev" aria-label="이전 사진"></button>
+          <button type="button" class="oc26-slide__arrow oc26-slide__arrow--next" aria-label="다음 사진"></button>
+          <p class="oc26-credit">출처: 함평군</p>
+          <div class="oc26-slide__dots">
+            <button type="button" class="oc26-slide__dot is-on" aria-label="1번째 사진"></button>
+            <button type="button" class="oc26-slide__dot" aria-label="2번째 사진"></button>
+            <button type="button" class="oc26-slide__dot" aria-label="3번째 사진"></button>
+            <button type="button" class="oc26-slide__dot" aria-label="4번째 사진"></button>
+            <button type="button" class="oc26-slide__dot" aria-label="5번째 사진"></button>
+          </div>
+        </div>
+        <div class="oc26-pick__body">
+          <h3 class="oc26-h3">대한민국 국향대전</h3>
+          <p class="oc26-pick__desc">가을을 대표하는 꽃 국화를 테마로 한 대한민국 국향대전이 올해도 함평에서 열립니다. 형형색색 아름다운 국화가 어우러진 함평에서 올해 테마인 ‘신화의 국화동산’을 만나보세요.</p>
+          <ul class="oc26-info">
+                <li><span class="oc26-lb">기간</span><span class="oc26-info__txt">2026.10.23.(금)~11.08.(일)</span></li>
+                <li><span class="oc26-lb">장소</span><span class="oc26-info__txt">함평 엑스포공원 일원</span></li>
+                <li><span class="oc26-lb">입장권</span><span class="oc26-info__txt"><span class="oc26-tk">어른 7천원</span><span class="oc26-tk__sep">, </span><span class="oc26-tk">청소년‧군인 5천원</span><span class="oc26-tk__sep">, </span><span class="oc26-tk">유치원‧어린이‧경로 3천원</span></span></li>
+          </ul>
+          <a class="oc26-cta" href="https://www.hpftf.or.kr/" target="_blank" rel="noopener" title="대한민국 국향대전 공식 누리집 (새 창)"><span>공식 누리집 바로가기</span><i class="oc26-cta__arr" aria-hidden="true"></i></a>
+        </div>
+      </article>
+      <div class="oc26-idx">
+        <ul class="oc26-idx__grid">
+          <li class="oc26-idx__item">
+            <span class="oc26-idx__num">01</span>
+            <div class="oc26-idx__txt">
+              <p class="oc26-idx__name"><a class="oc26-idx__link" href="https://m.blog.naver.com/cleanhwasun/224416121897" target="_blank" rel="noopener" title="화순 고인돌 가을꽃 축제 안내 (새 창)">화순 고인돌 가을꽃 <span class="oc26-idx__last">축제</span></a></p>
+              <p class="oc26-idx__meta oc26-idx__meta--date">10.16.(금)~10.25.(일)</p>
+              <p class="oc26-idx__meta oc26-idx__meta--place">화순 고인돌 유적지 일원</p>
+            </div>
+          </li>
+          <li class="oc26-idx__item">
+            <span class="oc26-idx__num">02</span>
+            <div class="oc26-idx__txt">
+              <p class="oc26-idx__name">강진만 춤추는 갈대축제</p>
+              <p class="oc26-idx__meta oc26-idx__meta--date">10.24.(토)~11.01.(일)</p>
+              <p class="oc26-idx__meta oc26-idx__meta--place">강진만생태공원</p>
+            </div>
+          </li>
+          <li class="oc26-idx__item">
+            <span class="oc26-idx__num">03</span>
+            <div class="oc26-idx__txt">
+              <p class="oc26-idx__name">2026 남도 K-가든 페스티벌</p>
+              <p class="oc26-idx__meta oc26-idx__meta--date">09.11.(금)~10.31.(토)</p>
+              <p class="oc26-idx__meta oc26-idx__meta--place">여문문화의거리 등</p>
+            </div>
+          </li>
+          <li class="oc26-idx__item">
+            <span class="oc26-idx__num">04</span>
+            <div class="oc26-idx__txt">
+              <p class="oc26-idx__name"><a class="oc26-idx__link" href="https://blog.naver.com/jang_heung/224429493067" target="_blank" rel="noopener" title="하늘빛수목정원 제4회 가을 향기축제 안내 (새 창)">하늘빛수목정원 제4회 가을 <span class="oc26-idx__last">향기축제</span></a></p>
+              <p class="oc26-idx__meta oc26-idx__meta--date">10.06.(화)~10.16.(금)</p>
+              <p class="oc26-idx__meta oc26-idx__meta--place">하늘빛수목정원</p>
+            </div>
+          </li>
+          <li class="oc26-idx__item">
+            <span class="oc26-idx__num">05</span>
+            <div class="oc26-idx__txt">
+              <p class="oc26-idx__name">영암 월출산 국화축제</p>
+              <p class="oc26-idx__meta oc26-idx__meta--date">10.30.(금)~11.15.(일)</p>
+              <p class="oc26-idx__meta oc26-idx__meta--place">월출산 기찬랜드 일원</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 02 가을 식도락 축제 -->
+    <section class="oc26-sec oc26-sec--food" id="oc26-food" aria-labelledby="oc26-h-food">
+      <div class="oc26-head">
+        <p class="oc26-kicker"><span class="oc26-kicker__num">02</span><span class="oc26-kicker__txt"><i class="oc26-cal__dot oc26-cal__dot--food" aria-hidden="true"></i>가을 식도락 축제</span></p>
+        <h2 class="oc26-h2" id="oc26-h-food">천고마비의 계절,<br>전남광주 미식에 빠져볼까?</h2>
+      </div>
+      <article class="oc26-pick oc26-pick--wide">
+        <p class="oc26-sticker"><span class="oc26-sticker__txt">모전광<br>Pick!</span></p>
+        <div class="oc26-fig oc26-slide" data-oc26-slide aria-roledescription="carousel" aria-label="해남미남축제 사진">
+          <div class="oc26-slide__track">
+            <div class="oc26-slide__item"><img src="img/해남미남축제1.webp" alt="" loading="lazy" decoding="async"></div>
+            <div class="oc26-slide__item"><img src="img/해남미남축제2.webp" alt="" loading="lazy" decoding="async"></div>
+            <div class="oc26-slide__item"><img src="img/해남미남축제3.webp" alt="" loading="lazy" decoding="async"></div>
+            <div class="oc26-slide__item"><img src="img/해남미남축제4.webp" alt="" loading="lazy" decoding="async"></div>
+            <div class="oc26-slide__item"><img src="img/해남미남축제5.webp" alt="" loading="lazy" decoding="async"></div>
+            <div class="oc26-slide__item"><img src="img/해남미남축제6.webp" alt="" loading="lazy" decoding="async"></div>
+            <div class="oc26-slide__item"><img src="img/해남미남축제7.webp" alt="" loading="lazy" decoding="async"></div>
+            <div class="oc26-slide__item"><img src="img/해남미남축제8.webp" alt="" loading="lazy" decoding="async"></div>
+          </div>
+          <button type="button" class="oc26-slide__arrow oc26-slide__arrow--prev" aria-label="이전 사진"></button>
+          <button type="button" class="oc26-slide__arrow oc26-slide__arrow--next" aria-label="다음 사진"></button>
+          <p class="oc26-credit">출처: 해남미남축제</p>
+          <div class="oc26-slide__dots">
+            <button type="button" class="oc26-slide__dot is-on" aria-label="1번째 사진"></button>
+            <button type="button" class="oc26-slide__dot" aria-label="2번째 사진"></button>
+            <button type="button" class="oc26-slide__dot" aria-label="3번째 사진"></button>
+            <button type="button" class="oc26-slide__dot" aria-label="4번째 사진"></button>
+            <button type="button" class="oc26-slide__dot" aria-label="5번째 사진"></button>
+            <button type="button" class="oc26-slide__dot" aria-label="6번째 사진"></button>
+            <button type="button" class="oc26-slide__dot" aria-label="7번째 사진"></button>
+            <button type="button" class="oc26-slide__dot" aria-label="8번째 사진"></button>
+          </div>
+        </div>
+        <div class="oc26-pick__body">
+          <h3 class="oc26-h3">해남미남축제</h3>
+              <p class="oc26-pick__hook">미식에 진심인 전남광주가 마음먹고 식도락 축제를 연다? 어머, 그건 꼭 가야해!</p>
+          <p class="oc26-pick__desc">맛있는 남도(해남)를 뜻하는 해남미남축제는 해남의 다양한 먹거리와 다채로운 프로그램을 한자리에서 즐길 수 있어요.</p>
+          <ul class="oc26-info">
+                <li><span class="oc26-lb">기간</span><span class="oc26-info__txt">10.30.(금)~11.01.(일)</span></li>
+                <li><span class="oc26-lb">장소</span><span class="oc26-info__txt">두륜산 도립공원 일원</span></li>
+          </ul>
+          <a class="oc26-cta" href="https://haenamminam.com/22/" target="_blank" rel="noopener" title="해남미남축제 공식 누리집 (새 창)"><span>공식 누리집 바로가기</span><i class="oc26-cta__arr" aria-hidden="true"></i></a>
+        </div>
+      </article>
+      <div class="oc26-idx">
+        <ul class="oc26-idx__grid">
+          <li class="oc26-idx__item">
+            <span class="oc26-idx__num">01</span>
+            <div class="oc26-idx__txt">
+              <p class="oc26-idx__name">제33회 광주김치축제</p>
+              <p class="oc26-idx__meta oc26-idx__meta--date">10.23.(금)~10.25.(일)</p>
+              <p class="oc26-idx__meta oc26-idx__meta--place">광주청사 광장 일원</p>
+            </div>
+          </li>
+          <li class="oc26-idx__item">
+            <span class="oc26-idx__num">02</span>
+            <div class="oc26-idx__txt">
+              <p class="oc26-idx__name">2026 전남광주 빵 페스타</p>
+              <p class="oc26-idx__meta oc26-idx__meta--date">10.23.(금)~10.25.(일)</p>
+              <p class="oc26-idx__meta oc26-idx__meta--place">김대중컨벤션센터</p>
+            </div>
+          </li>
+          <li class="oc26-idx__item">
+            <span class="oc26-idx__num">03</span>
+            <div class="oc26-idx__txt">
+              <p class="oc26-idx__name">제3회 광주송정 남도맛 페스티벌</p>
+              <p class="oc26-idx__meta oc26-idx__meta--date">10.17.(토)</p>
+              <p class="oc26-idx__meta oc26-idx__meta--place">광주송정역세권 KTX역 앞</p>
+            </div>
+          </li>
+          <li class="oc26-idx__item">
+            <span class="oc26-idx__num">04</span>
+            <div class="oc26-idx__txt">
+              <p class="oc26-idx__name"><a class="oc26-idx__link" href="https://blog.naver.com/giocoson1/224421977628" target="_blank" rel="noopener" title="2026 상하농원 소시지 축제 안내 (새 창)">2026 상하농원 소시지 <span class="oc26-idx__last">축제</span></a></p>
+              <p class="oc26-idx__meta oc26-idx__meta--date">10.01.(목)~11.01.(일)</p>
+              <p class="oc26-idx__meta oc26-idx__meta--place">고창 상하농원</p>
+            </div>
+          </li>
+          <li class="oc26-idx__item">
+            <span class="oc26-idx__num">05</span>
+            <div class="oc26-idx__txt">
+              <p class="oc26-idx__name">광양 전통숯불구이축제</p>
+              <p class="oc26-idx__meta oc26-idx__meta--date">10.16.(금)~10.18.(일)</p>
+              <p class="oc26-idx__meta oc26-idx__meta--place">광양읍 서천변 일원</p>
+            </div>
+          </li>
+          <li class="oc26-idx__item">
+            <span class="oc26-idx__num">06</span>
+            <div class="oc26-idx__txt">
+              <p class="oc26-idx__name">신안 팔금왕새우축제</p>
+              <p class="oc26-idx__meta oc26-idx__meta--date">10.17.(토)~10.25.(일)</p>
+              <p class="oc26-idx__meta oc26-idx__meta--place">신안군 팔금면 장목마을</p>
+            </div>
+          </li>
+          <li class="oc26-idx__item">
+            <span class="oc26-idx__num">07</span>
+            <div class="oc26-idx__txt">
+              <p class="oc26-idx__name">신안 보물섬 함초축제</p>
+              <p class="oc26-idx__meta oc26-idx__meta--date">10.23.(금)~10.24.(토)</p>
+              <p class="oc26-idx__meta oc26-idx__meta--place">증도 태평염전 일원</p>
+            </div>
+          </li>
+          <li class="oc26-idx__item">
+            <span class="oc26-idx__num">08</span>
+            <div class="oc26-idx__txt">
+              <p class="oc26-idx__name">신안 섬 새우젓축제</p>
+              <p class="oc26-idx__meta oc26-idx__meta--date">10.23.(금)~10.24.(토)</p>
+              <p class="oc26-idx__meta oc26-idx__meta--place">지도읍 신안젓갈타운 일원</p>
+            </div>
+          </li>
+          <li class="oc26-idx__item">
+            <span class="oc26-idx__num">09</span>
+            <div class="oc26-idx__txt">
+              <p class="oc26-idx__name">순천 푸드앤아트 페스티벌</p>
+              <p class="oc26-idx__meta oc26-idx__meta--date">10.16.(금)~10.18.(일)</p>
+              <p class="oc26-idx__meta oc26-idx__meta--place">순천시 중앙로 일원</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 03 문화예술 테마 축제 -->
+    <section class="oc26-sec oc26-sec--art" id="oc26-art" aria-labelledby="oc26-h-art">
+      <div class="oc26-head">
+        <p class="oc26-kicker"><span class="oc26-kicker__num">03</span><span class="oc26-kicker__txt"><i class="oc26-cal__dot oc26-cal__dot--art" aria-hidden="true"></i>문화예술 테마 축제</span></p>
+        <h2 class="oc26-h2" id="oc26-h-art">흥이 넘치는 남도 문화<br>축제로 즐겨보자</h2>
+      </div>
+      <article class="oc26-pick oc26-pick--wide">
+        <p class="oc26-sticker"><span class="oc26-sticker__txt">모전광<br>Pick!</span></p>
+        <div class="oc26-fig oc26-slide" data-oc26-slide aria-roledescription="carousel" aria-label="제17회 광주국제아트페어 사진">
+          <div class="oc26-slide__track">
+            <div class="oc26-slide__item"><img src="img/광주국제아트페어1.webp" alt="" loading="lazy" decoding="async"></div>
+            <div class="oc26-slide__item"><img src="img/광주국제아트페어2.webp" alt="" loading="lazy" decoding="async"></div>
+            <div class="oc26-slide__item"><img src="img/광주국제아트페어3.webp" alt="" loading="lazy" decoding="async"></div>
+          </div>
+          <button type="button" class="oc26-slide__arrow oc26-slide__arrow--prev" aria-label="이전 사진"></button>
+          <button type="button" class="oc26-slide__arrow oc26-slide__arrow--next" aria-label="다음 사진"></button>
+          <p class="oc26-credit">출처: 아트광주</p>
+          <div class="oc26-slide__dots">
+            <button type="button" class="oc26-slide__dot is-on" aria-label="1번째 사진"></button>
+            <button type="button" class="oc26-slide__dot" aria-label="2번째 사진"></button>
+            <button type="button" class="oc26-slide__dot" aria-label="3번째 사진"></button>
+          </div>
+        </div>
+        <div class="oc26-pick__body">
+          <h3 class="oc26-h3">제17회 광주국제아트페어</h3>
+          <p class="oc26-pick__desc">올해도 아트광주가 찾아옵니다. 올해 아트광주는 전남광주의 한층 넓어진 미술 역량을 만날 수 있는데요. 도슨트 투어를 비롯해 청년작가를 소개하는 라이징 스타전, 컬렉터의 소장품을 선보이는 프로포즈전까지 풍성하게 준비했어요.</p>
+          <ul class="oc26-info">
+                <li><span class="oc26-lb">기간</span><span class="oc26-info__txt">10.22.(목)~10.25.(일)</span></li>
+                <li><span class="oc26-lb">장소</span><span class="oc26-info__txt">김대중컨벤션센터</span></li>
+          </ul>
+          <a class="oc26-cta" href="https://artgwangju.kr/ko/" target="_blank" rel="noopener" title="제17회 광주국제아트페어 공식 누리집 (새 창)"><span>공식 누리집 바로가기</span><i class="oc26-cta__arr" aria-hidden="true"></i></a>
+        </div>
+      </article>
+      <div class="oc26-idx">
+        <ul class="oc26-idx__grid">
+          <li class="oc26-idx__item">
+            <span class="oc26-idx__num">01</span>
+            <div class="oc26-idx__txt">
+              <p class="oc26-idx__name"><a class="oc26-idx__link" href="https://blog.naver.com/siksi03/224377583077" target="_blank" rel="noopener" title="제5회 광양 KPOP 페스티벌 안내 (새 창)">제5회 광양 KPOP <span class="oc26-idx__last">페스티벌</span></a></p>
+              <p class="oc26-idx__meta oc26-idx__meta--date">10.17.(금)~10.18.(토)</p>
+              <p class="oc26-idx__meta oc26-idx__meta--place">광양공설운동장</p>
+            </div>
+          </li>
+          <li class="oc26-idx__item">
+            <span class="oc26-idx__num">02</span>
+            <div class="oc26-idx__txt">
+              <p class="oc26-idx__name">제16회 광주비엔날레</p>
+              <p class="oc26-idx__meta oc26-idx__meta--date">09.05.(토)~11.15.(일)</p>
+              <p class="oc26-idx__meta oc26-idx__meta--place">광주비엔날레전시관 일원</p>
+            </div>
+          </li>
+          <li class="oc26-idx__item">
+            <span class="oc26-idx__num">03</span>
+            <div class="oc26-idx__txt">
+              <p class="oc26-idx__name">2026 여수세계섬박람회</p>
+              <p class="oc26-idx__meta oc26-idx__meta--date">09.05.(토)~11.04.(수)</p>
+              <p class="oc26-idx__meta oc26-idx__meta--place">여수시 돌산 진모지구 등</p>
+            </div>
+          </li>
+          <li class="oc26-idx__item">
+            <span class="oc26-idx__num">04</span>
+            <div class="oc26-idx__txt">
+              <p class="oc26-idx__name"><a class="oc26-idx__link" href="https://www.instagram.com/media_art_yeosu/" target="_blank" rel="noopener" title="국가유산 미디어아트 여수 진남관 안내 (새 창)">국가유산 미디어아트 여수 <span class="oc26-idx__last">진남관</span></a></p>
+              <p class="oc26-idx__meta oc26-idx__meta--date">10.09.(금)~11.08.(일)</p>
+              <p class="oc26-idx__meta oc26-idx__meta--place">진남관, 고소대, 이순신광장</p>
+            </div>
+          </li>
+          <li class="oc26-idx__item">
+            <span class="oc26-idx__num">05</span>
+            <div class="oc26-idx__txt">
+              <p class="oc26-idx__name"><a class="oc26-idx__link" href="https://www.sieaf.com/" target="_blank" rel="noopener" title="섬진강국제실험예술제 안내 (새 창)"><span class="oc26-idx__last">섬진강국제실험예술제</span></a></p>
+              <p class="oc26-idx__meta oc26-idx__meta--date">09.22.(화)~10.30.(금)</p>
+              <p class="oc26-idx__meta oc26-idx__meta--place">곡성 압록유원지</p>
+            </div>
+          </li>
+          <li class="oc26-idx__item">
+            <span class="oc26-idx__num">06</span>
+            <div class="oc26-idx__txt">
+              <p class="oc26-idx__name">여수밤바다 불꽃축제</p>
+              <p class="oc26-idx__meta oc26-idx__meta--date">10.31.(토) 19:00~</p>
+              <p class="oc26-idx__meta oc26-idx__meta--place">여수세계박람회장 일원</p>
+            </div>
+          </li>
+          <li class="oc26-idx__item">
+            <span class="oc26-idx__num">07</span>
+            <div class="oc26-idx__txt">
+              <p class="oc26-idx__name">고흥 녹동항 드론쇼(상시)</p>
+              <p class="oc26-idx__meta oc26-idx__meta--date">10.31.(토)까지 21:00~</p>
+              <p class="oc26-idx__meta oc26-idx__meta--place">녹동항 일원</p>
+            </div>
+          </li>
+          <li class="oc26-idx__item">
+            <span class="oc26-idx__num">08</span>
+            <div class="oc26-idx__txt">
+              <p class="oc26-idx__name">2026 구례동편제소리축제</p>
+              <p class="oc26-idx__meta oc26-idx__meta--date">10.16.(금)~10.17.(토)</p>
+              <p class="oc26-idx__meta oc26-idx__meta--place">구례 서시천 체육공원 특설무대</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 04 자연 테마 축제 -->
+    <section class="oc26-sec oc26-sec--nature" id="oc26-nature" aria-labelledby="oc26-h-nature">
+      <div class="oc26-head">
+        <p class="oc26-kicker"><span class="oc26-kicker__num">04</span><span class="oc26-kicker__txt"><i class="oc26-cal__dot oc26-cal__dot--nature" aria-hidden="true"></i>자연 테마 축제</span></p>
+        <h2 class="oc26-h2" id="oc26-h-nature">10월 전남광주는 <span class="oc26-br oc26-br--mo"></span>더 아름다우니까.</h2>
+      </div>
+      <article class="oc26-pick oc26-pick--wide">
+        <p class="oc26-sticker"><span class="oc26-sticker__txt">모전광<br>Pick!</span></p>
+        <div class="oc26-fig oc26-slide" data-oc26-slide aria-roledescription="carousel" aria-label="목포항구축제 사진">
+          <div class="oc26-slide__track">
+            <div class="oc26-slide__item"><img src="img/목포항구축제1.webp" alt="" loading="lazy" decoding="async"></div>
+            <div class="oc26-slide__item"><img src="img/목포항구축제2.webp" alt="" loading="lazy" decoding="async"></div>
+            <div class="oc26-slide__item"><img src="img/목포항구축제3.webp" alt="" loading="lazy" decoding="async"></div>
+            <div class="oc26-slide__item"><img src="img/목포항구축제4.webp" alt="" loading="lazy" decoding="async"></div>
+          </div>
+          <button type="button" class="oc26-slide__arrow oc26-slide__arrow--prev" aria-label="이전 사진"></button>
+          <button type="button" class="oc26-slide__arrow oc26-slide__arrow--next" aria-label="다음 사진"></button>
+          <p class="oc26-credit">출처: 목포항구축제</p>
+          <div class="oc26-slide__dots">
+            <button type="button" class="oc26-slide__dot is-on" aria-label="1번째 사진"></button>
+            <button type="button" class="oc26-slide__dot" aria-label="2번째 사진"></button>
+            <button type="button" class="oc26-slide__dot" aria-label="3번째 사진"></button>
+            <button type="button" class="oc26-slide__dot" aria-label="4번째 사진"></button>
+          </div>
+        </div>
+        <div class="oc26-pick__body">
+          <h3 class="oc26-h3">목포항구축제</h3>
+              <p class="oc26-pick__hook">목포는 항구다♪ 축제의 즐거움에 목포의 맛까지!</p>
+          <p class="oc26-pick__desc">목포의 바다, 음식, 공연과 체험을 한자리에서 만나는 항구축제를 즐겨요. 볼거리, 먹거리, 놀거리 세 가지 주제에 각각 세 가지 즐거움을 담아 목포 9樂을 만날 수 있어요.</p>
+          <ul class="oc26-info">
+                <li><span class="oc26-lb">기간</span><span class="oc26-info__txt">10.16.(금)~10.18.(일)</span></li>
+                <li><span class="oc26-lb">장소</span><span class="oc26-info__txt">목포항 및 삼학도 일원</span></li>
+          </ul>
+          <a class="oc26-cta" href="https://mokpoharborfestival.com/" target="_blank" rel="noopener" title="목포항구축제 공식 누리집 (새 창)"><span>공식 누리집 바로가기</span><i class="oc26-cta__arr" aria-hidden="true"></i></a>
+        </div>
+      </article>
+      <div class="oc26-idx">
+        <ul class="oc26-idx__grid">
+          <li class="oc26-idx__item">
+            <span class="oc26-idx__num">01</span>
+            <div class="oc26-idx__txt">
+              <p class="oc26-idx__name">광주서창억새축제</p>
+              <p class="oc26-idx__meta oc26-idx__meta--date">10.15.(목)~10.18.(일)</p>
+              <p class="oc26-idx__meta oc26-idx__meta--place">영산강자전거길안내센터</p>
+            </div>
+          </li>
+          <li class="oc26-idx__item">
+            <span class="oc26-idx__num">02</span>
+            <div class="oc26-idx__txt">
+              <p class="oc26-idx__name"><a class="oc26-idx__link" href="https://www.muan.go.kr/www/operation_guide/visual_popup_new?idx=15205877&amp;mode=view" target="_blank" rel="noopener" title="2026 TOP麥(톱맥)축제 안내 (새 창)">2026 <span class="oc26-idx__last">TOP麥(톱맥)축제</span></a></p>
+              <p class="oc26-idx__meta oc26-idx__meta--date">09.12.(토)~10.31.(토) 매주 토</p>
+              <p class="oc26-idx__meta oc26-idx__meta--place">톱머리해수욕장 일대</p>
+            </div>
+          </li>
+          <li class="oc26-idx__item">
+            <span class="oc26-idx__num">03</span>
+            <div class="oc26-idx__txt">
+              <p class="oc26-idx__name"><a class="oc26-idx__link" href="http://www.mdjournal.co.kr/bbs/board.php?bo_table=news&amp;wr_id=20076" target="_blank" rel="noopener" title="제3회 황룡강 뱃나드리 축제 안내 (새 창)">제3회 황룡강 뱃나드리 <span class="oc26-idx__last">축제</span></a></p>
+              <p class="oc26-idx__meta oc26-idx__meta--date">10.17.(토)</p>
+              <p class="oc26-idx__meta oc26-idx__meta--place">황룡강 용탑일원</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  <!-- 체크리스트 -->
+  <section class="oc26-sec oc26-chk" aria-labelledby="oc26-h-chk">
+    <div class="oc26-head">
+      <p class="oc26-kicker"><span class="oc26-kicker__num">05</span><span class="oc26-kicker__txt"><i class="oc26-cal__dot oc26-cal__dot--check" aria-hidden="true"></i>축제 체크 리스트</span></p>
+      <h2 class="oc26-h2" id="oc26-h-chk">프로 축제러를 위한<br><em>모전광 추천 축제 체크 리스트✓</em></h2>
+    </div>
+    <ul class="oc26-chk__list">
+          <li class="oc26-chk__item"><span class="oc26-chk__txt">방문 전 날씨체크 하세요</span></li>
+          <li class="oc26-chk__item"><span class="oc26-chk__txt">주차장 위치 미리 확인하세요</span></li>
+          <li class="oc26-chk__item"><span class="oc26-chk__txt">셔틀버스 운행 여부도 체크!</span></li>
+          <li class="oc26-chk__item"><span class="oc26-chk__txt">놓치면 아쉬운 대표 프로그램은 미리 찜!</span></li>
+          <li class="oc26-chk__item"><span class="oc26-chk__txt">10월엔 일교차 대비 겉옷 챙기기</span></li>
+          <li class="oc26-chk__item"><span class="oc26-chk__txt">자세한 일정·변경사항은 공식 누리집에서 확인!</span></li>
+    </ul>
+  </section>
+
+  <!-- 아웃트로 · 태그 -->
+  <footer class="oc26-sec oc26-outro" aria-labelledby="oc26-h-outro">
+    <div class="oc26-head">
+      <p class="oc26-kicker"><span class="oc26-kicker__num">06</span><span class="oc26-kicker__txt"><i class="oc26-cal__dot oc26-cal__dot--cal" aria-hidden="true"></i>10월 축제 캘린더</span></p>
+      <h2 class="oc26-h2" id="oc26-h-outro">10월 전남광주는<br><em>놓치면 후회할 즐거움이 가득!</em></h2>
+      <p class="oc26-outro__lead">취향에 맞는 축제를 골라 전남광주통합특별시에서 멋진 10월 보내세요.</p>
+    </div>
+
+    <div class="oc26-cal" data-oc26-cal>
+      <div class="oc26-cal__head">
+        <h3 class="oc26-cal__title">2026년 10월 축제 캘린더</h3>
+        <ul class="oc26-cal__legend">
+          <li><i class="oc26-cal__dot oc26-cal__dot--flower"></i>꽃</li>
+          <li><i class="oc26-cal__dot oc26-cal__dot--food"></i>식도락</li>
+          <li><i class="oc26-cal__dot oc26-cal__dot--art"></i>문화예술</li>
+          <li><i class="oc26-cal__dot oc26-cal__dot--nature"></i>자연</li>
+        </ul>
+      </div>
+      <div class="oc26-cal__week" aria-hidden="true"><span class="oc26-cal__w--sun">일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span class="oc26-cal__w--sat">토</span></div>
+      <div class="oc26-cal__grid">
+            <span class="oc26-cal__cell oc26-cal__cell--empty" aria-hidden="true"></span>
+            <span class="oc26-cal__cell oc26-cal__cell--empty" aria-hidden="true"></span>
+            <span class="oc26-cal__cell oc26-cal__cell--empty" aria-hidden="true"></span>
+            <span class="oc26-cal__cell oc26-cal__cell--empty" aria-hidden="true"></span>
+            <button type="button" class="oc26-cal__cell" data-day="1" aria-pressed="false" aria-label="10월 1일, 축제 6개"><span class="oc26-cal__d">1</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i></span><span class="oc26-cal__n" aria-hidden="true">6</span></button>
+            <button type="button" class="oc26-cal__cell" data-day="2" aria-pressed="false" aria-label="10월 2일, 축제 6개"><span class="oc26-cal__d">2</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i></span><span class="oc26-cal__n" aria-hidden="true">6</span></button>
+            <button type="button" class="oc26-cal__cell oc26-cal__cell--sat" data-day="3" aria-pressed="false" aria-label="10월 3일, 축제 7개"><span class="oc26-cal__d">3</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i><i class="oc26-cal__dot oc26-cal__dot--nature"></i></span><span class="oc26-cal__n" aria-hidden="true">7</span></button>
+            <button type="button" class="oc26-cal__cell oc26-cal__cell--sun" data-day="4" aria-pressed="false" aria-label="10월 4일, 축제 6개"><span class="oc26-cal__d">4</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i></span><span class="oc26-cal__n" aria-hidden="true">6</span></button>
+            <button type="button" class="oc26-cal__cell" data-day="5" aria-pressed="false" aria-label="10월 5일, 축제 6개"><span class="oc26-cal__d">5</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i></span><span class="oc26-cal__n" aria-hidden="true">6</span></button>
+            <button type="button" class="oc26-cal__cell" data-day="6" aria-pressed="false" aria-label="10월 6일, 축제 7개"><span class="oc26-cal__d">6</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i></span><span class="oc26-cal__n" aria-hidden="true">7</span></button>
+            <button type="button" class="oc26-cal__cell" data-day="7" aria-pressed="false" aria-label="10월 7일, 축제 7개"><span class="oc26-cal__d">7</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i></span><span class="oc26-cal__n" aria-hidden="true">7</span></button>
+            <button type="button" class="oc26-cal__cell" data-day="8" aria-pressed="false" aria-label="10월 8일, 축제 7개"><span class="oc26-cal__d">8</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i></span><span class="oc26-cal__n" aria-hidden="true">7</span></button>
+            <button type="button" class="oc26-cal__cell" data-day="9" aria-pressed="false" aria-label="10월 9일, 축제 8개"><span class="oc26-cal__d">9</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i></span><span class="oc26-cal__n" aria-hidden="true">8</span></button>
+            <button type="button" class="oc26-cal__cell oc26-cal__cell--sat" data-day="10" aria-pressed="false" aria-label="10월 10일, 축제 9개"><span class="oc26-cal__d">10</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i><i class="oc26-cal__dot oc26-cal__dot--nature"></i></span><span class="oc26-cal__n" aria-hidden="true">9</span></button>
+            <button type="button" class="oc26-cal__cell oc26-cal__cell--sun" data-day="11" aria-pressed="false" aria-label="10월 11일, 축제 8개"><span class="oc26-cal__d">11</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i></span><span class="oc26-cal__n" aria-hidden="true">8</span></button>
+            <button type="button" class="oc26-cal__cell" data-day="12" aria-pressed="false" aria-label="10월 12일, 축제 8개"><span class="oc26-cal__d">12</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i></span><span class="oc26-cal__n" aria-hidden="true">8</span></button>
+            <button type="button" class="oc26-cal__cell" data-day="13" aria-pressed="false" aria-label="10월 13일, 축제 8개"><span class="oc26-cal__d">13</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i></span><span class="oc26-cal__n" aria-hidden="true">8</span></button>
+            <button type="button" class="oc26-cal__cell" data-day="14" aria-pressed="false" aria-label="10월 14일, 축제 8개"><span class="oc26-cal__d">14</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i></span><span class="oc26-cal__n" aria-hidden="true">8</span></button>
+            <button type="button" class="oc26-cal__cell" data-day="15" aria-pressed="false" aria-label="10월 15일, 축제 9개"><span class="oc26-cal__d">15</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i><i class="oc26-cal__dot oc26-cal__dot--nature"></i></span><span class="oc26-cal__n" aria-hidden="true">9</span></button>
+            <button type="button" class="oc26-cal__cell" data-day="16" aria-pressed="false" aria-label="10월 16일, 축제 14개"><span class="oc26-cal__d">16</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i><i class="oc26-cal__dot oc26-cal__dot--nature"></i></span><span class="oc26-cal__n" aria-hidden="true">14</span></button>
+            <button type="button" class="oc26-cal__cell oc26-cal__cell--sat" data-day="17" aria-pressed="false" aria-label="10월 17일, 축제 18개"><span class="oc26-cal__d">17</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i><i class="oc26-cal__dot oc26-cal__dot--nature"></i></span><span class="oc26-cal__n" aria-hidden="true">18</span></button>
+            <button type="button" class="oc26-cal__cell oc26-cal__cell--sun" data-day="18" aria-pressed="false" aria-label="10월 18일, 축제 14개"><span class="oc26-cal__d">18</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i><i class="oc26-cal__dot oc26-cal__dot--nature"></i></span><span class="oc26-cal__n" aria-hidden="true">14</span></button>
+            <button type="button" class="oc26-cal__cell" data-day="19" aria-pressed="false" aria-label="10월 19일, 축제 9개"><span class="oc26-cal__d">19</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i></span><span class="oc26-cal__n" aria-hidden="true">9</span></button>
+            <button type="button" class="oc26-cal__cell" data-day="20" aria-pressed="false" aria-label="10월 20일, 축제 9개"><span class="oc26-cal__d">20</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i></span><span class="oc26-cal__n" aria-hidden="true">9</span></button>
+            <button type="button" class="oc26-cal__cell" data-day="21" aria-pressed="false" aria-label="10월 21일, 축제 9개"><span class="oc26-cal__d">21</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i></span><span class="oc26-cal__n" aria-hidden="true">9</span></button>
+            <button type="button" class="oc26-cal__cell" data-day="22" aria-pressed="false" aria-label="10월 22일, 축제 10개"><span class="oc26-cal__d">22</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i></span><span class="oc26-cal__n" aria-hidden="true">10</span></button>
+            <button type="button" class="oc26-cal__cell" data-day="23" aria-pressed="false" aria-label="10월 23일, 축제 15개"><span class="oc26-cal__d">23</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i></span><span class="oc26-cal__n" aria-hidden="true">15</span></button>
+            <button type="button" class="oc26-cal__cell oc26-cal__cell--sat" data-day="24" aria-pressed="false" aria-label="10월 24일, 축제 17개"><span class="oc26-cal__d">24</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i><i class="oc26-cal__dot oc26-cal__dot--nature"></i></span><span class="oc26-cal__n" aria-hidden="true">17</span></button>
+            <button type="button" class="oc26-cal__cell oc26-cal__cell--sun" data-day="25" aria-pressed="false" aria-label="10월 25일, 축제 14개"><span class="oc26-cal__d">25</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i></span><span class="oc26-cal__n" aria-hidden="true">14</span></button>
+            <button type="button" class="oc26-cal__cell" data-day="26" aria-pressed="false" aria-label="10월 26일, 축제 9개"><span class="oc26-cal__d">26</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i></span><span class="oc26-cal__n" aria-hidden="true">9</span></button>
+            <button type="button" class="oc26-cal__cell" data-day="27" aria-pressed="false" aria-label="10월 27일, 축제 9개"><span class="oc26-cal__d">27</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i></span><span class="oc26-cal__n" aria-hidden="true">9</span></button>
+            <button type="button" class="oc26-cal__cell" data-day="28" aria-pressed="false" aria-label="10월 28일, 축제 9개"><span class="oc26-cal__d">28</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i></span><span class="oc26-cal__n" aria-hidden="true">9</span></button>
+            <button type="button" class="oc26-cal__cell" data-day="29" aria-pressed="false" aria-label="10월 29일, 축제 9개"><span class="oc26-cal__d">29</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i></span><span class="oc26-cal__n" aria-hidden="true">9</span></button>
+            <button type="button" class="oc26-cal__cell" data-day="30" aria-pressed="false" aria-label="10월 30일, 축제 11개"><span class="oc26-cal__d">30</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i></span><span class="oc26-cal__n" aria-hidden="true">11</span></button>
+            <button type="button" class="oc26-cal__cell oc26-cal__cell--sat" data-day="31" aria-pressed="false" aria-label="10월 31일, 축제 12개"><span class="oc26-cal__d">31</span><span class="oc26-cal__dots" aria-hidden="true"><i class="oc26-cal__dot oc26-cal__dot--flower"></i><i class="oc26-cal__dot oc26-cal__dot--food"></i><i class="oc26-cal__dot oc26-cal__dot--art"></i><i class="oc26-cal__dot oc26-cal__dot--nature"></i></span><span class="oc26-cal__n" aria-hidden="true">12</span></button>
+      </div>
+      <div class="oc26-cal__panel" aria-live="polite">
+        <p class="oc26-cal__sel"><strong class="oc26-cal__sel-date"></strong><span class="oc26-cal__sel-cnt"></span></p>
+        <ul class="oc26-cal__list"></ul>
+      </div>
+    </div>
+    <ul class="oc26-tags" aria-label="관련 태그">
+          <li>#10월축제</li>
+          <li>#전남광주통합특별시</li>
+          <li>#가을축제</li>
+          <li>#대한민국국향대전</li>
+          <li>#해남미남축제</li>
+          <li>#광주국제아트페어</li>
+          <li>#목포항구축제</li>
+          <li>#국화축제</li>
+          <li>#남도미식</li>
+          <li>#전남광주가볼만한곳</li>
+    </ul>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var root=document.querySelector('.contents_div .oc26-wrap');
+  if(!root) return;
+
+  /* 슬라이드: 화면 근처에 오면 숨은 장까지 미리 로드 */
+  (function(){
+    var sls=root.querySelectorAll('[data-oc26-slide]');
+    function warm(el){ var im=el.querySelectorAll('img[loading="lazy"]'); for(var i=0;i<im.length;i++){ im[i].loading='eager'; if(im[i].decode){ im[i].decode().catch(function(){}); } } }
+    if(!('IntersectionObserver' in window)){ for(var i=0;i<sls.length;i++) warm(sls[i]); return; }
+    var pio=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ warm(e.target); pio.unobserve(e.target); } });
+    },{rootMargin:'1000px 0px'});
+    for(var j=0;j<sls.length;j++) pio.observe(sls[j]);
+  })();
+
+  /* 스크롤 등장: 화면에 들어오는 블록을 아래에서 위로 */
+  (function(){
+    if(!('IntersectionObserver' in window)) return;
+    var all=root.querySelectorAll('.oc26-nav__grid, .oc26-note, .oc26-head, .oc26-pick, .oc26-idx__grid, .oc26-cal, .oc26-chk__list'), list=[];
+    for(var i=0;i<all.length;i++){
+      var el=all[i], p=el.parentNode, nested=false;
+      while(p && p!==root){ if(p.classList && p.classList.contains('oc26-rv')){ nested=true; break; } p=p.parentNode; }
+      if(!nested){ el.classList.add('oc26-rv'); list.push(el); }
+    }
+    var rio=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('is-show'); rio.unobserve(e.target); } });
+    },{threshold:0.12, rootMargin:'0px 0px -6% 0px'});
+    for(var j=0;j<list.length;j++) rio.observe(list[j]);
+  })();
+
+  /* 히어로: 뷰포트 진입 시 재생 */
+  var hero=root.querySelector('.oc26-hero');
+  if(hero){
+    if('IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(es){
+        es.forEach(function(e){ if(e.isIntersecting){ hero.classList.add('is-in'); io.disconnect(); } });
+      },{threshold:0.3});
+      io.observe(hero);
+    }else{ hero.classList.add('is-in'); }
+  }
+
+  /* 앵커 내비: 버튼 + 스크립트 스크롤 */
+  var btns=root.querySelectorAll('.oc26-nav__btn');
+  var secs=[];
+  Array.prototype.forEach.call(btns,function(btn){
+    var t=root.querySelector('#'+btn.getAttribute('data-go'));
+    if(t) secs.push({btn:btn,el:t});
+    btn.addEventListener('click',function(){
+      if(!t) return;
+      var y=t.getBoundingClientRect().top+(window.pageYOffset||document.documentElement.scrollTop)-12;
+      try{ window.scrollTo({top:y,behavior:'smooth'}); }catch(e){ window.scrollTo(0,y); }
+    });
+  });
+
+  /* 현재 위치 표시 */
+  var ticking=false;
+  function mark(){
+    ticking=false;
+    var line=window.innerHeight*0.35, cur=null;
+    secs.forEach(function(s){
+      var r=s.el.getBoundingClientRect();
+      if(r.top<=line && r.bottom>line) cur=s;
+    });
+    secs.forEach(function(s){
+      var on=(s===cur);
+      s.btn.classList.toggle('is-on',on);
+      if(on) s.btn.setAttribute('aria-current','true'); else s.btn.removeAttribute('aria-current');
+    });
+  }
+  window.addEventListener('scroll',function(){ if(!ticking){ ticking=true; window.requestAnimationFrame(mark); } },{passive:true});
+  mark();
+
+  /* 슬라이드: 자동 재생 · 한 방향 루프(첫 장 복제본) */
+  Array.prototype.forEach.call(root.querySelectorAll('[data-oc26-slide]'),function(box){
+    var track=box.querySelector('.oc26-slide__track');
+    var dots=box.querySelectorAll('.oc26-slide__dot');
+    var n=track.children.length;
+    if(n<2) return;
+    var clone=track.children[0].cloneNode(true);
+    clone.setAttribute('aria-hidden','true');
+    var ci=clone.querySelector('img'); if(ci) ci.setAttribute('loading','lazy');
+    track.appendChild(clone);
+    var idx=0, timer=null, moving=false, DELAY=3500, DUR='transform .6s ease';
+    function paint(){ var real=idx%n; Array.prototype.forEach.call(dots,function(d,i){ d.classList.toggle('is-on',i===real); if(i===real) d.setAttribute('aria-current','true'); else d.removeAttribute('aria-current'); }); }
+    function go(i,anim){
+      idx=i;
+      track.style.transition=anim?DUR:'none';
+      track.style.transform='translate3d('+(-100*idx)+'%,0,0)';
+      moving=!!anim; paint();
+      clearTimeout(fb); if(anim) fb=setTimeout(settle,800);
+    }
+    var fb=null;
+    function settle(){
+      clearTimeout(fb); moving=false;
+      if(idx===n){ go(0,false); void track.offsetWidth; }
+    }
+    track.addEventListener('transitionend',function(e){ if(e.target===track) settle(); });
+    function next(){ if(!moving) go(idx+1,true); }
+    function prev(){
+      if(moving) return;
+      if(idx===0){ go(n,false); void track.offsetWidth; }
+      go(idx-1,true);
+    }
+    var bp=box.querySelector('.oc26-slide__arrow--prev'), bn=box.querySelector('.oc26-slide__arrow--next');
+    if(bp) bp.addEventListener('click',function(){ prev(); start(); });
+    if(bn) bn.addEventListener('click',function(){ next(); start(); });
+    function start(){ stop(); timer=setInterval(next,DELAY); }
+    function stop(){ if(timer){ clearInterval(timer); timer=null; } }
+    Array.prototype.forEach.call(dots,function(d,i){
+      d.addEventListener('click',function(){ if(i!==idx%n){ go(i,true); } start(); });
+    });
+    document.addEventListener('visibilitychange',function(){ if(document.hidden) stop(); else start(); });
+    go(0,false); start();
+  });
+
+  /* 축제 캘린더 */
+  var cal=root.querySelector('[data-oc26-cal]');
+  if(cal){
+    var FEST=[{"n": "대한민국 국향대전", "t": "flower", "s": [10, 23], "e": [11, 8], "p": "2026.10.23.(금)~11.08.(일)", "l": "함평 엑스포공원 일원", "o": ""}, {"n": "화순 고인돌 가을꽃 축제", "t": "flower", "s": [10, 16], "e": [10, 25], "p": "10.16.(금)~10.25.(일)", "l": "화순 고인돌 유적지 일원", "o": ""}, {"n": "강진만 춤추는 갈대축제", "t": "flower", "s": [10, 24], "e": [11, 1], "p": "10.24.(토)~11.01.(일)", "l": "강진만생태공원", "o": ""}, {"n": "2026 남도 K-가든 페스티벌", "t": "flower", "s": [9, 11], "e": [10, 31], "p": "09.11.(금)~10.31.(토)", "l": "여문문화의거리 등", "o": ""}, {"n": "하늘빛수목정원 제4회 가을 향기축제", "t": "flower", "s": [10, 6], "e": [10, 16], "p": "10.06.(화)~10.16.(금)", "l": "하늘빛수목정원", "o": ""}, {"n": "영암 월출산 국화축제", "t": "flower", "s": [10, 30], "e": [11, 15], "p": "10.30.(금)~11.15.(일)", "l": "월출산 기찬랜드 일원", "o": ""}, {"n": "해남미남축제", "t": "food", "s": [10, 30], "e": [11, 1], "p": "10.30.(금)~11.01.(일)", "l": "두륜산 도립공원 일원", "o": ""}, {"n": "제33회 광주김치축제", "t": "food", "s": [10, 23], "e": [10, 25], "p": "10.23.(금)~10.25.(일)", "l": "광주청사 광장 일원", "o": ""}, {"n": "2026 전남광주 빵 페스타", "t": "food", "s": [10, 23], "e": [10, 25], "p": "10.23.(금)~10.25.(일)", "l": "김대중컨벤션센터", "o": ""}, {"n": "제3회 광주송정 남도맛 페스티벌", "t": "food", "s": [10, 17], "e": [10, 17], "p": "10.17.(토)", "l": "광주송정역세권 KTX역 앞", "o": ""}, {"n": "2026 상하농원 소시지 축제", "t": "food", "s": [10, 1], "e": [11, 1], "p": "10.01.(목)~11.01.(일)", "l": "고창 상하농원", "o": ""}, {"n": "광양 전통숯불구이축제", "t": "food", "s": [10, 16], "e": [10, 18], "p": "10.16.(금)~10.18.(일)", "l": "광양읍 서천변 일원", "o": ""}, {"n": "신안 팔금왕새우축제", "t": "food", "s": [10, 17], "e": [10, 25], "p": "10.17.(토)~10.25.(일)", "l": "신안군 팔금면 장목마을", "o": ""}, {"n": "신안 보물섬 함초축제", "t": "food", "s": [10, 23], "e": [10, 24], "p": "10.23.(금)~10.24.(토)", "l": "증도 태평염전 일원", "o": ""}, {"n": "신안 섬 새우젓축제", "t": "food", "s": [10, 23], "e": [10, 24], "p": "10.23.(금)~10.24.(토)", "l": "지도읍 신안젓갈타운 일원", "o": ""}, {"n": "순천 푸드앤아트 페스티벌", "t": "food", "s": [10, 16], "e": [10, 18], "p": "10.16.(금)~10.18.(일)", "l": "순천시 중앙로 일원", "o": ""}, {"n": "제17회 광주국제아트페어", "t": "art", "s": [10, 22], "e": [10, 25], "p": "10.22.(목)~10.25.(일)", "l": "김대중컨벤션센터", "o": ""}, {"n": "제5회 광양 KPOP 페스티벌", "t": "art", "s": [10, 17], "e": [10, 18], "p": "10.17.(금)~10.18.(토)", "l": "광양공설운동장", "o": ""}, {"n": "제16회 광주비엔날레", "t": "art", "s": [9, 5], "e": [11, 15], "p": "09.05.(토)~11.15.(일)", "l": "광주비엔날레전시관 일원", "o": ""}, {"n": "2026 여수세계섬박람회", "t": "art", "s": [9, 5], "e": [11, 4], "p": "09.05.(토)~11.04.(수)", "l": "여수시 돌산 진모지구 등", "o": ""}, {"n": "국가유산 미디어아트 여수 진남관", "t": "art", "s": [10, 9], "e": [11, 8], "p": "10.09.(금)~11.08.(일)", "l": "진남관, 고소대, 이순신광장", "o": ""}, {"n": "섬진강국제실험예술제", "t": "art", "s": [9, 22], "e": [10, 30], "p": "09.22.(화)~10.30.(금)", "l": "곡성 압록유원지", "o": ""}, {"n": "여수밤바다 불꽃축제", "t": "art", "s": [10, 31], "e": [10, 31], "p": "10.31.(토) 19:00~", "l": "여수세계박람회장 일원", "o": ""}, {"n": "고흥 녹동항 드론쇼(상시)", "t": "art", "s": [10, 1], "e": [10, 31], "p": "10.31.(토)까지 21:00~", "l": "녹동항 일원", "o": ""}, {"n": "2026 구례동편제소리축제", "t": "art", "s": [10, 16], "e": [10, 17], "p": "10.16.(금)~10.17.(토)", "l": "구례 서시천 체육공원 특설무대", "o": ""}, {"n": "목포항구축제", "t": "nature", "s": [10, 16], "e": [10, 18], "p": "10.16.(금)~10.18.(일)", "l": "목포항 및 삼학도 일원", "o": ""}, {"n": "광주서창억새축제", "t": "nature", "s": [10, 15], "e": [10, 18], "p": "10.15.(목)~10.18.(일)", "l": "영산강자전거길안내센터", "o": ""}, {"n": "2026 TOP麥(톱맥)축제", "t": "nature", "s": [9, 12], "e": [10, 31], "p": "09.12.(토)~10.31.(토) 매주 토", "l": "톱머리해수욕장 일대", "o": "sat"}, {"n": "제3회 황룡강 뱃나드리 축제", "t": "nature", "s": [10, 17], "e": [10, 17], "p": "10.17.(토)", "l": "황룡강 용탑일원", "o": ""}];
+    var ORDER={flower:0,food:1,art:2,nature:3};
+    var WD=['일','월','화','수','목','금','토'];
+    var calCells=cal.querySelectorAll('.oc26-cal__cell[data-day]');
+    var selDate=cal.querySelector('.oc26-cal__sel-date'), selCnt=cal.querySelector('.oc26-cal__sel-cnt'), list=cal.querySelector('.oc26-cal__list');
+    function key(m,d){ return m*100+d; }
+    function esc(t){ var d=document.createElement('div'); d.textContent=t; return d.innerHTML; }
+    function pick(day){
+      var k=key(10,day), wd=new Date(2026,9,day).getDay(), act=[];
+      FEST.forEach(function(f){
+        if(key(f.s[0],f.s[1])<=k && k<=key(f.e[0],f.e[1]) && (f.o!=='sat'||wd===6)) act.push(f);
+      });
+      act.sort(function(a,b){ return ORDER[a.t]-ORDER[b.t]; });
+      selDate.textContent='10월 '+day+'일 ('+WD[wd]+')';
+      selCnt.textContent='축제 '+act.length+'개';
+      list.innerHTML=act.map(function(f){
+        return '<li class="oc26-cal__item"><i class="oc26-cal__dot oc26-cal__dot--'+f.t+'"></i><div class="oc26-cal__item-txt"><p class="oc26-cal__item-name">'+esc(f.n)+'</p><p class="oc26-cal__item-meta">'+esc(f.p)+' · '+esc(f.l)+'</p></div></li>';
+      }).join('');
+      Array.prototype.forEach.call(calCells,function(c){
+        var on=(+c.getAttribute('data-day')===day);
+        c.classList.toggle('is-on',on); c.setAttribute('aria-pressed',on?'true':'false');
+      });
+    }
+    Array.prototype.forEach.call(calCells,function(c){
+      c.addEventListener('click',function(){ pick(+c.getAttribute('data-day')); });
+    });
+    var now=new Date();
+    pick(now.getFullYear()===2026 && now.getMonth()===9 ? now.getDate() : 1);
+  }
+
+  /* 체크리스트: 모든 항목 한 줄 + 같은 글자 크기 (가장 긴 항목 기준으로 함께 축소) */
+  var chkTxt=root.querySelectorAll('.oc26-chk__txt');
+  function fitChk(){
+    if(!chkTxt.length) return;
+    var i, ratio=1;
+    for(i=0;i<chkTxt.length;i++) chkTxt[i].style.fontSize='';
+    var base=parseFloat(window.getComputedStyle(chkTxt[0]).fontSize);
+    for(i=0;i<chkTxt.length;i++){
+      var el=chkTxt[i]; if(el.scrollWidth>el.clientWidth) ratio=Math.min(ratio, el.clientWidth/el.scrollWidth);
+    }
+    if(ratio<1){ var fs=(Math.floor(base*ratio*10)/10)+'px'; for(i=0;i<chkTxt.length;i++) chkTxt[i].style.fontSize=fs; }
+  }
+  fitChk();
+  window.addEventListener('load',fitChk);
+  if(document.fonts&&document.fonts.ready){ document.fonts.ready.then(fitChk)['catch'](function(){}); }
+  var chkT; window.addEventListener('resize',function(){ clearTimeout(chkT); chkT=setTimeout(fitChk,150); });
+
+  /* 정보박스 라벨 균등 배분 (타이포그래피-기준 A안) */
+  function readLS(el){ var v=window.getComputedStyle(el).letterSpacing; return v==='normal'?0:(parseFloat(v)||0); }
+  function balanceLabels(){
+    var boxes=root.querySelectorAll('.oc26-info');
+    for(var b=0;b<boxes.length;b++){
+      var lbs=boxes[b].querySelectorAll('.oc26-lb');
+      if(lbs.length<2) continue;
+      var items=[],i,lb,sp,target=0;
+      for(i=0;i<lbs.length;i++){
+        lb=lbs[i]; sp=lb.firstElementChild;
+        if(!sp||!sp.hasAttribute('data-fit')){
+          sp=document.createElement('span'); sp.setAttribute('data-fit',''); sp.style.display='inline-block';
+          sp.textContent=(lb.textContent||'').replace(/^\s+|\s+$/g,''); lb.textContent=''; lb.appendChild(sp);
+        }
+        sp.style.letterSpacing=''; sp.style.marginRight='';
+        items.push({sp:sp,len:sp.textContent.length,ls:readLS(lb)});
+      }
+      for(i=0;i<items.length;i++){
+        items[i].run=items[i].sp.getBoundingClientRect().width-items[i].ls;
+        if(items[i].run>target) target=items[i].run;
+      }
+      for(i=0;i<items.length;i++){
+        if(items[i].len<2) continue;
+        var ls=items[i].ls+(target-items[i].run)/(items[i].len-1);
+        items[i].sp.style.letterSpacing=ls.toFixed(3)+'px';
+        items[i].sp.style.marginRight=(-ls).toFixed(3)+'px';
+      }
+    }
+  }
+  balanceLabels();
+  window.addEventListener('load',balanceLabels);
+  if(document.fonts&&document.fonts.ready){ document.fonts.ready.then(balanceLabels)['catch'](function(){}); }
+  var rt;
+  window.addEventListener('resize',function(){ clearTimeout(rt); rt=setTimeout(function(){ balanceLabels(); mark(); },150); });
+})();
+</script>
+</div>
