@@ -465,7 +465,7 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
   .contents_div .oc26-cal__item .oc26-cal__dot{ width:14px; height:14px; margin-top:2px; }
   .contents_div .oc26-cal__item-name{ font-size:14px; }
   .contents_div .oc26-cal__item-meta{ font-size:12px; }
-  .contents_div .oc26-tags{ margin-top:26px; padding-top:32px; gap:11px 12px; }
+  .contents_div .oc26-tags{ margin-top:26px; padding-top:32px; gap:6px 12px; }
   .contents_div .oc26-tags li{ font-size:12px; }
 }
 @media (max-width:650px) and (min-width:541px){
@@ -1148,8 +1148,9 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
       }
       if(idx===0 && x>0){ idx=n; }
       else if(idx===n && x<0){ idx=0; }
+      if(e.cancelable) e.preventDefault();
       dx=Math.max(-W,Math.min(W,x)); setX(dx);
-    },{passive:true});
+    },{passive:false});
     function endTouch(){
       if(lock!==1){ lock=0; return; }
       lock=0; void track.offsetWidth;
