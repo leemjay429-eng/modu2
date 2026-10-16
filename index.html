@@ -442,7 +442,7 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
   .contents_div .aut26-hero__body{ padding:30px 22px 33px; }
   .contents_div .aut26-intro-card{ padding:32px 18px 28px; border-radius:10px; }
   /* 모바일: 첫 줄 양옆 구도 유지, 둘째 줄과 겹치지 않게 간격·크기만 단계 축소 (em이라 글자 크기 따라 자동 축소) */
-  .contents_div .aut26-hero .aut26-h1{ --lf-gap:1em; --gk-gap:.15em; }
+  .contents_div .aut26-hero .aut26-h1{ --lf-gap:1em; --gk-gap:calc(.15em - 3px); }
   .contents_div .aut26-h1-l1::before{ width:1.5em; height:1.5em; top:-.3em; }
   .contents_div .aut26-h1-l1::after{ width:2.7em; height:1.74em; top:-.62em; }
   .contents_div .aut26-hero .aut26-ginkgo{ width:.9em; height:.93em; top:-1.1em; transform:rotate(-15deg); }
@@ -608,8 +608,8 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
       <div class="aut26-vs" role="table" aria-label="가을철 안전 등산 힐링코스와 킬링코스 비교">
         <div class="aut26-vs__row" role="row">
           <span class="aut26-vs__blank" role="columnheader"><span class="aut26-sr">구분</span></span>
-          <span class="aut26-vs__hd aut26-vs__hd--safe" role="columnheader">힐링코스</span>
-          <span class="aut26-vs__hd aut26-vs__hd--danger" role="columnheader">킬링코스</span>
+          <span class="aut26-vs__hd aut26-vs__hd--safe" role="columnheader"><span class="aut26-vs__en">SAFE</span>힐링코스</span>
+          <span class="aut26-vs__hd aut26-vs__hd--danger" role="columnheader"><span class="aut26-vs__en">DANGER</span>킬링코스</span>
         </div>
         <div class="aut26-vs__row" role="row">
           <span class="aut26-vs__lb" role="rowheader">옷차림</span>
