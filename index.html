@@ -1,0 +1,747 @@
+<!-- 모바일 좌우 패딩 16 -->
+<script>
+if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
+  var s=document.createElement('style');
+  s.textContent='body{margin:0}@media(max-width:700px){.contents_div{padding:0 16px}}@media(max-width:576px){.contents_div br{display:inline!important}}';
+  document.head.appendChild(s);
+}
+</script>
+<script>
+(function(){
+  try{
+    if(!document.querySelector('meta[name="viewport"]')){
+      var m=document.createElement('meta');
+      m.setAttribute('name','viewport');
+      m.setAttribute('content','width=device-width, initial-scale=1');
+      (document.head||document.getElementsByTagName('head')[0]||document.documentElement).appendChild(m);
+    }
+  }catch(e){}
+})();
+</script>
+
+<style>
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');font-weight:100;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2');font-weight:200;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');font-weight:300;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');font-weight:800;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2') format('woff2');font-weight:900;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Thin.woff2') format('woff2');font-weight:100;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-2ExtraLight.woff2') format('woff2');font-weight:200;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2') format('woff2');font-weight:300;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');font-weight:800;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2') format('woff2');font-weight:900;font-display:swap}
+@font-face{font-family:'GmarketSansBold';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');font-weight:400;font-display:swap}
+
+/* ===== 토큰 ===== */
+.contents_div .aut26-wrap{
+  --c-maple:#b7523b;   --c-maple-dk:#883609; --c-maple-lt:#f6ddd2; --c-danger-cell:#f5cdbd;
+  --c-safe:#3e673e;    --c-safe-lt:#e4ecdc;
+  --c-ink:#43281a;     --c-ink-2:#63402b;    --c-line:#e3cbb6;
+  --c-bg-hero:#efcfaa; --c-bg-a:#f6dcbf;     --c-bg-b:#fff6ec;  --c-bg-c:#f0cfae;
+  --c-foot:#4f2e1c;
+
+  --fs-h1:32px; --fs-h2:31px; --fs-h3:21px; --fs-foot:31px;
+  --fs-kicker:15px; --fs-num:14px;
+  --fs-body:17px; --fs-lead:16px; --fs-item:16px; --fs-nav:16px; --fs-cta:16px;
+  --fs-tag:12.5px; --fs-lb:13px; --fs-check:11px;
+  --kick:32px;
+  --gut:clamp(22px, 6.25%, 50px);
+}
+
+/* ===== Reset ===== */
+.contents_div .aut26-wrap, .contents_div .aut26-wrap *,
+.contents_div .aut26-wrap *::before, .contents_div .aut26-wrap *::after{ box-sizing:border-box; }
+.contents_div .aut26-wrap :where(h1,h2,h3,p,ul,ol,li,figure){ margin:0; padding:0; }
+.contents_div .aut26-wrap :where(ul,ol){ list-style:none; }
+.contents_div .aut26-wrap :where(img){ max-width:100%; display:block; border:0; }
+.contents_div .aut26-wrap :where(a){ text-decoration:none; color:inherit; }
+.contents_div .aut26-wrap :where(button){ font:inherit; margin:0; cursor:pointer; -webkit-appearance:none; appearance:none; }
+
+/* ===== 기본 ===== */
+.contents_div .aut26-wrap{
+  max-width:800px; margin:0 auto;
+  font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  font-size:var(--fs-body); line-height:1.8; letter-spacing:-0.02em;
+  color:var(--c-ink); word-break:keep-all;
+}
+.contents_div .aut26-wrap :where(h1,h2,h3){
+  font-family:'Paperozi','Pretendard',sans-serif; word-break:keep-all;
+}
+.contents_div .aut26-br::before{ content:'\A'; white-space:pre; }
+.contents_div .aut26-br--mo{ display:none; }
+
+.contents_div .aut26-sec{ width:100%; padding:70px var(--gut); }
+.contents_div .aut26-sec--a{ background:var(--c-bg-a); border-top:2px solid #ebc9a5; }
+.contents_div .aut26-sec--b{ background:var(--c-bg-b); border-top:2px solid #e3bf96; }
+/* 섹션 상단·하단 배경 이미지 — 가장자리에서 안쪽으로 갈수록 투명 */
+.contents_div .aut26-sec--a,
+.contents_div .aut26-sec--b{ position:relative; isolation:isolate; }
+.contents_div .aut26-sec--a::before,
+.contents_div .aut26-sec--b::before, .contents_div .aut26-sec--b::after{
+  content:''; position:absolute; left:0; right:0; height:290px; z-index:-1; pointer-events:none;
+  background-repeat:no-repeat; background-size:cover;
+}
+.contents_div .aut26-sec--a::before, .contents_div .aut26-sec--b::before{
+  top:0; background-position:center top;
+  -webkit-mask-image:linear-gradient(to bottom, #000 0%, #000 45%, transparent 100%);
+          mask-image:linear-gradient(to bottom, #000 0%, #000 45%, transparent 100%);
+}
+.contents_div .aut26-sec--b::after{
+  bottom:0; background-position:center bottom;
+  -webkit-mask-image:linear-gradient(to top, #000 0%, #000 45%, transparent 100%);
+          mask-image:linear-gradient(to top, #000 0%, #000 45%, transparent 100%);
+}
+/* ▼ 배경 이미지 경로 */
+.contents_div .aut26-sec--a::before{ background-image:url('img/가을철 화재 예방 배경.webp'); }
+.contents_div .aut26-sec--b::before{ background-image:url('img/가을철 안전 등산 배경.webp'); }
+.contents_div .aut26-sec--b::after{ background-image:url('img/가을철 안전 등산 배경.webp'); }
+.contents_div .aut26-sec--c{ position:relative; background:var(--c-bg-c); border-top:2px solid #b97c4c; padding-bottom:calc(19.14% + 30px); }
+
+/* 섹션 머리 */
+.contents_div .aut26-kicker{
+  display:inline-flex; align-items:center; height:var(--kick); padding:2px 14px 0;
+  font-family:'Pretendard',sans-serif; font-weight:500;
+  font-size:var(--fs-kicker); line-height:1.2; letter-spacing:0.01em;
+  color:#fff; background:var(--c-maple); border-radius:4px;
+}
+.contents_div .aut26-h2{
+  margin-top:14px; font-size:var(--fs-h2); font-weight:800; line-height:1.35; letter-spacing:-0.01em;
+}
+.contents_div .aut26-h2 em{ font-style:normal; color:var(--c-maple); }
+.contents_div .aut26-h2 .aut26-vsw{ color:var(--c-ink-2); font-weight:600; }
+.contents_div .aut26-lead{
+  margin-top:16px; font-size:var(--fs-lead); line-height:1.7; color:var(--c-ink-2);
+}
+.contents_div .aut26-lead strong{ color:inherit; font-weight:700; }
+
+/* 섹션 머리 중앙 정렬 */
+.contents_div .aut26-sec .aut26-kicker{ display:flex; width:fit-content; margin:0 auto; }
+.contents_div .aut26-sec .aut26-h2,
+.contents_div .aut26-sec .aut26-lead{ text-align:center; }
+
+/* 배경 이미지 위 글자 가독성 — 한 줄씩 흰 띠 */
+.contents_div .aut26-hl{
+  padding:2px 10px; border-radius:4px; background:rgba(255,250,243,.9);
+  -webkit-box-decoration-break:clone; box-decoration-break:clone;
+}
+.contents_div .aut26-h2 .aut26-hl{ padding:2px 12px; line-height:1.6; }
+
+/* 이미지 */
+.contents_div .aut26-fig{ position:relative; width:100%; overflow:hidden; background:#eee; }
+.contents_div .aut26-fig::before{ content:''; display:block; padding-top:62.5%; }
+.contents_div .aut26-hero .aut26-hero__fig{ background:#ffedd7; }
+.contents_div .aut26-hero .aut26-hero__fig::before{ padding-top:87.31%; }  /* 레이어 원본 비율 1600×1397 */
+
+/* 텍스트 레이어 한 장을 클리핑해서 둘로 나눔: 위쪽(타이틀·낙엽·구름) / 아래쪽(바위, 가장 위에 쌓임) */
+.contents_div .aut26-layer--sub{ clip-path:polygon(23.75% 9.66%, 75.94% 9.66%, 75.94% 17.18%, 23.75% 17.18%); transform-origin:50% 13%; }  /* 작은 글씨 */
+.contents_div .aut26-layer--title{ clip-path:polygon(26.25% 20.40%, 73.25% 20.40%, 73.25% 50.11%, 26.25% 50.11%); transform-origin:50% 35%; }  /* 큰 글씨 */
+.contents_div .aut26-layer--leaf1{ clip-path:inset(5.51% 80.25% 84.75% 8.25%); transform-origin:14% 10.38%; }  /* 왼쪽 위 낙엽 */
+.contents_div .aut26-layer--leaf2{ clip-path:inset(21.12% 18.06% 70.08% 74%); transform-origin:77.94% 25.48%; }  /* 오른쪽 단풍잎 */
+.contents_div .aut26-layer--rock{ clip-path:inset(80% 0 0 0); z-index:1; }
+.contents_div .aut26-scene.is-done .aut26-layer{ transform:none; will-change:auto; }
+.contents_div .aut26-scene.is-done .aut26-layer--squirrel{ filter:none; }
+
+/* '안전수칙' 노란 샤인 — 텍스트 레이어를 노랗게 바꾼 복사본을 빛줄기 모양으로만 보여줌 (외부 마스크 이미지 없이 그라데이션 마스크) */
+.contents_div .aut26-scene .aut26-shine{
+  opacity:0; pointer-events:none;
+  clip-path:polygon(26.88% 35.08%, 72.81% 35.08%, 72.81% 49.53%, 26.88% 49.53%);
+  filter:sepia(1) saturate(4) brightness(2.6) hue-rotate(-8deg);  /* 갈색 글자 → #ffd01b 노랑 */
+  -webkit-mask-image:linear-gradient(110deg, transparent 36%, #000 50%, transparent 64%);
+          mask-image:linear-gradient(110deg, transparent 36%, #000 50%, transparent 64%);
+  -webkit-mask-size:260% 100%; mask-size:260% 100%;
+  -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat;
+  -webkit-mask-position:120% 0; mask-position:120% 0;
+}
+.contents_div .aut26-scene.is-done .aut26-shine{ opacity:1; animation:aut26-shine 3.6s ease-in-out .2s infinite; }
+@keyframes aut26-shine{
+  0%{ -webkit-mask-position:120% 0; mask-position:120% 0; }
+  55%,100%{ -webkit-mask-position:-20% 0; mask-position:-20% 0; }
+}
+
+/* 히어로 레이어 애니메이션 — 스크롤로 보일 때 재생 (JS가 is-pre → is-play → is-done 클래스 부여) */
+.contents_div .aut26-scene.is-pre .aut26-layer--mount{ opacity:0; transform:translateY(5%); }
+.contents_div .aut26-scene.is-pre .aut26-layer--tree{ opacity:0; transform:scale(1.08); }
+.contents_div .aut26-scene.is-pre .aut26-layer--path{ opacity:0; transform:translateY(10%); }
+.contents_div .aut26-scene.is-pre .aut26-layer--rock{ opacity:0; transform:translateY(8%); }
+.contents_div .aut26-scene.is-pre .aut26-layer--squirrel{ opacity:0; transform:translateY(7%) scale(.94); filter:blur(6px); }
+.contents_div .aut26-scene.is-pre .aut26-layer--sub{ opacity:0; transform:translateY(-4%); }
+.contents_div .aut26-scene.is-pre .aut26-layer--title{ opacity:0; transform:scale(.55); }
+.contents_div .aut26-scene.is-pre .aut26-layer--leaf1{ opacity:0; transform:scale(0) rotate(-50deg); }
+.contents_div .aut26-scene.is-pre .aut26-layer--leaf2{ opacity:0; transform:scale(0) rotate(50deg); }
+.contents_div .aut26-scene.is-play .aut26-layer{ will-change:transform, opacity; }
+.contents_div .aut26-scene.is-play .aut26-layer--mount{ transition:opacity 1s ease, transform 1.2s cubic-bezier(.2,.7,.2,1); }
+.contents_div .aut26-scene.is-play .aut26-layer--tree{ transition:opacity 1s ease .15s, transform 1.3s cubic-bezier(.2,.7,.2,1) .15s; }
+.contents_div .aut26-scene.is-play .aut26-layer--path{ transition:opacity .8s ease .3s, transform 1s cubic-bezier(.2,.7,.2,1) .3s; }
+.contents_div .aut26-scene.is-play .aut26-layer--rock{ transition:opacity .8s ease .45s, transform 1s cubic-bezier(.2,.7,.2,1) .45s; }
+.contents_div .aut26-scene.is-play .aut26-layer--sub{ transition:opacity .5s ease 1.25s, transform .7s cubic-bezier(.2,.8,.2,1) 1.25s; }
+.contents_div .aut26-scene.is-play .aut26-layer--title{ transition:opacity .3s ease .55s, transform .8s cubic-bezier(.3,2.1,.5,1) .55s; }
+.contents_div .aut26-scene.is-play .aut26-layer--leaf1{ transition:opacity .2s ease 1.65s, transform .6s cubic-bezier(.3,2.2,.5,1) 1.65s; }
+.contents_div .aut26-scene.is-play .aut26-layer--leaf2{ transition:opacity .2s ease 1.9s, transform .6s cubic-bezier(.3,2.2,.5,1) 1.9s; }
+.contents_div .aut26-scene.is-play .aut26-layer--squirrel{ transform-origin:50% 92%; transition:opacity .6s ease .95s, filter .7s ease .95s, transform 1.1s cubic-bezier(.22,1.4,.36,1) .95s; }
+.contents_div .aut26-fig img{
+  position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center;
+}
+.contents_div .aut26-sec .aut26-fig{ margin-top:28px; border-radius:10px; }
+
+/* ===== 히어로 ===== */
+.contents_div .aut26-hero{ background:var(--c-bg-hero); }
+.contents_div .aut26-hero__body{ padding:52px var(--gut) 60px; border-top:2px solid #c4895c; background:linear-gradient(to bottom, var(--c-bg-hero) 45%, #d4a473 100%); }
+.contents_div .aut26-intro-card{ padding:46px 40px 44px; background:#fffaf3; border:2px solid #e6c49c; border-radius:14px; }
+/* 가을 불청객 섹션 바닥 잔디 (CSS 배경 SVG, 원본 비율 925×177) */
+.contents_div .aut26-sec--c::after{
+  content:''; position:absolute; left:0; right:0; bottom:0; aspect-ratio:925 / 177; pointer-events:none;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 925 174' preserveAspectRatio='none'%3E%3Cpath fill='%23a3a63a' fill-rule='evenodd' d='M0.2 176.1C-0.3 174.8 -0.0 8.2 0.5 7.5C1.1 6.5 5.0 4.0 7.7 2.7C16.2 -1.2 23.6 -0.8 29.8 4.0C34.9 7.9 41.4 18.4 44.2 27.0C44.5 28.0 45.0 29.3 45.2 29.9C45.5 30.5 45.7 31.4 45.7 31.8C45.7 32.2 45.8 32.7 46.1 32.9C46.3 33.1 46.5 33.9 46.7 34.7C46.8 35.5 47.2 37.1 47.4 38.3C47.7 39.5 48.1 41.4 48.3 42.4C48.5 43.5 48.8 45.2 49.0 46.2C49.2 47.3 49.5 49.2 49.6 50.4C49.7 52.6 49.8 52.7 50.6 52.7C52.6 52.6 73.1 52.0 81.7 51.7C93.5 51.2 167.8 51.2 182.2 51.7C188.2 51.9 198.3 52.1 204.7 52.3C215.7 52.6 224.5 53.0 240.2 53.7C244.2 53.9 250.8 54.2 254.7 54.3C261.8 54.6 268.1 54.9 279.8 55.7C282.9 55.9 287.9 56.2 290.9 56.3C296.1 56.6 301.9 57.0 311.5 57.7C314.1 57.9 318.6 58.2 321.7 58.3C324.7 58.5 328.2 58.8 329.5 59.0C330.8 59.2 332.9 59.3 334.2 59.3C336.3 59.3 339.9 59.6 354.2 60.8C366.3 61.9 368.0 62.1 372.0 62.3C374.3 62.5 377.7 62.8 379.5 63.0C384.8 63.5 390.6 64.0 394.4 64.3C396.3 64.5 399.2 64.8 400.9 65.0C404.4 65.4 410.1 66.0 415.0 66.3C417.0 66.5 419.9 66.8 421.5 67.0C429.1 67.9 431.1 68.1 434.2 68.3C436.0 68.5 438.7 68.8 440.0 69.0C442.5 69.3 446.8 69.8 452.7 70.3C455.6 70.6 457.2 70.8 464.3 71.7C469.7 72.4 475.5 73.0 478.3 73.3C479.9 73.5 482.3 73.8 483.7 74.0C486.6 74.4 491.7 75.0 494.6 75.3C497.6 75.6 516.4 75.0 538.0 74.0C541.9 73.8 549.3 73.5 554.3 73.3C567.4 72.9 581.0 72.4 589.2 72.0C593.0 71.8 600.4 71.5 605.7 71.3C617.4 71.0 631.4 70.4 641.5 70.0C645.7 69.8 653.4 69.5 658.7 69.3C670.2 69.0 684.7 68.4 695.5 68.0C699.9 67.8 707.9 67.5 713.2 67.3C727.0 66.9 742.2 66.4 751.7 66.0C756.2 65.8 764.6 65.5 770.3 65.3C782.4 65.0 797.9 64.5 811.0 64.0C816.0 63.8 828.3 63.5 838.2 63.3C848.1 63.1 859.8 62.8 864.2 62.7L872.2 62.5L873.6 60.3C877.0 55.0 884.1 47.8 887.3 46.2C887.6 46.1 888.4 45.6 889.2 45.2C889.9 44.7 890.7 44.4 891.0 44.3C891.2 44.3 891.7 44.1 892.0 43.9C892.3 43.7 893.3 43.2 894.3 42.9C895.3 42.6 896.8 42.2 897.7 41.9C901.3 40.9 914.7 41.7 916.1 43.0C916.3 43.2 916.7 43.3 917.0 43.3C917.9 43.3 922.4 45.8 923.1 46.7C924.3 48.0 924.3 51.7 924.3 117.3C924.3 174.0 924.3 175.3 923.7 176.0C922.8 176.8 0.5 177.0 0.2 176.1Z'/%3E%3Cpath fill='%238c8b2f' fill-rule='evenodd' d='M0.7 91.9L0.8 7.9L2.5 6.6C4.5 5.1 10.6 2.0 11.5 2.0C11.9 2.0 12.5 1.8 12.9 1.5C13.8 0.8 22.5 0.8 23.9 1.5C24.4 1.7 25.7 2.4 26.8 2.9C29.3 4.1 33.7 8.4 36.1 12.2C38.2 15.3 41.6 21.9 42.2 23.9C42.3 24.3 42.5 24.7 42.7 24.7C42.9 24.7 43.0 25.1 43.0 25.6C43.0 26.1 43.2 26.8 43.5 27.2C43.8 27.5 44.0 28.2 44.0 28.7C44.0 29.2 44.2 29.8 44.5 30.2C44.8 30.5 45.0 31.3 45.0 31.9C45.0 32.5 45.2 33.2 45.5 33.5C45.8 33.7 46.0 34.5 46.0 35.3C46.0 36.1 46.2 37.1 46.5 37.6C46.7 38.1 47.0 39.3 47.1 40.3C47.2 41.3 47.4 42.2 47.6 42.5C47.8 42.7 48.0 44.0 48.1 45.4C48.2 46.8 48.4 48.2 48.6 48.4C48.8 48.6 49.0 49.9 49.1 51.2C49.2 52.4 49.4 54.2 49.6 55.2C49.8 56.1 50.1 60.5 50.2 65.1C50.4 72.9 50.6 74.4 51.3 72.5C51.5 72.1 52.4 70.9 53.5 69.8C57.8 65.1 64.3 63.9 70.0 66.8C72.7 68.1 76.8 72.4 77.4 74.5C77.5 74.9 77.9 76.0 78.3 77.0C79.3 79.6 80.0 83.0 80.3 86.4C80.5 89.1 81.0 90.3 81.3 88.8C81.4 87.9 85.6 79.4 86.0 79.2C86.2 79.1 86.3 78.7 86.3 78.4C86.3 78.2 86.8 77.4 87.3 76.7C87.9 76.0 88.3 75.3 88.3 75.2C88.3 75.0 88.7 74.4 89.2 73.7C89.8 73.0 90.3 72.3 90.5 72.0C93.2 67.7 104.2 56.7 105.8 56.7C106.0 56.7 106.6 56.3 107.3 55.7C108.7 54.6 110.8 53.7 111.7 53.7C112.0 53.7 112.4 53.4 112.6 53.1C113.0 52.4 122.5 52.2 122.9 52.9C123.1 53.1 123.9 53.6 124.8 54.0C128.3 55.8 131.5 60.5 132.7 65.8C133.4 68.9 133.6 76.5 133.0 79.0C132.8 79.8 132.5 81.5 132.3 82.7C132.2 83.9 131.9 85.6 131.7 86.5C131.1 89.1 129.5 94.7 128.8 96.8C128.5 97.6 128.3 98.5 128.3 98.8C128.3 99.2 128.1 99.8 127.8 100.1C127.6 100.5 127.3 101.2 127.3 101.6C127.3 102.1 127.1 102.8 126.8 103.1C126.3 103.9 126.2 104.9 126.6 105.1C126.8 105.2 127.8 104.1 128.9 102.7C134.1 96.0 143.7 87.2 151.3 82.3C159.3 77.2 163.7 75.5 169.8 75.5C174.0 75.5 174.5 75.6 178.0 77.3C181.0 78.7 187.3 85.7 187.3 87.5C187.3 87.7 187.6 88.1 187.8 88.3C188.1 88.6 188.3 88.9 188.3 89.2C188.3 89.4 188.5 90.1 188.8 90.7C189.1 91.3 189.4 92.5 189.7 93.3C190.2 95.2 190.7 95.3 192.4 93.9C194.9 91.9 198.6 89.7 199.5 89.7C199.8 89.7 200.4 89.5 200.8 89.2C201.9 88.5 205.4 87.9 207.2 88.1C210.6 88.5 211.7 88.7 212.0 89.2C212.2 89.5 212.7 89.7 213.1 89.7C215.0 89.7 222.3 97.5 222.3 99.5C222.3 99.7 222.6 100.1 222.8 100.3C223.1 100.6 223.3 101.1 223.3 101.5C223.3 101.9 223.5 102.5 223.8 102.8C224.2 103.4 224.4 104.3 225.7 109.0C225.9 109.8 226.2 112.0 226.3 113.8C226.4 117.2 226.6 117.6 227.6 117.0C231.7 114.7 240.2 112.8 246.2 112.8C251.8 112.8 254.8 113.5 257.5 115.3C262.8 118.8 264.0 123.3 264.2 140.5C264.3 145.7 264.5 150.0 264.7 150.2C264.9 150.5 265.4 150.5 266.1 150.3C268.5 149.6 277.4 148.7 281.7 148.7C288.1 148.7 290.8 149.4 296.3 152.4C298.8 153.7 302.8 157.3 305.1 160.1C306.9 162.3 309.3 166.0 309.3 166.5C309.3 166.7 309.6 167.1 309.8 167.3C310.1 167.6 310.3 168.0 310.3 168.3C310.3 168.7 310.5 169.1 310.8 169.3C311.1 169.5 311.3 170.1 311.4 170.6C311.6 171.6 312.3 173.5 312.7 174.4C312.9 174.8 312.9 175.2 312.8 175.3C312.5 175.6 236.5 175.9 115.6 176.0L0.7 176.0L0.7 91.9ZM610.3 175.8C565.8 175.7 540.7 175.5 540.5 175.3C540.3 175.1 540.4 174.8 540.7 174.4C541.0 174.1 541.8 172.7 542.5 171.4C543.3 170.1 544.2 168.2 544.7 167.3C545.2 166.4 546.0 165.1 546.5 164.5C546.9 163.9 547.3 163.3 547.3 163.2C547.3 163.0 547.8 162.4 548.3 161.7C548.9 161.0 549.3 160.3 549.3 160.2C549.3 158.7 559.8 147.6 562.3 146.4C569.6 142.9 577.6 144.5 592.9 152.6C594.0 153.2 594.0 153.4 594.2 148.0C594.4 143.3 595.1 138.5 596.1 135.8C596.7 134.3 600.1 130.7 601.0 130.7C601.3 130.7 601.8 130.4 602.0 130.2C602.2 129.9 602.8 129.7 603.2 129.7C603.6 129.7 604.6 129.4 605.2 129.2C610.2 127.3 631.5 128.5 639.8 131.2C642.0 131.9 642.3 131.7 642.3 129.5C642.3 123.1 649.0 114.0 655.5 111.5C662.3 108.9 669.4 108.4 675.3 110.2C676.2 110.4 677.2 110.7 677.7 110.8C679.2 111.1 681.6 112.0 685.0 113.7C687.3 114.8 688.3 114.8 688.3 113.8C688.3 111.4 695.1 104.5 699.7 102.3C704.6 100.0 706.7 99.6 713.6 99.5C720.5 99.5 722.4 99.8 730.7 102.4C736.6 104.2 746.6 108.6 751.7 111.6C752.3 112.0 753.4 112.6 754.2 113.0C756.3 114.2 762.9 118.6 766.0 120.9C767.5 122.1 768.8 123.0 768.9 122.9C769.0 122.8 768.2 120.9 767.7 120.0C767.5 119.7 766.9 118.5 766.3 117.2C765.8 115.9 765.1 114.5 764.9 114.2C764.7 113.8 764.5 113.2 764.3 112.7C764.2 112.2 763.7 111.0 763.3 110.0C762.4 107.5 760.6 102.4 760.3 101.2C760.2 100.6 759.8 99.0 759.4 97.5C756.7 87.8 756.6 80.7 759.2 76.6C762.7 71.1 773.2 68.9 780.9 72.2C781.5 72.5 782.2 72.7 782.5 72.7C782.7 72.7 783.6 73.0 784.5 73.4C787.7 74.8 791.8 76.7 792.3 77.0C792.6 77.2 793.5 77.7 794.3 78.1C805.5 84.1 820.3 98.8 825.0 108.5C826.1 110.7 826.5 110.5 827.0 107.1C827.2 105.5 827.6 103.8 827.9 103.4C828.1 103.0 828.3 102.5 828.3 102.4C828.3 101.1 834.0 94.7 835.2 94.7C835.4 94.7 835.7 94.5 835.9 94.3C838.0 92.2 849.7 90.8 853.5 92.2C854.2 92.4 855.1 92.7 855.4 92.7C855.8 92.7 856.5 92.9 856.9 93.1C857.4 93.4 858.6 93.9 859.5 94.4C860.3 94.8 862.0 96.0 863.0 97.1L865.0 99.1L864.8 95.1C864.5 88.1 865.9 78.0 867.9 73.4C868.1 72.8 868.3 72.0 868.3 71.7C868.3 71.4 869.0 69.8 869.8 68.2C870.7 66.5 871.3 65.0 871.3 64.8C871.3 64.6 871.8 64.0 872.3 63.4C872.9 62.8 873.3 62.2 873.3 62.0C873.3 61.9 873.8 61.2 874.3 60.5C874.9 59.8 875.3 59.0 875.3 58.8C875.3 58.6 875.8 58.0 876.3 57.5C876.8 56.9 877.8 55.7 878.5 54.8C879.9 53.0 886.6 47.2 887.7 46.8C888.1 46.7 888.3 46.5 888.3 46.3C888.3 46.1 888.6 46.0 889.0 46.0C889.3 46.0 889.8 45.8 890.1 45.6C890.3 45.3 890.9 45.0 891.4 44.9C891.9 44.8 892.3 44.5 892.3 44.3C892.3 44.1 892.7 44.0 893.2 44.0C893.7 44.0 894.5 43.8 894.9 43.5C898.7 41.6 911.2 41.8 916.7 44.0C917.7 44.4 918.8 44.8 919.2 44.9C919.5 45.0 920.3 45.5 920.9 45.9C921.4 46.3 922.1 46.7 922.3 46.7C923.0 46.7 923.3 48.0 923.4 51.5C923.4 53.5 923.5 82.1 923.6 115.1C923.8 169.5 923.8 175.1 923.3 175.5C922.8 176.0 858.5 176.1 610.3 175.8Z'/%3E%3Cpath fill='%23767226' fill-rule='evenodd' d='M0.7 175.1C0.6 174.8 0.6 137.2 0.7 91.4L0.9 8.3L1.6 7.6C2.0 7.2 2.4 7.0 2.6 7.1C2.7 7.3 2.6 7.6 2.2 7.8C1.7 8.2 1.7 9.4 1.7 27.0L1.8 45.8L4.3 46.4C8.1 47.3 9.7 47.7 10.9 48.2C11.5 48.5 12.2 48.7 12.6 48.7C13.0 48.7 13.4 48.8 13.5 49.0C13.6 49.2 14.2 49.5 14.8 49.6C19.7 51.1 23.9 54.7 26.8 59.8C27.1 60.4 27.7 61.4 28.2 62.2C28.6 62.9 29.1 63.7 29.2 64.0C29.3 64.3 29.8 65.5 30.3 66.7C34.3 76.0 35.5 88.8 32.8 94.1C32.5 94.6 32.3 95.2 32.3 95.5C32.3 96.0 31.1 98.7 30.5 99.5C30.2 99.8 30.0 100.2 30.0 100.4C30.0 100.8 31.2 100.7 31.5 100.4C31.6 100.2 33.3 99.3 35.3 98.3C37.2 97.4 39.3 96.4 39.8 96.1C40.3 95.9 41.0 95.7 41.4 95.7C41.7 95.7 42.3 95.5 42.7 95.3C45.5 93.8 54.4 93.7 57.8 95.2C58.4 95.4 59.5 95.9 60.3 96.2C63.4 97.5 68.3 103.4 68.3 105.8C68.3 106.1 68.6 107.2 68.8 108.2C69.7 111.4 69.4 117.5 68.0 127.5C67.8 128.8 67.5 131.6 67.3 133.7C67.2 135.9 66.9 138.0 66.7 138.4C66.1 140.0 66.8 139.7 68.7 137.7C70.4 135.9 75.4 131.7 75.8 131.7C75.9 131.7 76.6 131.3 77.4 130.8C79.6 129.4 80.1 129.0 80.7 128.8C80.9 128.7 81.6 128.4 82.1 128.1C82.6 127.9 83.3 127.7 83.7 127.7C84.0 127.7 84.4 127.5 84.5 127.4C84.6 127.1 88.3 125.9 90.0 125.5C90.5 125.5 91.5 125.2 92.3 125.0C93.0 124.8 95.4 124.6 97.5 124.6C101.9 124.5 102.8 125.0 103.8 127.8C105.1 131.5 105.9 140.7 105.0 142.4C104.4 143.5 105.1 144.0 106.4 143.2C109.9 141.2 111.0 140.8 114.2 140.3C118.3 139.7 121.8 140.8 124.5 143.5C125.8 144.8 127.3 147.5 127.3 148.5C127.3 149.4 128.2 149.0 128.8 147.9C129.2 147.3 129.6 146.8 129.7 146.7C129.8 146.6 131.4 144.8 133.1 142.7C136.8 138.5 136.7 138.6 139.9 135.8C144.2 132.0 148.7 129.3 152.8 128.0C154.1 127.6 155.7 127.1 156.3 127.0C159.7 125.9 167.0 126.7 170.6 128.5C173.4 129.8 173.7 130.1 175.9 132.1C182.0 137.8 184.5 144.4 185.5 157.1C185.8 160.4 186.0 163.2 186.1 163.2C186.2 163.3 186.7 163.1 187.2 162.8C187.7 162.4 188.3 162.1 188.5 162.0C190.2 161.0 191.0 160.7 191.5 160.7C191.8 160.7 192.4 160.5 192.9 160.2C194.2 159.5 196.9 159.3 197.6 159.8C197.9 160.1 198.2 160.9 198.3 161.9C198.5 163.5 198.5 163.5 199.7 163.6C202.7 163.8 206.1 165.1 209.2 167.3C210.4 168.0 211.5 168.7 211.7 168.7C212.0 168.7 212.3 168.8 212.5 169.0C212.9 169.3 216.3 170.3 218.7 170.7C219.5 170.8 220.6 171.1 221.2 171.3C221.7 171.5 223.4 171.9 225.0 172.2C226.6 172.5 228.3 172.9 228.8 173.1C230.5 173.6 234.7 174.4 236.2 174.5C237.6 174.6 238.3 174.8 237.9 175.2C237.5 175.6 0.9 175.5 0.7 175.1ZM681.9 175.4C681.0 175.3 680.6 174.7 681.4 174.6C682.2 174.6 687.1 174.0 689.2 173.7C690.3 173.5 691.5 173.3 691.7 173.1C692.0 173.0 692.9 172.8 693.8 172.6C694.8 172.5 696.5 172.3 697.7 172.0C698.9 171.8 700.9 171.4 702.2 171.2C704.7 170.7 708.1 170.1 711.0 169.7C712.0 169.5 713.5 169.3 714.3 169.1C715.2 168.9 717.6 168.5 719.8 168.2C722.0 167.9 725.1 167.5 726.7 167.3C728.3 167.1 730.8 166.9 732.3 166.9C735.5 166.8 735.3 167.1 735.3 162.0C735.3 158.3 736.1 152.2 736.9 149.6C737.1 148.7 737.3 147.8 737.3 147.5C737.3 147.3 737.5 146.6 737.8 146.1C740.3 141.0 740.9 140.1 742.6 138.1C745.3 135.0 749.1 132.5 753.3 131.1C757.7 129.8 768.5 130.8 772.3 133.0C772.6 133.2 773.1 133.4 773.3 133.5C773.6 133.6 774.1 133.9 774.3 134.0C774.6 134.2 775.2 134.5 775.6 134.7C779.3 136.3 789.1 144.9 793.3 150.2C794.1 151.3 794.1 151.3 795.1 149.2C798.3 142.9 806.8 141.1 814.8 145.2C816.0 145.8 817.1 146.3 817.2 146.3C817.3 146.3 817.3 144.1 817.3 141.4C817.3 134.5 818.4 130.4 820.4 129.2C821.7 128.4 827.8 128.4 830.4 129.0C831.2 129.2 832.4 129.5 833.2 129.7C840.9 131.3 848.6 135.3 854.0 140.6C856.4 142.9 856.5 142.6 855.9 137.8C853.2 118.8 853.2 114.6 855.5 109.5C860.4 99.1 876.5 97.7 892.1 106.2C892.5 106.4 893.0 106.7 893.1 106.7C893.5 106.7 893.4 105.4 893.0 105.2C892.6 104.9 890.3 100.1 890.3 99.3C890.3 99.0 890.1 97.8 889.8 96.8C888.8 92.8 889.8 83.4 891.7 79.6C891.9 79.3 892.3 78.1 892.7 76.9C893.1 75.8 893.6 74.6 893.9 74.3C894.1 74.0 894.3 73.6 894.3 73.5C894.3 72.9 897.5 68.4 899.7 65.8C901.9 63.2 905.0 60.6 906.9 59.8C907.5 59.5 908.0 59.2 908.2 59.0C908.3 58.8 908.6 58.7 908.9 58.7C909.2 58.7 909.9 58.4 910.5 58.2C911.0 57.9 911.7 57.7 912.1 57.7C912.4 57.7 913.1 57.5 913.6 57.2C914.1 57.0 915.9 56.6 917.5 56.4C919.1 56.2 920.8 55.9 921.1 55.9C922.0 55.7 922.1 55.4 922.0 52.3C921.9 47.9 922.5 47.9 922.8 52.3C922.9 54.4 923.1 82.7 923.2 115.2C923.3 147.6 923.4 174.4 923.5 174.6C923.6 174.8 923.5 175.1 923.2 175.2C922.8 175.4 683.4 175.6 681.9 175.4ZM901.3 42.7C901.3 42.5 902.9 42.3 905.3 42.3C907.8 42.3 909.3 42.5 909.3 42.7C909.3 42.9 907.8 43.0 905.3 43.0C902.9 43.0 901.3 42.9 901.3 42.7ZM13.7 1.7C13.7 1.5 15.4 1.3 18.3 1.3C21.2 1.3 23.0 1.5 23.0 1.7C23.0 1.9 21.2 2.0 18.3 2.0C15.4 2.0 13.7 1.9 13.7 1.7Z'/%3E%3Cg stroke='%23d9d46c' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M707 96 L711 84'/%3E%3Cpath d='M712 97 L716 85'/%3E%3Cpath d='M717 98 L720 89'/%3E%3Cpath d='M330 112 L334 100'/%3E%3Cpath d='M335 113 L339 101'/%3E%3Cpath d='M340 114 L343 105'/%3E%3Cpath d='M470 132 L474 120'/%3E%3Cpath d='M475 133 L479 121'/%3E%3Cpath d='M480 134 L483 125'/%3E%3C/g%3E%3C/svg%3E") no-repeat center bottom / 100% 100%;
+}
+.contents_div .aut26-h1{
+  font-size:var(--fs-h1); font-weight:800; line-height:1.35; letter-spacing:-0.01em;
+}
+.contents_div .aut26-h1 .aut26-heal{ color:var(--c-safe); }
+.contents_div .aut26-h1 .aut26-kill{ color:var(--c-maple); }
+/* 인트로 타이틀 옆 낙엽·단풍·은행잎 (CSS 배경 SVG) — 왼쪽 1개, 오른쪽 2개 */
+.contents_div .aut26-hero .aut26-h1{ position:relative; }
+.contents_div .aut26-hero .aut26-h1::before,
+.contents_div .aut26-hero .aut26-h1::after{ content:''; position:absolute; pointer-events:none; background-repeat:no-repeat; background-size:contain; }
+.contents_div .aut26-hero .aut26-h1::before{ width:58px; height:58px; top:-4px; left:calc(50% - 272px); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg transform='rotate%28-38 50 50%29'%3E%3Cpath fill='%23f0913a' d='M50.0 8.0 L48.3 9.3 L46.6 10.7 L45.0 12.0 L43.5 13.3 L42.5 14.7 L41.8 16.0 L41.6 17.3 L41.5 18.7 L41.3 20.0 L40.8 21.3 L39.8 22.7 L38.1 24.0 L36.0 25.3 L33.6 26.7 L31.4 28.0 L29.6 29.3 L28.7 30.7 L28.6 32.0 L29.3 33.3 L30.7 34.7 L32.2 36.0 L33.3 37.3 L33.8 38.7 L33.4 40.0 L32.0 41.3 L29.9 42.7 L27.5 44.0 L25.3 45.3 L23.7 46.7 L23.2 48.0 L23.7 49.3 L25.3 50.7 L27.5 52.0 L29.9 53.3 L32.0 54.7 L33.4 56.0 L33.8 57.3 L33.3 58.7 L32.2 60.0 L30.7 61.3 L29.3 62.7 L28.6 64.0 L28.7 65.3 L29.6 66.7 L31.4 68.0 L33.6 69.3 L36.0 70.7 L38.1 72.0 L39.8 73.3 L40.8 74.7 L41.3 76.0 L41.5 77.3 L41.6 78.7 L41.8 80.0 L42.5 81.3 L43.5 82.7 L45.0 84.0 L46.6 85.3 L48.3 86.7 L50.0 88.0 L50.0 88.0 L51.7 86.7 L53.4 85.3 L55.0 84.0 L56.5 82.7 L57.5 81.3 L58.2 80.0 L58.4 78.7 L58.5 77.3 L58.7 76.0 L59.2 74.7 L60.2 73.3 L61.9 72.0 L64.0 70.7 L66.4 69.3 L68.6 68.0 L70.4 66.7 L71.3 65.3 L71.4 64.0 L70.7 62.7 L69.3 61.3 L67.8 60.0 L66.7 58.7 L66.2 57.3 L66.6 56.0 L68.0 54.7 L70.1 53.3 L72.5 52.0 L74.7 50.7 L76.3 49.3 L76.8 48.0 L76.3 46.7 L74.7 45.3 L72.5 44.0 L70.1 42.7 L68.0 41.3 L66.6 40.0 L66.2 38.7 L66.7 37.3 L67.8 36.0 L69.3 34.7 L70.7 33.3 L71.4 32.0 L71.3 30.7 L70.4 29.3 L68.6 28.0 L66.4 26.7 L64.0 25.3 L61.9 24.0 L60.2 22.7 L59.2 21.3 L58.7 20.0 L58.5 18.7 L58.4 17.3 L58.2 16.0 L57.5 14.7 L56.5 13.3 L55.0 12.0 L53.4 10.7 L51.7 9.3 L50.0 8.0Z'/%3E%3Cg stroke='%23c9662a' stroke-width='2.2' stroke-linecap='round' fill='none'%3E%3Cpath d='M50 10 L50 94'/%3E%3Cpath d='M50 30.4 L40.8 23.4'/%3E%3Cpath d='M50 30.4 L59.2 23.4'/%3E%3Cpath d='M50 44.0 L38.1 37.0'/%3E%3Cpath d='M50 44.0 L61.9 37.0'/%3E%3Cpath d='M50 57.6 L38.8 50.6'/%3E%3Cpath d='M50 57.6 L61.2 50.6'/%3E%3Cpath d='M50 70.4 L42.4 63.4'/%3E%3Cpath d='M50 70.4 L57.6 63.4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+.contents_div .aut26-hero .aut26-h1::after{ width:112px; height:72px; top:14px; right:calc(50% - 327px); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 170 110'%3E%3Cg transform='translate%280 4%29 rotate%2818 50 50%29'%3E%3Cpath fill='%23e2502f' d='M50.0 6.0 L52.8 8.3 L55.1 11.8 L56.8 16.2 L57.7 21.1 L58.2 25.5 L58.4 29.1 L58.7 31.7 L59.0 33.6 L59.4 35.1 L61.2 34.7 L63.8 33.7 L66.7 33.0 L69.6 32.7 L72.3 33.0 L75.1 33.5 L78.8 34.0 L83.7 34.4 L89.9 35.0 L88.6 38.4 L86.0 41.6 L82.3 44.6 L78.0 47.0 L73.9 48.8 L70.6 50.2 L68.2 51.2 L66.5 52.1 L65.2 52.9 L66.1 54.5 L67.8 56.7 L69.4 59.2 L70.6 61.9 L71.2 64.5 L71.6 67.4 L72.2 71.0 L73.4 75.8 L74.7 82.0 L71.1 81.7 L67.2 80.3 L63.2 77.7 L59.6 74.3 L56.6 71.0 L54.3 68.3 L52.6 66.3 L51.2 64.9 L50.0 64.0 L48.8 65.4 L47.2 67.6 L45.3 70.0 L43.2 71.8 L40.8 73.2 L38.2 74.5 L35.0 76.2 L30.7 78.8 L25.3 82.0 L24.4 78.5 L24.6 74.3 L25.9 69.7 L27.9 65.2 L30.2 61.4 L32.1 58.4 L33.4 56.1 L34.3 54.4 L34.8 52.9 L33.1 52.2 L30.5 51.4 L27.7 50.3 L25.2 48.9 L23.2 47.1 L21.2 45.0 L18.5 42.4 L14.7 39.2 L10.1 35.0 L13.1 33.1 L17.1 32.0 L21.9 31.8 L26.8 32.3 L31.2 33.3 L34.6 34.1 L37.1 34.7 L39.1 35.0 L40.6 35.1 L40.8 33.2 L40.7 30.5 L40.9 27.5 L41.5 24.7 L42.6 22.2 L44.0 19.6 L45.5 16.3 L47.5 11.8Z'/%3E%3Cg stroke='%23b8381f' stroke-width='2' stroke-linecap='round' fill='none'%3E%3Cpath d='M50 50 L50.0 14.0'/%3E%3Cpath d='M50 50 L82.3 37.5'/%3E%3Cpath d='M50 50 L70.0 75.5'/%3E%3Cpath d='M50 50 L30.0 75.5'/%3E%3Cpath d='M50 50 L17.7 37.5'/%3E%3Cpath d='M50 50 L54 92'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+.contents_div .aut26-hero .aut26-ginkgo{ position:absolute; width:34px; height:35px; top:-16px; left:calc(50% + 176px); pointer-events:none; background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 4 100 102'%3E%3Cpath fill='%23f5bd3a' d='M50 70 C45 64 22 58 6 44 Q2 30 12 24 Q16 14 27 13 Q33 6 42 10 Q48 12 50 21 Q52 12 58 10 Q67 6 73 13 Q84 14 88 24 Q98 30 94 44 C78 58 55 64 50 70Z'/%3E%3Cpath fill='%23eaa82a' opacity='.5' d='M50 70 L50 21 Q52 12 58 10 Q67 6 73 13 Q84 14 88 24 Q98 30 94 44 C78 58 55 64 50 70Z'/%3E%3Cpath d='M50 68 C49 80 51 90 50 100' stroke='%23e2a024' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='50' cy='100.5' r='2.4' fill='%23e2a024'/%3E%3C/svg%3E") no-repeat center / contain; }
+.contents_div .aut26-hero .aut26-lead{ margin-top:18px; }
+.contents_div .aut26-hero .aut26-h1,
+.contents_div .aut26-hero .aut26-lead{ text-align:center; }
+
+/* 앵커 내비 — 히어로 아래 다크 띠 */
+.contents_div .aut26-nav{
+  display:grid; grid-template-columns:repeat(3,1fr); align-items:center;
+  padding:10px var(--gut); background:#3b2418;
+}
+.contents_div .aut26-nav__btn{
+  display:flex; align-items:center; justify-content:center; gap:7px;
+  min-height:44px; padding:0 8px;
+  font-size:var(--fs-nav); font-weight:600; line-height:1.4; letter-spacing:-0.03em;
+  color:#e9d6c2; background:none; border:0; border-radius:0;
+  transition:color .2s;
+}
+.contents_div .aut26-nav__btn + .aut26-nav__btn{ border-left:1px solid rgba(233,214,194,.28); }
+.contents_div .aut26-nav__num{
+  flex:0 0 auto; font-family:'GmarketSansBold','Pretendard',sans-serif; font-weight:400;
+  font-size:var(--fs-num); color:#f5a66d; line-height:1;
+}
+.contents_div .aut26-nav__btn.is-on{ color:#fff; font-weight:700; }
+
+/* ===== 힐링 vs 킬링 비교표 ===== */
+.contents_div .aut26-vs{ margin-top:28px; border-radius:10px; overflow:hidden; background:#fff; }
+.contents_div .aut26-vs__row{
+  display:grid; grid-template-columns:88px 1fr 1fr;
+  border-top:1px solid var(--c-line);
+}
+.contents_div .aut26-vs__row:first-child{ border-top:0; }
+.contents_div .aut26-vs__hd{
+  display:flex; align-items:center; justify-content:center; gap:7px;
+  min-height:58px; padding:8px 10px; color:#fff; font-size:var(--fs-item); font-weight:700; line-height:1.4;
+}
+.contents_div .aut26-vs__hd--safe{ background:var(--c-safe); }
+.contents_div .aut26-vs__hd--danger{ background:var(--c-maple); }
+.contents_div .aut26-vs__en{
+  font-family:'GmarketSansBold','Pretendard',sans-serif; font-weight:400;
+  font-size:var(--fs-lb); letter-spacing:0.01em; opacity:.85;
+}
+.contents_div .aut26-vs__blank{ background:#7f5135; }
+.contents_div .aut26-vs__lb{
+  display:flex; align-items:center; justify-content:center; padding:14px 12px; text-align:center;
+  font-size:var(--fs-item); font-weight:700; line-height:1.5; color:#fbeee2;
+  background:#7f5135;
+}
+.contents_div .aut26-vs__cell{ padding:14px 10px; font-size:var(--fs-item); line-height:1.5; }
+.contents_div .aut26-vs__cell--safe{ background:var(--c-safe-lt); }
+.contents_div .aut26-vs__cell--danger{ background:var(--c-danger-cell); }
+.contents_div .aut26-vs__item{ display:flex; align-items:flex-start; gap:8px; }
+.contents_div .aut26-vs__item + .aut26-vs__item{ margin-top:6px; }
+.contents_div .aut26-mark{
+  flex:0 0 auto; display:inline-flex; align-items:center; justify-content:center;
+  width:18px; height:18px; margin-top:2px; border-radius:50%;
+  font-size:var(--fs-check); font-weight:700; line-height:1; color:#fff;
+}
+.contents_div .aut26-mark--o{ background:var(--c-safe); }
+.contents_div .aut26-mark--x{ background:var(--c-maple); }
+
+.contents_div .aut26-vs__img{ position:relative; width:100%; margin-bottom:12px; overflow:hidden; background:#eee; border-radius:6px; }
+.contents_div .aut26-vs__img::before{ content:''; display:block; padding-top:75%; }
+.contents_div .aut26-vs__img img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; }
+
+/* 클리핑 이미지 — 원본 시트 한 장을 칸마다 잘라 보여줌 (원본 1448×1086, 칸 699×524) */
+.contents_div .aut26-clip{ position:absolute; inset:0; background-repeat:no-repeat; background-size:207.153% 207.252%; }
+.contents_div .aut26-clip--1{ background-position:1.869% 2.135%; }
+.contents_div .aut26-clip--2{ background-position:97.864% 2.135%; }
+.contents_div .aut26-clip--3{ background-position:1.869% 97.865%; }
+.contents_div .aut26-clip--4{ background-position:97.864% 97.865%; }
+.contents_div .aut26-clip--fs1{ background-size:207.648% 207.648%; background-position:1.843% 2.131%; }
+.contents_div .aut26-clip--fs2{ background-size:207.648% 207.648%; background-position:98.157% 2.131%; }
+.contents_div .aut26-clip--fs3{ background-size:207.648% 207.648%; background-position:1.776% 98.224%; }
+.contents_div .aut26-clip--fs4{ background-size:208.445% 208.445%; background-position:97.987% 97.876%; }
+/* ▼ 화재 힐링코스 원본 시트 — 경로 교체 시 이 url만 수정 */
+.contents_div .aut26-sheet-fire-safe{ background-image:url(
+  'img/가을철화재예방_힐링.webp'
+); }
+/* ▼ 화재 킬링코스 원본 시트 — 경로 교체 시 이 url만 수정 (예: url('img/fire_danger.webp')) */
+.contents_div .aut26-sheet-fire-danger{ background-image:url(
+  'img/가을철화재예방_킬링.webp'
+); }
+
+/* 안전 등산 클리핑 — 원본 시트 1586×992, 칸은 16:10 */
+.contents_div .aut26-sec--b .aut26-vs__img::before{ padding-top:62.5%; }
+.contents_div .aut26-clip--hd1{ background-size:206.510% 206.667%; background-position:1.834% 1.953%; }
+.contents_div .aut26-clip--hd2{ background-size:206.510% 206.667%; background-position:98.227% 1.953%; }
+.contents_div .aut26-clip--hd3{ background-size:206.942% 207.098%; background-position:1.928% 97.661%; }
+.contents_div .aut26-clip--hd4{ background-size:206.942% 207.098%; background-position:98.133% 97.661%; }
+.contents_div .aut26-clip--hs1{ background-size:205.228% 205.383%; background-position:0.935% 0.589%; }
+.contents_div .aut26-clip--hs2{ background-size:205.228% 205.383%; background-position:99.065% 0.589%; }
+.contents_div .aut26-clip--hs3{ background-size:203.542% 203.696%; background-position:0.545% 99.406%; }
+.contents_div .aut26-clip--hs4{ background-size:203.961% 204.115%; background-position:99.357% 99.407%; }
+/* ▼ 등산 킬링코스 원본 시트 — 경로 교체 시 이 url만 수정 */
+.contents_div .aut26-sheet-hike-danger{ background-image:url(
+  'img/가을철안전등산_킬링.webp'
+); }
+/* ▼ 등산 힐링코스 원본 시트 — 경로 교체 시 이 url만 수정 */
+.contents_div .aut26-sheet-hike-safe{ background-image:url(
+  'img/가을철안전등산_힐링.webp'
+); }
+
+/* 팁 박스 — 상단 탭 + 테두리 카드 */
+.contents_div .aut26-tip{ margin-top:24px; }
+.contents_div .aut26-tip__h3{
+  display:inline-flex; align-items:center; gap:9px; vertical-align:top;
+  padding:9px 20px 9px 14px; background:var(--c-safe); border-radius:8px 8px 0 0;
+  font-size:18px; font-weight:600; line-height:1.45; color:#fff;
+}
+.contents_div .aut26-tip__ck{
+  flex:0 0 auto; display:inline-flex; align-items:center; justify-content:center;
+  width:22px; height:22px; border-radius:50%; background:#fff;
+  font-family:'Pretendard',sans-serif; font-size:var(--fs-check); font-weight:700; color:var(--c-safe); line-height:1;
+}
+.contents_div .aut26-tip p{
+  padding:22px 28px; background:#fff; border:2px solid var(--c-safe); border-radius:0 10px 10px 10px;
+  font-size:var(--fs-body); line-height:1.8;
+}
+.contents_div .aut26-tip strong{ font-weight:700; color:var(--c-safe); }
+
+/* CTA */
+.contents_div .aut26-cta{
+  display:flex; align-items:center; justify-content:center; gap:10px;
+  width:fit-content; min-width:360px; min-height:56px; margin:24px auto 0; padding:12px 40px;
+  font-size:var(--fs-cta); font-weight:700; line-height:1.45; color:#fff;
+  background:var(--c-ink); border-radius:8px; transition:background-color .2s;
+}
+.contents_div .aut26-cta__arw{
+  font-family:'GmarketSansBold','Pretendard',sans-serif; font-weight:400; font-size:17px; line-height:1;
+}
+
+/* 단계 카드 */
+.contents_div .aut26-steps{ display:grid; grid-template-columns:1fr 1fr; margin-top:28px; background:#fff; border-radius:10px; overflow:hidden; }
+.contents_div .aut26-step{ padding:0 0 30px; }
+.contents_div .aut26-step:nth-child(2n){ border-left:1px solid var(--c-line); }
+.contents_div .aut26-step:nth-child(n+3){ border-top:1px solid var(--c-line); }
+/* 아이콘(투명 배경) 자리 */
+.contents_div .aut26-step__img{ position:relative; width:120px; height:120px; margin:26px auto 16px; }
+.contents_div .aut26-step__img img{ position:absolute; inset:0; width:100%; height:100%; object-fit:contain; object-position:center; }
+.contents_div .aut26-step__h3{
+  min-height:58px; padding:8px 30px; background:#7f5135;
+  justify-content:center; text-align:center;
+  display:flex; align-items:center; gap:10px;
+  font-size:var(--fs-h3); font-weight:700; line-height:1.45; color:#fff3e6;
+}
+.contents_div .aut26-step__num{
+  flex:0 0 auto; display:inline-flex; align-items:center; justify-content:center;
+  color:#f5a66d;
+  font-family:'GmarketSansBold','Pretendard',sans-serif; font-weight:400; font-size:1em; line-height:inherit;
+  position:relative; top:0.07em;  /* 숫자·한글 글자 중심 맞춤 */
+}
+.contents_div .aut26-step p{ padding:0 30px; font-size:var(--fs-body); line-height:1.8; text-align:center; }
+
+/* ===== 푸터 ===== */
+.contents_div .aut26-foot{ padding:70px var(--gut); background:var(--c-foot); border-top:2px solid #2e180c; color:#f7e6d6; text-align:center; }
+.contents_div .aut26-foot__pre{ font-size:var(--fs-lead); line-height:1.7; color:#e3c3a8; }
+.contents_div .aut26-foot__title{
+  margin-top:10px; font-size:var(--fs-foot); font-weight:800; line-height:1.4; letter-spacing:-0.01em; color:#fff;
+}
+.contents_div .aut26-foot__title em{ font-style:normal; color:#f5a66d; }
+.contents_div .aut26-foot__txt{ margin-top:16px; font-size:var(--fs-body); line-height:1.75; }
+.contents_div .aut26-tags{
+  display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-top:34px;
+}
+.contents_div .aut26-tags li{
+  padding:6px 10px; border:1px solid rgba(247,230,214,.35); border-radius:999px;
+  font-size:var(--fs-tag); line-height:1.35; color:#ecd2bd;
+}
+
+/* SR */
+.contents_div .aut26-sr{
+  position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+  overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0;
+}
+
+.contents_div .aut26-nav__btn:active{ color:#fff; }
+
+/* ===== 반응형 ===== */
+@media (prefers-reduced-motion:reduce){
+  .contents_div .aut26-scene .aut26-layer{ opacity:1 !important; transform:none !important; transition:none !important; animation:none !important; }
+  .contents_div .aut26-shine{ display:none; }
+}
+@media (hover:hover) and (pointer:fine){
+  .contents_div .aut26-nav__btn:hover{ color:#fff; }
+  .contents_div .aut26-cta:hover{ background:var(--c-maple); }
+}
+@media (max-width:767px){
+  .contents_div .aut26-wrap{ --fs-h1:28px; --fs-h2:29px; --fs-foot:28px; }
+}
+@media (max-width:600px){
+  .contents_div .aut26-wrap{
+    --fs-h1:22px; --fs-h2:22px; --fs-h3:17px; --fs-foot:21px;
+    --fs-kicker:10px; --fs-num:9.5px;
+    --fs-body:14px; --fs-lead:13.5px; --fs-item:14px; --fs-nav:12px; --fs-cta:14px;
+    --fs-tag:11px; --fs-lb:10px; --fs-check:10px;
+    --kick:22px;
+    line-height:1.6;
+  }
+  .contents_div .aut26-sec{ padding:40px 22px; }
+  .contents_div .aut26-sec--c{ padding-bottom:calc(19.14% + 24px); }
+  .contents_div .aut26-sec--a::before,
+  .contents_div .aut26-sec--b::before, .contents_div .aut26-sec--b::after{ height:240px; }
+  .contents_div .aut26-hero__body{ padding:40px 22px; }
+  .contents_div .aut26-intro-card{ padding:44px 18px 28px; border-radius:10px; }
+  .contents_div .aut26-hero .aut26-h1::before{ width:34px; height:34px; top:-30px; left:0; }
+  .contents_div .aut26-hero .aut26-h1::after{ width:64px; height:42px; top:-31px; right:-5px; }
+  .contents_div .aut26-hero .aut26-ginkgo{ width:21px; height:21px; top:-44px; left:auto; right:63px; }
+  .contents_div .aut26-foot{ padding:40px 22px; }
+  .contents_div .aut26-br--mo{ display:inline; }
+  .contents_div .aut26-br--web{ display:none; }
+
+  .contents_div .aut26-fig::before{ padding-top:75%; }
+  .contents_div .aut26-sec .aut26-fig{ margin-top:22px; border-radius:8px; }
+  .contents_div .aut26-kicker{ padding:2px 10px 0; }
+  .contents_div .aut26-h2{ margin-top:10px; line-height:1.4; }
+  .contents_div .aut26-lead{ margin-top:12px; line-height:1.6; }
+
+  .contents_div .aut26-nav{ padding:4px 22px; }
+  .contents_div .aut26-nav__btn{ gap:4px; min-height:44px; padding:0 4px; }
+
+  .contents_div .aut26-vs{ margin-top:22px; border-radius:8px; }
+  .contents_div .aut26-vs__row{ grid-template-columns:1fr 1fr; }
+  .contents_div .aut26-vs__blank{ display:none; }
+  .contents_div .aut26-vs__hd{ flex-direction:column; gap:2px; min-height:56px; padding:6px; }
+  .contents_div .aut26-vs__lb{ grid-column:1 / -1; justify-content:center; padding:7px 10px; line-height:1.6; }
+  .contents_div .aut26-vs__cell{ padding:11px 11px; line-height:1.6; }
+  .contents_div .aut26-vs__item{ gap:6px; }
+  .contents_div .aut26-mark{ width:16px; height:16px; margin-top:2.5px; }
+  .contents_div .aut26-vs__img{ margin-bottom:9px; border-radius:5px; }
+
+  .contents_div .aut26-tip{ margin-top:18px; }
+  .contents_div .aut26-tip__h3{ gap:7px; padding:7px 16px 7px 11px; border-radius:6px 6px 0 0; font-size:13px; font-weight:500; }
+  .contents_div .aut26-tip__ck{ width:16px; height:16px; }
+  .contents_div .aut26-tip p{ padding:18px 17px; border-width:1.5px; border-radius:0 8px 8px 8px; line-height:1.6; }
+
+  .contents_div .aut26-cta{ width:100%; min-width:0; min-height:48px; margin-top:18px; padding:10px 14px; }
+  .contents_div .aut26-cta__arw{ font-size:15px; }
+
+  .contents_div .aut26-steps{ grid-template-columns:1fr; margin-top:22px; border-radius:8px; }
+  .contents_div .aut26-step:nth-child(2n){ border-left:0; }
+  .contents_div .aut26-step:nth-child(n+2){ border-top:1px solid var(--c-line); }
+  .contents_div .aut26-step{ display:grid; grid-template-columns:72px 1fr; column-gap:14px; align-items:center; padding:0 17px 18px; }
+  .contents_div .aut26-step__h3{ grid-column:1 / -1; margin:0 -17px; }
+  .contents_div .aut26-step__img{ width:72px; height:72px; margin:16px 0 0; }
+  .contents_div .aut26-step__h3{ gap:8px; min-height:56px; padding:6px 17px; }
+  .contents_div .aut26-step p{ padding:0; margin-top:16px; line-height:1.6; text-align:left; }
+
+  .contents_div .aut26-foot__title{ margin-top:8px; line-height:1.42; }
+  .contents_div .aut26-foot__txt{ margin-top:12px; line-height:1.6; }
+  .contents_div .aut26-foot__pre{ line-height:1.6; }
+  .contents_div .aut26-tags{ gap:6px; margin-top:26px; }
+  .contents_div .aut26-tags li{ padding:5px 10px; }
+}
+@media (max-width:480px){
+  .contents_div .aut26-wrap{ --fs-nav:12.5px; }
+  .contents_div .aut26-sec{ padding-left:15px; padding-right:15px; }
+  .contents_div .aut26-hero__body{ padding-left:15px; padding-right:15px; }
+  .contents_div .aut26-foot{ padding-left:15px; padding-right:15px; }
+  .contents_div .aut26-nav{ padding-left:15px; padding-right:15px; }
+}
+@media (max-width:380px){
+  .contents_div .aut26-wrap{
+    --fs-h1:21px; --fs-h2:21.5px; --fs-h3:16px; --fs-foot:18px;
+    --fs-body:13.5px; --fs-lead:13px; --fs-item:13.5px; --fs-nav:11.5px; --fs-cta:13.5px;
+    --fs-tag:10.5px;
+  }
+  .contents_div .aut26-vs__cell{ padding:10px 9px; }
+  .contents_div .aut26-step{ grid-template-columns:64px 1fr; column-gap:12px; padding:0 14px 16px; }
+  .contents_div .aut26-step__h3{ padding:6px 14px; margin:0 -14px; }
+  .contents_div .aut26-step__img{ width:64px; height:64px; }
+  .contents_div .aut26-tip p{ padding:16px 14px; }
+  .contents_div .aut26-tip__h3{ font-size:12.5px; }
+}
+</style>
+
+<div class="contents_div">
+<!-- TEST: 확인 후 이 줄 삭제 --><div class="jngj-test-spacer" aria-hidden="true" style="height:900px;max-width:800px;margin:auto;display:grid;place-items:center;border:1px solid #cb9;background:linear-gradient(to top right,#0000 calc(50% - 1px),#cb9,#0000 calc(50% + 1px)),linear-gradient(to top left,#0000 calc(50% - 1px),#cb9,#0000 calc(50% + 1px)) #fffdef;font:700 16px sans-serif;color:#7E5E50"><b style="padding:10px 20px;background:#fffdef;border:1px solid #cb9;border-radius:99px">테스트 영역 · 아래로 스크롤 ↓</b></div>
+<div class="aut26-wrap">
+
+  <!-- 히어로 -->
+  <section class="aut26-hero" aria-labelledby="aut26-h1">
+    <div class="aut26-fig aut26-hero__fig aut26-scene">
+      <img class="aut26-layer aut26-layer--mount" src="img/히어로_산.webp" alt="" width="1600" height="1397" fetchpriority="high" loading="eager" decoding="async">
+      <img class="aut26-layer aut26-layer--tree" src="img/히어로_나무.webp" alt="" width="1600" height="1397" fetchpriority="high" loading="eager" decoding="async">
+      <img class="aut26-layer aut26-layer--path" src="img/히어로_바닥.webp" alt="" width="1600" height="1397" fetchpriority="high" loading="eager" decoding="async">
+      <img class="aut26-layer aut26-layer--squirrel" src="img/히어로_다람쥐.webp" alt="" width="1600" height="1397" fetchpriority="high" loading="eager" decoding="async">
+      <img class="aut26-layer aut26-layer--title" src="img/히어로_텍스트.webp" alt="더 즐거운 가을 나들이를 위한 가을철 안전수칙 — 단풍길을 걷는 다람쥐 등산객들" width="1600" height="1397" fetchpriority="high" loading="eager" decoding="async">
+      <img class="aut26-layer aut26-layer--sub" src="img/히어로_텍스트.webp" alt="" width="1600" height="1397" fetchpriority="high" loading="eager" decoding="async">
+      <img class="aut26-layer aut26-shine" src="img/히어로_텍스트.webp" alt="" width="1600" height="1397" fetchpriority="high" loading="eager" decoding="async">
+      <img class="aut26-layer aut26-layer--leaf1" src="img/히어로_텍스트.webp" alt="" width="1600" height="1397" fetchpriority="high" loading="eager" decoding="async">
+      <img class="aut26-layer aut26-layer--leaf2" src="img/히어로_텍스트.webp" alt="" width="1600" height="1397" fetchpriority="high" loading="eager" decoding="async">
+      <img class="aut26-layer aut26-layer--rock" src="img/히어로_텍스트.webp" alt="" width="1600" height="1397" fetchpriority="high" loading="eager" decoding="async">
+    </div>
+    <nav class="aut26-nav" aria-label="가을철 안전수칙 바로가기">
+      <button type="button" class="aut26-nav__btn" data-go="aut26-fire"><span class="aut26-nav__num">01</span>화재 예방</button>
+      <button type="button" class="aut26-nav__btn" data-go="aut26-hike"><span class="aut26-nav__num">02</span>안전 등산</button>
+      <button type="button" class="aut26-nav__btn" data-go="aut26-tick"><span class="aut26-nav__num">03</span>진드기 예방</button>
+    </nav>
+    <div class="aut26-hero__body">
+      <div class="aut26-intro-card">
+        <h1 class="aut26-h1" id="aut26-h1">당신의 가을은<br><span class="aut26-heal">‘힐링’</span>인가요 <span class="aut26-kill">‘킬링’</span>인가요?<span class="aut26-ginkgo" aria-hidden="true"></span></h1>
+        <p class="aut26-lead">알록달록 산을 물들인 단풍과 선선한 바람, 야외활동이 부쩍 늘어나는 시기입니다.<span class="aut26-br aut26-br--web"></span> 하지만 가을은 건조한 날씨와 큰 일교차, 빨라진 일몰 등으로 더 조심해야 하는 계절이기도 합니다.<span class="aut26-br aut26-br--web"></span> 작은 방심이 큰 사고로 이어질 수도 있는 아찔한 순간!<span class="aut26-br aut26-br--web"></span> 힐링과 킬링, 그 사이에서 여러분은 어떤 선택을 하실 건가요?</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 가을철 화재 예방 -->
+  <section class="aut26-sec aut26-sec--a" id="aut26-fire" aria-labelledby="aut26-fire-h2">
+    <div class="aut26-sec__inner">
+      <p class="aut26-kicker">가을철 화재 예방</p>
+      <h2 class="aut26-h2" id="aut26-fire-h2"><span class="aut26-hl">감성 불멍 <span class="aut26-vsw">vs</span> <em>대형 산불</em></span></h2>
+      <p class="aut26-lead"><span class="aut26-hl">가을은 건조한 바람이 불고 낙엽이 바싹 마르는 계절이에요. 어디서나 불조심을 기억하세요.<span class="aut26-br aut26-br--web"></span> 한순간의 방심이 낭만을 대형 산불로 만들 수도 있어요. 여러분의 가을 여행은 어느 코스인가요?</span></p>
+
+      <div class="aut26-vs" role="table" aria-label="가을철 화재 예방 힐링코스와 킬링코스 비교">
+        <div class="aut26-vs__row" role="row">
+          <span class="aut26-vs__blank" role="columnheader"><span class="aut26-sr">구분</span></span>
+          <span class="aut26-vs__hd aut26-vs__hd--safe" role="columnheader"><span class="aut26-vs__en">SAFE</span>힐링코스</span>
+          <span class="aut26-vs__hd aut26-vs__hd--danger" role="columnheader"><span class="aut26-vs__en">DANGER</span>킬링코스</span>
+        </div>
+        <div class="aut26-vs__row" role="row">
+          <span class="aut26-vs__lb" role="rowheader">장소&amp;환경</span>
+          <div class="aut26-vs__cell aut26-vs__cell--safe" role="cell">
+            <div class="aut26-vs__img"><span class="aut26-clip aut26-sheet-fire-safe aut26-clip--fs1" role="img" aria-label="지정된 캠핑장 화로대에서 불멍하는 가족"></span></div><p class="aut26-vs__item"><span class="aut26-mark aut26-mark--o" aria-hidden="true">O</span>지정된 캠핑장·야영장 화로대 사용</p></div>
+          <div class="aut26-vs__cell aut26-vs__cell--danger" role="cell">
+            <div class="aut26-vs__img"><span class="aut26-clip aut26-sheet-fire-danger aut26-clip--1" role="img" aria-label="금지 구역에서 불 피우기"></span></div><p class="aut26-vs__item"><span class="aut26-mark aut26-mark--x" aria-hidden="true">X</span>금지 구역에서 불 피우기</p></div>
+        </div>
+        <div class="aut26-vs__row" role="row">
+          <span class="aut26-vs__lb" role="rowheader">정리&amp;환기</span>
+          <div class="aut26-vs__cell aut26-vs__cell--safe" role="cell">
+            <div class="aut26-vs__img"><span class="aut26-clip aut26-sheet-fire-safe aut26-clip--fs2" role="img" aria-label="물을 준비하고 잔불씨까지 확인하는 모습"></span></div><p class="aut26-vs__item"><span class="aut26-mark aut26-mark--o" aria-hidden="true">O</span>불이 꺼진 후 마지막 잔불씨까지 확인</p></div>
+          <div class="aut26-vs__cell aut26-vs__cell--danger" role="cell">
+            <div class="aut26-vs__img"><span class="aut26-clip aut26-sheet-fire-danger aut26-clip--2" role="img" aria-label="텐트 안에서 불 피우기"></span></div><p class="aut26-vs__item"><span class="aut26-mark aut26-mark--x" aria-hidden="true">X</span>텐트, 차 안 등 밀폐된 곳에서 불 피우기</p></div>
+        </div>
+        <div class="aut26-vs__row" role="row">
+          <span class="aut26-vs__lb" role="rowheader">등산 시</span>
+          <div class="aut26-vs__cell aut26-vs__cell--safe" role="cell">
+            <div class="aut26-vs__img"><span class="aut26-clip aut26-sheet-fire-safe aut26-clip--fs3" role="img" aria-label="라이터·버너를 집에 두고 입산하는 등산객"></span></div><p class="aut26-vs__item"><span class="aut26-mark aut26-mark--o" aria-hidden="true">O</span>화기는 집에 두고 입산</p></div>
+          <div class="aut26-vs__cell aut26-vs__cell--danger" role="cell">
+            <div class="aut26-vs__img"><span class="aut26-clip aut26-sheet-fire-danger aut26-clip--3" role="img" aria-label="인화물질을 소지한 채 입산"></span></div><p class="aut26-vs__item"><span class="aut26-mark aut26-mark--x" aria-hidden="true">X</span>담배, 라이터, 버너 등 인화물질 소지·사용</p></div>
+        </div>
+        <div class="aut26-vs__row" role="row">
+          <span class="aut26-vs__lb" role="rowheader">논밭 소각</span>
+          <div class="aut26-vs__cell aut26-vs__cell--safe" role="cell">
+            <div class="aut26-vs__img"><span class="aut26-clip aut26-sheet-fire-safe aut26-clip--fs4" role="img" aria-label="진화장비를 갖추고 소각하는 농민"></span></div>
+            <p class="aut26-vs__item"><span class="aut26-mark aut26-mark--o" aria-hidden="true">O</span>바람이 없고 습도가 높은 날 소각</p>
+            <p class="aut26-vs__item"><span class="aut26-mark aut26-mark--o" aria-hidden="true">O</span>산불 확산 대비해 진화 장비 배치</p>
+          </div>
+          <div class="aut26-vs__cell aut26-vs__cell--danger" role="cell">
+            <div class="aut26-vs__img"><span class="aut26-clip aut26-sheet-fire-danger aut26-clip--4" role="img" aria-label="산림 인접 지역에서 낙엽 소각"></span></div><p class="aut26-vs__item"><span class="aut26-mark aut26-mark--x" aria-hidden="true">X</span>산림 인접 지역에서 신고 없이 소각</p></div>
+        </div>
+      </div>
+
+      <a class="aut26-cta" href="https://www.forest.go.kr/kfsweb/kfi/kfs/cms/cmsView.do?cmsId=FC_002253&amp;mn=AR04_01_01_06" target="_blank" rel="noopener" title="새 창 열림">산불방지 국민행동요령 자세히 보기<span class="aut26-cta__arw" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <!-- 02 가을철 안전 등산 -->
+  <section class="aut26-sec aut26-sec--b" id="aut26-hike" aria-labelledby="aut26-hike-h2">
+    <div class="aut26-sec__inner">
+      <p class="aut26-kicker">가을철 안전 등산</p>
+      <h2 class="aut26-h2" id="aut26-hike-h2">단풍 구경 <span class="aut26-vsw">vs</span> <em>위험한 고립</em></h2>
+      <p class="aut26-lead">아름다운 단풍을 제대로 만끽하기 위해서는 안전한 산행이 필수예요.</p>
+
+      <div class="aut26-vs" role="table" aria-label="가을철 안전 등산 힐링코스와 킬링코스 비교">
+        <div class="aut26-vs__row" role="row">
+          <span class="aut26-vs__blank" role="columnheader"><span class="aut26-sr">구분</span></span>
+          <span class="aut26-vs__hd aut26-vs__hd--safe" role="columnheader">힐링코스</span>
+          <span class="aut26-vs__hd aut26-vs__hd--danger" role="columnheader">킬링코스</span>
+        </div>
+        <div class="aut26-vs__row" role="row">
+          <span class="aut26-vs__lb" role="rowheader">옷차림</span>
+          <div class="aut26-vs__cell aut26-vs__cell--safe" role="cell">
+            <div class="aut26-vs__img"><span class="aut26-clip aut26-sheet-hike-safe aut26-clip--hs1" role="img" aria-label="얇은 옷 여러 개 겹쳐 입은 등산객"></span></div><p class="aut26-vs__item"><span class="aut26-mark aut26-mark--o" aria-hidden="true">O</span>얇은 옷 여러 개 겹쳐 입기</p></div>
+          <div class="aut26-vs__cell aut26-vs__cell--danger" role="cell">
+            <div class="aut26-vs__img"><span class="aut26-clip aut26-sheet-hike-danger aut26-clip--hd1" role="img" aria-label="얇은 옷차림으로 추위에 떠는 등산객"></span></div><p class="aut26-vs__item"><span class="aut26-mark aut26-mark--x" aria-hidden="true">X</span>일교차 고려 없는 얇은 옷</p></div>
+        </div>
+        <div class="aut26-vs__row" role="row">
+          <span class="aut26-vs__lb" role="rowheader">신발</span>
+          <div class="aut26-vs__cell aut26-vs__cell--safe" role="cell">
+            <div class="aut26-vs__img"><span class="aut26-clip aut26-sheet-hike-safe aut26-clip--hs2" role="img" aria-label="접지력 좋은 등산화"></span></div><p class="aut26-vs__item"><span class="aut26-mark aut26-mark--o" aria-hidden="true">O</span>접지력 좋고 목이 긴 등산화</p></div>
+          <div class="aut26-vs__cell aut26-vs__cell--danger" role="cell">
+            <div class="aut26-vs__img"><span class="aut26-clip aut26-sheet-hike-danger aut26-clip--hd2" role="img" aria-label="미끄러운 신발로 미끄러지는 모습"></span></div><p class="aut26-vs__item"><span class="aut26-mark aut26-mark--x" aria-hidden="true">X</span>밑창이 미끄러운 신발</p></div>
+        </div>
+        <div class="aut26-vs__row" role="row">
+          <span class="aut26-vs__lb" role="rowheader">등산코스</span>
+          <div class="aut26-vs__cell aut26-vs__cell--safe" role="cell">
+            <div class="aut26-vs__img"><span class="aut26-clip aut26-sheet-hike-safe aut26-clip--hs3" role="img" aria-label="지정 등산로 표지판 옆 산행"></span></div><p class="aut26-vs__item"><span class="aut26-mark aut26-mark--o" aria-hidden="true">O</span>정비된 지정 등산로 이용</p></div>
+          <div class="aut26-vs__cell aut26-vs__cell--danger" role="cell">
+            <div class="aut26-vs__img"><span class="aut26-clip aut26-sheet-hike-danger aut26-clip--hd3" role="img" aria-label="낙엽길·샛길을 걷는 등산객"></span></div><p class="aut26-vs__item"><span class="aut26-mark aut26-mark--x" aria-hidden="true">X</span>미끄러운 낙엽길, 샛길</p></div>
+        </div>
+        <div class="aut26-vs__row" role="row">
+          <span class="aut26-vs__lb" role="rowheader">등산시간</span>
+          <div class="aut26-vs__cell aut26-vs__cell--safe" role="cell">
+            <div class="aut26-vs__img"><span class="aut26-clip aut26-sheet-hike-safe aut26-clip--hs4" role="img" aria-label="해 지기 전 하산하는 등산객"></span></div><p class="aut26-vs__item"><span class="aut26-mark aut26-mark--o" aria-hidden="true">O</span>오후 4시쯤 하산 완료</p></div>
+          <div class="aut26-vs__cell aut26-vs__cell--danger" role="cell">
+            <div class="aut26-vs__img"><span class="aut26-clip aut26-sheet-hike-danger aut26-clip--hd4" role="img" aria-label="어두워진 뒤 손전등을 켜고 하산"></span></div><p class="aut26-vs__item"><span class="aut26-mark aut26-mark--x" aria-hidden="true">X</span>일몰을 고려하지 않은 무리한 산행</p></div>
+        </div>
+      </div>
+
+      <div class="aut26-tip">
+        <h3 class="aut26-tip__h3"><span class="aut26-tip__ck" aria-hidden="true">✓</span>남들이 잘 모르는 팁</h3>
+        <p>가을철 낙엽 밑에는 이슬이나 서리로 인해 <strong>‘음지 빙판’</strong>이 형성되어 있는 경우가 많아요. 낙엽 더미를 피해 걷고 하산 시에는 <strong>발목 쪽의 신발 끈을 더 단단하게 묶어 발이 앞으로 쏠리는 것을 막는 것</strong>이 좋아요.</p>
+      </div>
+
+      <a class="aut26-cta" href="https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?&amp;category=mtSafetyAccident&amp;actsHeaderTitle=%EC%82%B0%ED%96%89%EC%95%88%EC%A0%84%EC%82%AC%EA%B3%A0&amp;menuSn=4" target="_blank" rel="noopener" title="새 창 열림">산행안전사고 국민행동요령 자세히 보기<span class="aut26-cta__arw" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <!-- 03 가을 불청객 -->
+  <section class="aut26-sec aut26-sec--c" id="aut26-tick" aria-labelledby="aut26-tick-h2">
+    <div class="aut26-sec__inner">
+      <p class="aut26-kicker">가을 불청객</p>
+      <h2 class="aut26-h2" id="aut26-tick-h2"><em>진드기&amp;쯔쯔가무시</em><br>예방은 이렇게</h2>
+      <p class="aut26-lead"><strong>포인트는 입고, 뿌리고, 피하고 씻고!</strong><span class="aut26-br aut26-br--web"></span> 진드기와 쯔쯔가무시 노출을 최소화하고 의심 증상이 발견되면 신속하게 대응하세요.</p>
+
+      <ol class="aut26-steps">
+        <li class="aut26-step">
+          <h3 class="aut26-step__h3"><span class="aut26-step__num" aria-hidden="true">01</span>야외활동 전</h3>
+          <div class="aut26-step__img"><img src="img/야외활동 전.webp" alt="" loading="lazy" decoding="async"></div>
+          <p>긴 소매, 긴 바지, 장갑, 양말 등을 착용해 피부 노출을 줄이고 진드기 기피제 사용</p>
+        </li>
+        <li class="aut26-step">
+          <h3 class="aut26-step__h3"><span class="aut26-step__num" aria-hidden="true">02</span>야외활동 중</h3>
+          <div class="aut26-step__img"><img src="img/야외활동 중.webp" alt="" loading="lazy" decoding="async"></div>
+          <p>풀밭에 직접 앉거나 눕지 말고 돗자리 사용</p>
+        </li>
+        <li class="aut26-step">
+          <h3 class="aut26-step__h3"><span class="aut26-step__num" aria-hidden="true">03</span>야외활동 후</h3>
+          <div class="aut26-step__img"><img src="img/야외활동 후.webp" alt="" loading="lazy" decoding="async"></div>
+          <p>귀가 즉시 옷을 세탁하고 샤워하며 몸에 진드기나 가피(검은 딱지)가 있는지 확인</p>
+        </li>
+        <li class="aut26-step">
+          <h3 class="aut26-step__h3"><span class="aut26-step__num" aria-hidden="true">04</span>의심 증상 시</h3>
+          <div class="aut26-step__img"><img src="img/의심 증상 시.webp" alt="" loading="lazy" decoding="async"></div>
+          <p>발열, 오한, 두통 등 증상이 나타나면 즉시 의료기관을 방문해 야외활동 이력을 알리고 진료받기</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 푸터 -->
+  <footer class="aut26-foot">
+    <p class="aut26-foot__pre">짧아서 더 눈부시고 아쉬운 가을입니다.</p>
+    <h2 class="aut26-foot__title">완벽한 가을의 완성은 <em>‘안전’</em>입니다</h2>
+    <p class="aut26-foot__txt">나들이 전 가을 안전수칙을 다시 한번 확인하고<span class="aut26-br aut26-br--web"></span> 올가을도 오랫동안 기억될 좋은 추억만 남겨보세요.</p>
+    <ul class="aut26-tags" aria-label="관련 태그">
+      <li>#가을철안전수칙</li>
+      <li>#가을나들이</li>
+      <li>#산불예방</li>
+      <li>#불조심</li>
+      <li>#안전산행</li>
+      <li>#단풍산행</li>
+      <li>#음지빙판</li>
+      <li>#진드기예방</li>
+      <li>#쯔쯔가무시</li>
+      <li>#야외활동</li>
+    </ul>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var root = document.querySelector('.contents_div .aut26-wrap');
+  if(!root) return;
+  var btns = root.querySelectorAll('.aut26-nav__btn');
+  var secs = [];
+  for(var i=0;i<btns.length;i++){
+    (function(btn){
+      var sec = root.querySelector('#' + btn.getAttribute('data-go'));
+      if(!sec) return;
+      secs.push({ btn:btn, sec:sec });
+      btn.addEventListener('click', function(){
+        var y = sec.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop);
+        try{ window.scrollTo({ top:y, behavior:'smooth' }); }catch(e){ window.scrollTo(0, y); }
+      });
+    })(btns[i]);
+  }
+  if(!secs.length) return;
+
+  var ticking = false;
+  function update(){
+    ticking = false;
+    var line = window.innerHeight * 0.35, cur = null;
+    for(var j=0;j<secs.length;j++){
+      var r = secs[j].sec.getBoundingClientRect();
+      if(r.top <= line && r.bottom > line){ cur = secs[j]; }
+    }
+    for(var k=0;k<secs.length;k++){
+      if(secs[k] === cur){ secs[k].btn.classList.add('is-on'); secs[k].btn.setAttribute('aria-current','true'); }
+      else{ secs[k].btn.classList.remove('is-on'); secs[k].btn.removeAttribute('aria-current'); }
+    }
+  }
+  window.addEventListener('scroll', function(){
+    if(!ticking){ ticking = true; window.requestAnimationFrame(update); }
+  }, { passive:true });
+  update();
+})();
+
+/* 히어로 레이어 애니메이션 */
+(function(){
+  var scene = document.querySelector('.contents_div .aut26-scene');
+  if(!scene) return;
+  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  scene.classList.add('is-pre');
+  function play(){
+    scene.classList.add('is-play');
+    window.requestAnimationFrame(function(){
+      window.requestAnimationFrame(function(){ scene.classList.remove('is-pre'); });
+    });
+    window.setTimeout(function(){
+      scene.classList.remove('is-play');
+      scene.classList.add('is-done');
+    }, 2800);
+  }
+  /* 이미지가 모두 로드되고 + 화면에 보일 때 재생 (로드가 늦으면 3초 뒤 강제 재생) */
+  var imgs = scene.querySelectorAll('.aut26-layer'), left = imgs.length, seen = false, started = false;
+  function tryPlay(){ if(!started && seen && left <= 0){ started = true; play(); } }
+  function done(){ left--; tryPlay(); }
+  for(var n=0;n<imgs.length;n++){
+    if(imgs[n].complete){ left--; }
+    else{ imgs[n].addEventListener('load', done); imgs[n].addEventListener('error', done); }
+  }
+  window.setTimeout(function(){ left = 0; tryPlay(); }, 3000);
+  if(!('IntersectionObserver' in window)){ seen = true; tryPlay(); return; }
+  var io = new IntersectionObserver(function(entries){
+    for(var i=0;i<entries.length;i++){
+      if(entries[i].isIntersecting){ io.disconnect(); seen = true; tryPlay(); break; }
+    }
+  }, { threshold:0.3 });
+  io.observe(scene);
+})();
+</script>
