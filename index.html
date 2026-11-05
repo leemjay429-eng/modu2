@@ -1,0 +1,1049 @@
+<!-- 모바일 좌우 패딩 16 -->
+<script>
+if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
+  var s=document.createElement('style');
+  s.textContent='body{margin:0}@media(max-width:700px){.contents_div{padding:0 16px}}@media(max-width:576px){.contents_div br{display:inline!important}}';
+  document.head.appendChild(s);
+}
+</script>
+<script>
+(function(){
+  try{
+    if(!document.querySelector('meta[name="viewport"]')){
+      var m=document.createElement('meta');
+      m.setAttribute('name','viewport');
+      m.setAttribute('content','width=device-width, initial-scale=1');
+      (document.head||document.getElementsByTagName('head')[0]||document.documentElement).appendChild(m);
+    }
+  }catch(e){}
+})();
+</script>
+
+<div class="contents_div">
+<style>
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');font-weight:100;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2');font-weight:200;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');font-weight:300;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');font-weight:800;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2') format('woff2');font-weight:900;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Thin.woff2') format('woff2');font-weight:100;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-2ExtraLight.woff2') format('woff2');font-weight:200;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2') format('woff2');font-weight:300;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');font-weight:800;font-display:swap}
+@font-face{font-family:'Paperozi';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2') format('woff2');font-weight:900;font-display:swap}
+
+/* ===== 토큰 ===== */
+.contents_div .gst-wrap{
+  container-type:inline-size;
+  /* Title */
+  --fs-h2:clamp(20px, min(23px + (100cqi - 388px) * 0.02185, 22px + (100cqi - 343px) * 0.02223, 20px + (100cqi - 318px) * 0.08), 32px); --fs-foot:31px; --fs-h3:21px;
+  /* Body */
+  --fs-body:17px; --fs-lead:16px; --fs-info:16px; --fs-cta:16px; --fs-arrow:17px;
+  --fs-nav:16px; --fs-kicker:15px; --fs-num:14px; --fs-tagcap:13.5px;
+  --fs-label:13px; --fw-label:700; --fs-check:11px; --fs-caption:11px; --fs-hash:12.5px;
+  /* 간격 */
+  --gut:clamp(22px, 6.25%, 50px);
+  --band:clamp(40px, calc(7.9% + 6.8px), 70px);
+  --card-py:30px; --card-px:28px;
+  --kick:32px; --lb-h:24px; --lb-px:11px;
+  --img-ratio:62.5%;
+  /* 색 — 이전 2호선 페이지와 같은 블루 계열 */
+  --c-ink:#1b2436; --c-sub:#4a5568; --c-line:#cfdbef;
+  --c-blue:#2160e0; --c-blue-l:#8fb3f5; --c-deep:#163a86; --c-navy:#172f63;
+  --c-bg1:#edf3fc; --c-bg2:#dce7f8; --c-bg3:#f4f1ea; --c-foot:#22345e;
+  --c-track:#e3eaf6;
+
+  max-width:800px; margin:0 auto;
+  font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  font-size:var(--fs-body); line-height:1.6; letter-spacing:-0.02em;
+  color:var(--c-ink); word-break:keep-all;
+}
+.contents_div .gst-wrap, .contents_div .gst-wrap *,
+.contents_div .gst-wrap *::before, .contents_div .gst-wrap *::after{ box-sizing:border-box; }
+.contents_div .gst-wrap :where(h1,h2,h3,p,ul,ol,li,dl,dt,dd,figure,table){ margin:0; padding:0; }
+.contents_div .gst-wrap :where(ul,ol){ list-style:none; }
+.contents_div .gst-wrap :where(img){ max-width:100%; display:block; border:0; }
+.contents_div .gst-wrap :where(h1,h2,h3){ font-family:'Paperozi','Pretendard',sans-serif; word-break:keep-all; }
+.contents_div .gst-wrap :where(table){ border-collapse:collapse; width:100%; }
+
+/* 조건부 줄바꿈 */
+.contents_div .gst-br::before{ content:'\A'; white-space:pre; }
+.contents_div .gst-br--mo,
+.contents_div .gst-br--mo-wide,
+.contents_div .gst-br--m420{ display:none; }
+
+/* ===== 섹션 ===== */
+.contents_div .gst-sec{ width:100%; padding:var(--band) var(--gut); }
+.contents_div .gst-sec--1{ background:var(--c-bg2); }
+.contents_div .gst-sec--2{ background:var(--c-bg1); border-top:1px solid #c2d2ed; }
+.contents_div .gst-sec--3{ background:var(--c-bg3); border-top:1px solid #e2dccf; }
+.contents_div .gst-sec--4{ background:var(--c-navy); color:#fff; }
+
+/* 이미지 */
+.contents_div .gst-fig{ position:relative; width:100%; overflow:hidden; background:#eee; }
+.contents_div .gst-fig::before{ content:''; display:block; padding-top:var(--img-ratio); }
+.contents_div .gst-fig img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; }
+
+/* ===== 히어로 (이전 페이지 그대로) ===== */
+.contents_div .gst-hero{ position:relative; aspect-ratio:1600 / 1033.96; overflow:hidden; background:#eee; }   /* 800 기준 516.98px(내비 윗변 369 + 흰 띠 147.98) — 폭이 줄면 같은 비율 */
+.contents_div .gst-hero-stage{ position:absolute; top:0; left:0; width:100%; }
+.contents_div .gst-hero-stage::before{ content:''; display:block; padding-top:80.4375%; }  /* 원본 1600×1287 */
+.contents_div .gst-hero-stage img,
+.contents_div .gst-hero-board{ position:absolute; inset:0; width:100%; height:100%; }
+.contents_div .gst-hero-stage img{ object-fit:cover; object-position:center top; }
+.contents_div .gst-hero-board{ transform-origin:45% 4%; }   /* 클립 위치를 축으로 흔들림 */
+
+/* 히어로 모션 — 배경 줌아웃 → 종이 떨어지며 흔들림 → 문구 등장 → 잔잔한 흔들림 반복 */
+@keyframes gst-hero-bg{ from{ transform:scale(1.12); } to{ transform:scale(1); } }
+@keyframes gst-hero-bg-mo{ from{ transform:scale(1.3); } to{ transform:scale(1); } }   /* 모바일: 더 크게 시작 */
+@keyframes gst-hero-drop{
+  0%{ transform:translateY(-38%) rotate(-7deg); opacity:0; }
+  45%{ opacity:1; }
+  62%{ transform:translateY(1.5%) rotate(2.2deg); }
+  80%{ transform:translateY(-.4%) rotate(-1deg); }
+  100%{ transform:translateY(0) rotate(0); opacity:1; }
+}
+@keyframes gst-hero-w1{
+  0%{ -webkit-mask-position:65.2% 0; mask-position:65.2% 0; }
+  92%{ -webkit-mask-position:34.6% 0; mask-position:34.6% 0; }
+  100%{ -webkit-mask-position:0 0; mask-position:0 0; }
+}
+@keyframes gst-hero-w2{
+  0%{ -webkit-mask-position:74.03% 0; mask-position:74.03% 0; }
+  92%{ -webkit-mask-position:27.45% 0; mask-position:27.45% 0; }
+  100%{ -webkit-mask-position:0 0; mask-position:0 0; }
+}
+@keyframes gst-hero-shine{
+  0%{ transform:translateX(-120%) skewX(-18deg); opacity:1; }
+  20%{ transform:translateX(560%) skewX(-18deg); opacity:1; }
+  20.01%,100%{ transform:translateX(560%) skewX(-18deg); opacity:0; }
+}
+@keyframes gst-hero-sway{ 0%,100%{ transform:rotate(-.2deg); } 50%{ transform:rotate(.9deg); } }
+@keyframes gst-hero-txt{
+  0%{ -webkit-mask-position:100% 0; mask-position:100% 0; transform:translateX(-1.5%); }
+  100%{ -webkit-mask-position:0 0; mask-position:0 0; transform:translateX(0); }
+}
+.contents_div .gst-hero.is-anim .gst-hero-bg{ transform-origin:50% 35%; animation:gst-hero-bg 6s cubic-bezier(.2,.6,.3,1) both paused; }
+.contents_div .gst-hero.is-anim .gst-hero-board{ animation:gst-hero-drop 1.4s cubic-bezier(.3,.7,.4,1) .3s both paused, gst-hero-sway 5s ease-in-out 1.7s infinite paused; }
+.contents_div .gst-hero.is-anim .gst-hero-txt--top{
+  -webkit-mask-image:linear-gradient(100deg, #000 40%, transparent 60%); mask-image:linear-gradient(100deg, #000 40%, transparent 60%);
+  -webkit-mask-size:300% 100%; mask-size:300% 100%; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat;
+  animation:gst-hero-txt 1.1s cubic-bezier(.45,.05,.3,1) 1.2s both paused;
+}
+/* 문구 한 장(히어로텍스트.webp)을 기울기(10°)에 맞춰 세 띠로 잘라 각각 움직임 */
+.contents_div .gst-hero-txt--top{ clip-path:polygon(-123.91% -159.67%, 159.22% -221.74%, 190.65% -0.12%, -92.48% 61.95%); }
+.contents_div .gst-hero-txt--l1{ clip-path:polygon(-92.48% 61.95%, 190.65% -0.12%, 192.20% 10.75%, -90.94% 72.82%); }
+.contents_div .gst-hero-txt--l2{ clip-path:polygon(-90.94% 72.82%, 192.20% 10.75%, 218.90% 199.05%, -64.23% 261.11%); }
+.contents_div .gst-hero-shine{
+  position:absolute; left:27.57%; top:21.53%; width:37.61%; height:7.59%;
+  border-radius:3.7% / 22.5%; overflow:hidden; transform:rotate(-10deg); pointer-events:none;
+}
+.contents_div .gst-hero-shine::before{
+  content:''; position:absolute; top:-20%; bottom:-20%; left:0; width:22%;
+  background:linear-gradient(100deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.65) 50%, rgba(255,255,255,0) 100%);
+  transform:translateX(-120%) skewX(-18deg); opacity:0;
+}
+.contents_div .gst-hero.is-anim .gst-hero-shine::before{ animation:gst-hero-shine 3s ease-in-out 2.4s infinite paused; }
+.contents_div .gst-hero.is-play .gst-hero-shine::before{ animation-play-state:running; }
+.contents_div .gst-hero.is-anim .gst-hero-txt--l1,
+.contents_div .gst-hero.is-anim .gst-hero-txt--l2{
+  -webkit-mask-image:linear-gradient(80deg, #000 49%, transparent 51%); mask-image:linear-gradient(80deg, #000 49%, transparent 51%);
+  -webkit-mask-size:200% 100%; mask-size:200% 100%; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat;
+}
+.contents_div .gst-hero.is-anim .gst-hero-txt--l1{ animation:gst-hero-w1 .54s cubic-bezier(.35,.1,.6,1) 1.2s both paused; }
+.contents_div .gst-hero.is-anim .gst-hero-txt--l2{ animation:gst-hero-w2 .75s cubic-bezier(.35,.1,.6,1) 1.2s both paused; }
+.contents_div .gst-hero.is-play .gst-hero-bg,
+.contents_div .gst-hero.is-play .gst-hero-board,
+.contents_div .gst-hero.is-play .gst-hero-txt{ animation-play-state:running; }
+
+/* 앵커 내비 — 역 표지판 느낌의 각진 칸 (이전 페이지 그대로, 4칸) */
+.contents_div .gst-nav{
+  position:absolute; left:0; right:0; bottom:0; z-index:1;
+  display:grid; grid-template-columns:repeat(4,1fr); align-content:center; gap:1cqi;
+  height:18.4975cqi; padding:0 6.25cqi; background:rgba(255,255,255,.36);
+}
+.contents_div .gst-nav-btn{
+  appearance:none; -webkit-appearance:none; cursor:pointer; margin:0;
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.75cqi;
+  height:8.55cqi; padding:0 4px;
+  background:#293f70; color:#fff;
+  border:0; border-top:2px solid var(--c-blue-l); border-radius:3px;
+  font-family:inherit; font-size:2cqi; font-weight:700; line-height:1.4; letter-spacing:-0.03em;
+  text-align:center; word-break:keep-all;
+  transition:background .2s, border-color .2s, color .2s;
+}
+.contents_div .gst-nav-num{ font-size:1.75cqi; font-weight:700; line-height:1; color:var(--c-blue-l); }
+.contents_div .gst-nav-btn[aria-current="true"]{ background:#fff; color:var(--c-navy); border-top-color:var(--c-blue); }
+.contents_div .gst-nav-btn[aria-current="true"] .gst-nav-num{ color:var(--c-blue); }
+.contents_div .gst-nav-btn:active{ background:var(--c-deep); }
+
+/* ===== 인트로 ===== */
+.contents_div .gst-intro{ background:var(--c-navy); color:#fff; }
+.contents_div .gst-wrap h1.gst-sr{
+  position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+  overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0;
+}
+.contents_div .gst-intro-lead{ font-size:var(--fs-lead); color:#dbe6fb; text-align:center; }
+.contents_div .gst-intro-lead strong{ color:#fff; font-weight:700; }
+.contents_div .gst-facts{ display:grid; grid-template-columns:1fr 1fr; margin-top:40px; border-top:1px solid rgba(255,255,255,.22); border-bottom:1px solid rgba(255,255,255,.22); }
+.contents_div .gst-facts > div{ padding:18px 0; }
+.contents_div .gst-facts > div + div{ padding-left:24px; border-left:1px solid rgba(255,255,255,.22); }
+.contents_div .gst-facts dt{ font-size:var(--fs-tagcap); font-weight:600; line-height:1.3; color:#c3d5f8; }
+.contents_div .gst-facts dd{ margin-top:6px; font-size:var(--fs-h2); font-weight:800; line-height:1.2; letter-spacing:-0.03em; color:#fff; white-space:nowrap; }
+.contents_div .gst-facts dd small{ display:block; margin-top:6px; font-size:var(--fs-tagcap); font-weight:500; letter-spacing:-0.02em; color:#c3d5f8; white-space:normal; }
+
+/* ===== 공통 제목 ===== */
+.contents_div .gst-kicker{ --pin:calc((var(--kick) + 8px) * 1.1); display:flex; align-items:flex-start; justify-content:center; gap:10px; position:relative; top:3px; }
+.contents_div .gst-kicker-pin{
+  position:relative; z-index:2; flex:0 0 auto; width:var(--pin); height:calc(var(--pin) * 1.21);
+}
+.contents_div .gst-kicker-pin::before{
+  content:''; position:absolute; left:0; top:0; width:var(--pin); height:var(--pin);
+  background:#fff; border:1.5px solid var(--c-blue); border-radius:50% 50% 12% 50%; transform:rotate(45deg);
+}
+.contents_div .gst-kicker-pin::after{
+  content:''; position:absolute; left:50%; top:calc(var(--pin) / 2); width:calc(var(--pin) * .64); height:calc(var(--pin) * .64);
+  transform:translate(-50%, -50%); background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232160e0' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7.5 3h9A3 3 0 0 1 19.5 6v9a2.5 2.5 0 0 1-2.5 2.5H7A2.5 2.5 0 0 1 4.5 15V6A3 3 0 0 1 7.5 3z'/%3E%3Cpath d='M10 5.2h4'/%3E%3Crect x='7' y='7' width='10' height='4.5' rx='1'/%3E%3Ccircle cx='8.5' cy='14.3' r='.9' fill='%232160e0'/%3E%3Ccircle cx='15.5' cy='14.3' r='.9' fill='%232160e0'/%3E%3Cpath d='M8.5 18l-1.8 4.3M15.5 18l1.8 4.3M8 20.2h8'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+@keyframes gst-pin-bounce{
+  0%,36%,100%{ transform:translateY(0); }
+  8%{ transform:translateY(calc(var(--pin) * -0.28)); }
+  16%{ transform:translateY(0); }
+  24%{ transform:translateY(calc(var(--pin) * -0.16)); }
+}
+.contents_div .gst-sec.is-in .gst-kicker-pin{ animation:gst-pin-bounce 2.6s cubic-bezier(.3,0,.4,1) .2s infinite; }
+.contents_div .gst-kicker-txt{
+  position:relative; z-index:1; margin-top:calc((var(--pin) - var(--kick)) / 2 + 5px); margin-left:calc(var(--pin) / -2 - 10px);
+  display:inline-flex; align-items:center; height:var(--kick); padding:0 16px 0 calc(var(--pin) / 2 + 9px);
+  background:var(--c-blue); border:1px solid var(--c-blue); border-radius:3px; color:#fff;
+  font-size:var(--fs-kicker); font-weight:700; line-height:1.2; letter-spacing:0.01em;
+}
+.contents_div .gst-h2{
+  margin-top:14px; text-align:center; font-size:var(--fs-h2); font-weight:800; line-height:1.35; letter-spacing:-0.01em; color:var(--c-navy);
+}
+.contents_div .gst-h3{ font-size:var(--fs-h3); font-weight:700; line-height:1.45; color:var(--c-deep); }
+.contents_div .gst-lead{ margin-top:16px; text-align:center; font-size:var(--fs-lead); color:var(--c-sub); }
+.contents_div .gst-lead strong{ color:var(--c-blue); font-weight:800; }
+.contents_div .gst-lead,
+.contents_div .gst-intro-lead{ text-wrap:pretty; }   /* 마지막 줄에 한 어절만 떨어지지 않게 */
+.contents_div .gst-lead strong{ white-space:nowrap; }   /* 숫자 쪼개짐 방지 */
+
+/* ===== 01 역명 제정 ===== */
+.contents_div .gst-stat{
+  display:grid; grid-template-columns:auto 1fr; align-items:center; gap:32px;
+  margin-top:28px; padding:var(--card-py) var(--card-px); background:#fff; border-top:2px solid var(--c-navy);
+}
+.contents_div .gst-stat-lb{ font-size:var(--fs-info); font-weight:700; line-height:1.4; color:var(--c-deep); }
+.contents_div .gst-stat-val{ margin-top:2px; font-size:var(--fs-h2); font-weight:800; line-height:1.2; letter-spacing:-0.03em; color:var(--c-blue); white-space:nowrap; font-variant-numeric:tabular-nums; }
+.contents_div .gst-part-bar{ display:flex; height:14px; border-radius:3px; overflow:hidden; }
+.contents_div .gst-part-bar span:first-child{ width:81.96%; background:var(--c-blue); }
+.contents_div .gst-part-bar span:last-child{ width:18.04%; background:var(--c-blue-l); }
+.contents_div .gst-part{ display:flex; flex-wrap:wrap; gap:4px 20px; margin-top:12px; }
+.contents_div .gst-part > div{ display:flex; align-items:center; gap:6px; font-size:var(--fs-info); line-height:1.5; }
+.contents_div .gst-part dt{ display:flex; align-items:center; gap:6px; color:var(--c-sub); font-size:var(--fs-label); font-weight:600; }
+.contents_div .gst-part dt::before{ content:''; width:8px; height:8px; border-radius:2px; background:var(--c-blue); }
+.contents_div .gst-part > div:nth-child(2) dt::before{ background:var(--c-blue-l); }
+.contents_div .gst-part dd{ font-weight:800; color:var(--c-navy); }
+
+/* 확정 과정 */
+.contents_div .gst-steps{ display:grid; grid-template-columns:repeat(4,1fr); gap:28px; margin-top:24px; }
+.contents_div .gst-steps > li{
+  position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px;
+  min-height:76px; padding:12px 8px; background:var(--c-navy); color:#fff; border-radius:6px; text-align:center;
+  font-size:var(--fs-info); font-weight:700; line-height:1.4;
+}
+.contents_div .gst-steps > li:last-child{ background:var(--c-blue); }
+.contents_div .gst-steps > li + li::before{   /* 단계 사이 화살표 */
+  content:''; position:absolute; left:-21px; top:50%; width:14px; height:14px; margin-top:-7px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232160e0' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 4l8 8-8 8'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+.contents_div .gst-steps time{ display:block; font-size:var(--fs-label); font-weight:600; line-height:1.3; color:var(--c-blue-l); }
+
+/* ===== 02 역명 소개 ===== */
+/* 상단 배경: 섹션 맨 위부터 첫 블록 세로 중앙까지 (높이는 스크립트가 실측) — 역명 소개: 노선도 / 흥미 포인트: 첫 번째 포인트 */
+.contents_div .gst-sec--2,
+.contents_div .gst-sec--3{ position:relative; isolation:isolate; }
+.contents_div .gst-sec-bg{
+  position:absolute; left:0; right:0; top:0; height:50%; z-index:-1; overflow:hidden; background:#eee;
+  -webkit-mask-image:linear-gradient(to bottom, #000 45%, transparent 100%); mask-image:linear-gradient(to bottom, #000 45%, transparent 100%);   /* 하단으로 갈수록 투명 */
+}
+.contents_div .gst-sec-bg img{ width:100%; height:100%; object-fit:cover; object-position:center top; }   /* 이미지 위쪽 기준 */
+.contents_div .gst-sec--2 .gst-sec-bg img{ position:absolute; top:0; left:50%; width:auto; min-width:100%; max-width:none; height:100%; transform:translateX(-50%); object-fit:cover; object-position:center top; }   /* 역명 소개: 높이에 맞추고 가로 가운데 — 폭보다 좁으면 폭을 꽉 채움(위쪽 기준) */
+.contents_div .gst-sec--3 .gst-sec-bg{
+  container-type:size; background:none;
+  --t:min(130px, 16.25vw);   /* 위쪽 진한 구간: 웹(800) 기준 130px — 폭이 줄면 같은 비율 */
+  --m:linear-gradient(to bottom, #000 0, rgba(0,0,0,.84) calc(var(--t) * .5), rgba(0,0,0,.75) var(--t), rgba(0,0,0,.714) calc(var(--t) * 1.5), rgba(0,0,0,.714) 45%, transparent 100%);   /* 맨 위 28% → 아래로 자연스럽게 20%로, 이후 하단으로 갈수록 투명 */
+  -webkit-mask-image:var(--m); mask-image:var(--m);
+}
+.contents_div .gst-sec--3 .gst-sec-bg img{   /* 흥미 포인트: 히어로배경(1600×1287) 재사용 — 원본 기준 윗부분 270px 잘라내고 불투명도 28%(마스크로 위 130px 지나면 20%) */
+  --h:max(100cqw * 0.80438, 100cqh * 1.26549);
+  position:absolute; left:50%; top:calc(var(--h) * -0.20979);
+  width:calc(var(--h) * 1.24320); height:var(--h); max-width:none;
+  transform:translateX(-50%); object-fit:fill; opacity:.28;
+}
+.contents_div .gst-map{ margin-top:28px; }
+.contents_div .gst-map{ position:relative; }
+.contents_div .gst-map-src{   /* 출처 — 노선도 오른쪽 위, 크게 보기 버튼과 같은 간격 */
+  position:absolute; right:12px; top:12px; z-index:1; padding:5px 8px 3px; border-radius:3px;   /* 웹: 글자 1px 아래로 */
+  background:rgba(0,0,0,.5); color:#fff; font-size:var(--fs-caption); font-weight:400; line-height:1.35; pointer-events:none;
+}
+.contents_div .gst-map .gst-fig{ border:1px solid var(--c-blue-l); }
+.contents_div .gst-fig--map{ cursor:zoom-in; }
+.contents_div .gst-fig--map::before{ display:none; }   /* 원본 비율 그대로 — 이미지 높이가 프레임 높이 (웹·모바일 동일) */
+.contents_div .gst-mapbox{ position:relative; container-type:inline-size; }
+.contents_div .gst-mapbox .gst-map-img,
+.contents_div .gst-mapbox .gst-lightbox-img{ position:static; inset:auto; display:block; width:100%; height:auto; object-fit:fill; }
+/* 역명 라벨 — 노선도 번호 칸 위에 겹쳐 표시. 위치는 이미지 기준 %(--x, --y = 번호 칸 중심) */
+.contents_div .gst-map-labels{ position:absolute; inset:0; margin:0; padding:0; list-style:none; pointer-events:none; }
+.contents_div .gst-map-labels li{
+  position:absolute; left:var(--x); top:var(--y); transform:translate(-50%, -50%);
+  display:flex; align-items:center; justify-content:center;
+  min-width:4.1cqi; min-height:2.75cqi;   /* 원본 번호 칸(테두리 포함 39×26 / 968) 보다 작아지지 않게 — 밑의 번호 칸이 비치지 않음 */
+  padding:.22em .36em; background:#e2232c; color:#fff; border:1px solid #fff; border-radius:max(3px, .6cqi);
+  box-shadow:0 1px 3px rgba(0,0,0,.28);
+  font-size:max(10px, 1.25cqi); font-weight:700; line-height:1.15; letter-spacing:-0.04em;
+  text-align:center; white-space:nowrap;
+}
+.contents_div .gst-zoom-btn{
+  position:absolute; right:12px; bottom:12px; z-index:1;
+  display:inline-flex; align-items:center; gap:6px; height:34px; padding:0 14px 0 12px;
+  background:rgba(23,47,99,.88); color:#fff; border-radius:3px;
+  font-size:var(--fs-label); font-weight:700; line-height:1;
+}
+.contents_div .gst-zoom-btn::before{ content:''; width:16px; height:16px; background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round'%3E%3Ccircle cx='10.5' cy='10.5' r='6.5'/%3E%3Cpath d='M15.5 15.5L20 20M10.5 7.5v6M7.5 10.5h6'/%3E%3C/svg%3E") center/contain no-repeat; }
+.contents_div .gst-fig--map:focus-visible{ outline:3px solid var(--c-blue); outline-offset:2px; }
+
+/* 확대 보기 */
+.contents_div .gst-lightbox{
+  position:fixed; inset:0; z-index:99999; display:none;
+  background:rgba(10,20,44,.94); overflow:auto; overscroll-behavior:contain; -webkit-overflow-scrolling:touch;
+}
+.contents_div .gst-lightbox.is-open{ display:block; }
+.contents_div .gst-lightbox:focus{ outline:0; }
+.contents_div .gst-lightbox{ --ar:1.4383; }   /* 노선도 가로÷세로 — 스크립트가 실제 이미지 값으로 덮어씀 */
+.contents_div .gst-lightbox-stage{ position:relative; box-sizing:border-box; width:min(100%, calc((100vh - 80px) * var(--ar) + 32px)); margin:0 auto; padding:56px 16px 24px; }
+.contents_div .gst-lightbox .gst-mapbox{ cursor:zoom-in; }
+.contents_div .gst-lightbox.is-zoom .gst-lightbox-stage{ width:100%; max-width:1232px; }
+.contents_div .gst-lightbox.is-zoom .gst-mapbox{ cursor:zoom-out; }
+.contents_div .gst-lightbox-close{
+  appearance:none; -webkit-appearance:none; position:absolute; top:56px; left:calc(100% + 12px); z-index:1;
+  width:44px; height:44px; margin:0; padding:0; border:0; border-radius:50%; cursor:pointer;
+  background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23172f63' stroke-width='2.6' stroke-linecap='round'%3E%3Cpath d='M6 6l12 12M18 6L6 18'/%3E%3C/svg%3E") center/20px 20px no-repeat;
+  box-shadow:0 4px 14px rgba(0,0,0,.35), 0 0 0 3px rgba(143,179,245,.55);
+  transition:transform .15s;
+}
+.contents_div .gst-lightbox.is-zoom .gst-lightbox-close{ position:fixed; top:10px; right:10px; left:auto; }
+.contents_div .gst-lightbox-hint{
+  position:fixed; left:50%; top:20px; transform:translateX(-50%);
+  font-size:var(--fs-label); font-weight:600; line-height:1; color:rgba(255,255,255,.75); white-space:nowrap; pointer-events:none;
+}
+
+/* 역명 표 */
+.contents_div .gst-stn{ margin-top:24px; background:#fff; border-top:2px solid var(--c-navy); table-layout:fixed; }
+.contents_div .gst-stn col:nth-child(1){ width:13%; }
+.contents_div .gst-stn col:nth-child(2){ width:18%; }
+.contents_div .gst-stn col:nth-child(3){ width:23%; }
+.contents_div .gst-stn col:nth-child(4){ width:16%; }
+.contents_div .gst-stn col:nth-child(5){ width:30%; }
+.contents_div .gst-stn th,
+.contents_div .gst-stn td{ padding:8px 10px; border-bottom:1px solid var(--c-line); font-size:var(--fs-label); line-height:1.4; text-align:left; vertical-align:middle; }
+.contents_div .gst-stn thead th{ padding-top:9px; padding-bottom:9px; background:var(--c-bg1); font-weight:700; color:var(--c-deep); white-space:nowrap; }
+.contents_div .gst-stn th + th,
+.contents_div .gst-stn th + td,
+.contents_div .gst-stn td + th,
+.contents_div .gst-stn td + td{ border-left:1px solid var(--c-line); }
+.contents_div .gst-stn td.gst-stn-no{ font-weight:700; color:var(--c-blue); white-space:nowrap; font-variant-numeric:tabular-nums; }
+.contents_div .gst-stn tbody th{ font-size:var(--fs-info); font-weight:800; color:var(--c-navy); }
+.contents_div .gst-stn td{ color:var(--c-sub); }
+.contents_div .gst-stn td:lang(ja){ overflow-wrap:anywhere; }
+.contents_div .gst-stn-note{ margin-left:4px; font-size:var(--fs-label); font-weight:400; color:var(--c-sub); }
+.contents_div .gst-stn-sub{ display:block; font-size:var(--fs-label); font-weight:500; color:var(--c-sub); }
+/* 접기 — 처음엔 9개 역만, 버튼으로 전체 */
+.contents_div .gst-stn.is-fold tbody tr:nth-child(n+10){ display:none; }
+.contents_div .gst-stn-more{
+  appearance:none; -webkit-appearance:none; cursor:pointer;
+  display:flex; align-items:center; justify-content:center; gap:6px; width:100%; min-height:44px; margin:0; padding:0 16px;
+  background:#fff; border:0; border-bottom:2px solid var(--c-navy); border-radius:0 0 6px 6px; color:var(--c-navy);
+  font-family:inherit; font-size:var(--fs-info); font-weight:700; line-height:1.3;
+}
+.contents_div .gst-stn-more[hidden]{ display:none; }
+.contents_div .gst-stn-more::after{
+  content:''; width:14px; height:14px; transition:transform .25s;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232160e0' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 9l7 7 7-7'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+.contents_div .gst-stn-more[aria-expanded="true"]::after{ transform:rotate(180deg); }
+.contents_div .gst-stn-more .gst-more-off,
+.contents_div .gst-stn-more[aria-expanded="true"] .gst-more-on{ display:none; }
+.contents_div .gst-stn-more[aria-expanded="true"] .gst-more-off{ display:inline; }
+
+/* ===== 03 흥미 포인트 ===== */
+.contents_div .gst-points{ margin-top:28px; border-top:2px solid var(--c-navy); }
+.contents_div .gst-points > li{ padding:26px 0; border-bottom:1px solid #ddd3c0; }
+.contents_div .gst-point-head{ display:flex; align-items:center; gap:12px; }
+.contents_div .gst-point-num{
+  flex:0 0 auto; display:flex; align-items:center; justify-content:center;
+  width:var(--kick); height:var(--kick); border-radius:50%; background:var(--c-navy); color:#fff;
+  font-size:var(--fs-num); font-weight:800; line-height:1; letter-spacing:0;
+}
+.contents_div .gst-point-body{ margin-top:10px; padding-left:calc(var(--kick) + 12px); }
+.contents_div .gst-point-body > p{ font-size:var(--fs-body); color:var(--c-sub); }
+.contents_div .gst-point-body > p + p,
+.contents_div .gst-point-body > table + p{ margin-top:12px; }
+
+/* 바뀐 이름 */
+.contents_div .gst-rename{ display:flex; flex-wrap:wrap; gap:8px 20px; margin-top:14px; }
+.contents_div .gst-rename-pair{ display:inline-flex; align-items:center; gap:8px; }
+.contents_div .gst-rename-from,
+.contents_div .gst-rename-to{ display:inline-flex; align-items:center; height:34px; padding:0 12px; border-radius:3px; font-size:var(--fs-info); font-weight:700; line-height:1; white-space:nowrap; }
+.contents_div .gst-rename-from{ background:#fff; box-shadow:inset 0 0 0 1px #ddd3c0; color:#8a8f99; text-decoration:line-through; text-decoration-color:rgba(138,143,153,.7); }
+.contents_div .gst-rename-to{ background:var(--c-blue); color:#fff; }
+.contents_div .gst-rename-arrow{
+  flex:0 0 auto; width:16px; height:16px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23163a86' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12h15M13 6l6 6-6 6'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+
+/* 박빙 투표 */
+.contents_div .gst-vote{ margin-top:16px; background:#fff; table-layout:fixed; }
+.contents_div .gst-vote th,
+.contents_div .gst-vote td{ padding:12px 14px; border-bottom:1px solid #e6dfd1; font-size:var(--fs-info); line-height:1.4; text-align:left; vertical-align:middle; }
+.contents_div .gst-vote thead th{ background:var(--c-navy); color:#fff; font-size:var(--fs-label); font-weight:700; }
+.contents_div .gst-vote thead th:nth-child(odd){ width:24%; }
+.contents_div .gst-vote tbody th{ font-weight:800; color:var(--c-navy); }
+.contents_div .gst-vote td.gst-vote-name{ font-weight:600; color:var(--c-sub); border-left:1px solid #e6dfd1; }
+.contents_div .gst-vote-pct{ display:flex; align-items:center; gap:10px; }
+.contents_div .gst-vote-pct b{ flex:0 0 2.8em; font-weight:800; color:var(--c-blue); font-variant-numeric:tabular-nums; }
+.contents_div .gst-vote-name + td .gst-vote-pct b{ color:var(--c-sub); }
+.contents_div .gst-vbar{ flex:1 1 auto; height:8px; border-radius:2px; overflow:hidden; background:var(--c-track); }
+.contents_div .gst-vbar i{ display:block; width:var(--v); height:100%; background:var(--c-blue); }
+.contents_div .gst-vote-name + td .gst-vbar i{ background:var(--c-blue-l); }
+
+/* ===== 04 앞으로의 일정 ===== */
+.contents_div .gst-sec--4{ text-align:center; }
+.contents_div .gst-sec--4 .gst-h2{ color:#fff; }
+.contents_div .gst-sec--4 .gst-lead{ color:#dbe6fb; }
+
+/* ===== 푸터 ===== */
+.contents_div .gst-foot{ background:var(--c-foot); color:#fff; border-top:1px solid rgba(255,255,255,.12); }
+.contents_div .gst-tags{ display:flex; flex-wrap:wrap; justify-content:center; gap:6px; }
+.contents_div .gst-tags li{
+  display:inline-flex; align-items:center; padding:6px 12px;
+  border:1px solid rgba(255,255,255,.35); border-radius:3px;
+  font-size:var(--fs-hash); line-height:1.35; color:#d6e3fb;
+}
+
+/* ===== 스크롤 이벤트 ===== */
+.contents_div .gst-wrap.is-rv .gst-rv{
+  opacity:0; transform:translate3d(0,28px,0);
+  transition:opacity .8s cubic-bezier(.2,.7,.3,1), transform .8s cubic-bezier(.2,.7,.3,1);
+  transition-delay:var(--rv-d,0s);
+}
+.contents_div .gst-wrap.is-rv .gst-rv.is-shown{ opacity:1; transform:none; }
+/* 참여 막대가 왼쪽부터 펼쳐짐 */
+.contents_div .gst-wrap.is-rv .gst-part-bar{ clip-path:inset(0 100% 0 0); transition:clip-path 1.1s cubic-bezier(.3,.6,.2,1) .35s; }
+.contents_div .gst-wrap.is-rv .gst-stat.is-shown .gst-part-bar{ clip-path:inset(0 0 0 0); }
+/* 득표율 막대가 차오름 */
+.contents_div .gst-wrap.is-rv .gst-vbar i{ width:0; transition:width 1.1s cubic-bezier(.3,.6,.2,1) .3s; }
+.contents_div .gst-wrap.is-rv .gst-vote.is-shown .gst-vbar i{ width:var(--v); }
+/* 숫자 롤링 */
+.contents_div .gst-roll{
+  display:inline-block; overflow:hidden; vertical-align:top; height:1.2em;
+  -webkit-mask-image:linear-gradient(transparent, #000 14%, #000 86%, transparent); mask-image:linear-gradient(transparent, #000 14%, #000 86%, transparent);
+}
+.contents_div .gst-roll-in{ display:block; transition:transform 1.4s cubic-bezier(.2,.75,.15,1); }
+.contents_div .gst-roll-in > span{ display:block; height:1.2em; line-height:1.2em; }
+
+/* ===== 모션 줄이기 ===== */
+@media (prefers-reduced-motion:reduce){
+  .contents_div .gst-sec.is-in .gst-kicker-pin,
+  .contents_div .gst-hero.is-anim .gst-hero-bg,
+  .contents_div .gst-hero.is-anim .gst-hero-board,
+  .contents_div .gst-hero.is-anim .gst-hero-txt,
+  .contents_div .gst-hero.is-anim .gst-hero-shine::before{ animation:none; }
+  .contents_div .gst-wrap.is-rv .gst-rv{ opacity:1; transform:none; transition:none; }
+  .contents_div .gst-wrap.is-rv .gst-part-bar{ clip-path:none; transition:none; }
+  .contents_div .gst-wrap.is-rv .gst-vbar i{ width:var(--v); transition:none; }
+}
+
+/* ===== hover ===== */
+@media (hover:hover) and (pointer:fine){
+  .contents_div .gst-nav-btn:hover{ background:var(--c-deep); }
+  .contents_div .gst-nav-btn[aria-current="true"]:hover{ background:#fff; }
+  .contents_div .gst-lightbox-close:hover{ transform:scale(1.08); }
+}
+
+/* ===== 반응형 ===== */
+@media (max-width:600px){
+  .contents_div .gst-wrap{
+    --fs-foot:clamp(18px, calc(18px + (100vw - 375px) * 0.0857), 21px);
+    --fs-h3:clamp(16px, calc(16px + (100vw - 375px) * 0.0286), 17px);
+    --fs-body:clamp(13.5px, calc(13.5px + (100vw - 375px) * 0.0143), 14px);
+    --fs-lead:var(--fs-body); --fs-info:var(--fs-body); --fs-cta:var(--fs-body);
+    --fs-arrow:15px; --fs-nav:12px; --fs-kicker:11.5px; --fs-num:10px; --fs-tagcap:10px;
+    --fs-label:10px; --fw-label:400; --fs-check:10px; --fs-caption:10px;
+    --fs-hash:clamp(10.5px, calc(10.5px + (100vw - 375px) * 0.0143), 11px);
+    --gut:22px;
+    --card-py:22px; --card-px:17px;
+    --kick:22px; --lb-h:17px; --lb-px:7px;
+    --img-ratio:75%;
+  }
+  .contents_div .gst-br--web{ display:none; }
+  .contents_div .gst-br--mo,
+  .contents_div .gst-br--mo-wide{ display:inline; }
+
+  .contents_div .gst-h2{ font-size:calc(var(--fs-h2) + 2px); line-height:1.4; }   /* 섹션 제목 +2px (이전 페이지 기준) */
+  .contents_div .gst-h3{ font-size:calc(var(--fs-h3) + 2px); line-height:1.5; }
+  .contents_div .gst-kicker-txt{ padding:0 12px 0 calc(var(--pin) / 2 + 7px); line-height:1; }
+  .contents_div .gst-lead{ margin-top:12px; }
+
+  /* 히어로·내비 (이전 페이지 그대로) */
+  .contents_div .gst-hero{ aspect-ratio:auto; }
+  .contents_div .gst-hero.is-anim .gst-hero-bg{ animation-name:gst-hero-bg-mo; }
+  .contents_div .gst-hero-board{ left:3%; }
+  .contents_div .gst-nav{ position:relative; margin-top:calc(51.78% - 17px); gap:4px; height:auto; padding:17px var(--gut); }
+  .contents_div .gst-nav-btn{ height:auto; gap:4px; padding:10px 2px; font-size:var(--fs-nav); font-weight:500; line-height:1.35; }
+  .contents_div .gst-nav-num{ font-size:var(--fs-num); font-weight:600; }
+
+  /* 인트로 */
+  .contents_div .gst-facts{ margin-top:31px; }
+  .contents_div .gst-facts > div{ padding:14px 0; }
+  .contents_div .gst-facts > div + div{ padding-left:14px; }
+  .contents_div .gst-facts dd{ font-size:var(--fs-h3); }
+  .contents_div .gst-facts dd small{ margin-top:4px; }
+
+  /* 01 */
+  .contents_div .gst-stat{ grid-template-columns:1fr; gap:12px; margin-top:22px; }
+  .contents_div .gst-part-bar{ height:10px; }
+  .contents_div .gst-part{ gap:2px 14px; margin-top:10px; }
+  .contents_div .gst-steps{ grid-template-columns:1fr 1fr; gap:6px 22px; margin-top:20px; }
+  .contents_div .gst-steps > li{ min-height:58px; padding:10px 6px; gap:2px; }
+  .contents_div .gst-steps > li + li::before{ left:-18px; width:12px; height:12px; margin-top:-6px; }
+  .contents_div .gst-steps > li:nth-child(3)::before{ display:none; }   /* 줄이 바뀌는 3번째 단계 앞 화살표 없음 */
+
+  /* 02 */
+  .contents_div .gst-map{ margin-top:22px; }
+  .contents_div .gst-map-src{ right:8px; top:8px; padding:4px 8px; }
+  .contents_div .gst-zoom-btn{ right:8px; bottom:8px; height:30px; padding:0 10px 0 9px; gap:5px; }
+  .contents_div .gst-zoom-btn::before{ width:14px; height:14px; }
+  .contents_div .gst-lightbox-hint{ left:16px; top:24px; transform:none; }
+  .contents_div .gst-lightbox-close,
+  .contents_div .gst-lightbox.is-zoom .gst-lightbox-close{ position:fixed; top:10px; right:10px; left:auto; }
+  .contents_div .gst-lightbox.is-zoom .gst-lightbox-stage{ width:200%; max-width:none; }
+
+  /* 역명 표 → 역별 블록 */
+  .contents_div .gst-stn{ margin-top:20px; }
+  .contents_div .gst-stn thead{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+  .contents_div .gst-stn colgroup{ display:none; }
+  .contents_div .gst-stn tbody{ display:block; }
+  .contents_div .gst-stn tr{ display:block; padding:10px var(--card-px); border-bottom:1px solid var(--c-line); line-height:1.5; }
+  .contents_div .gst-stn th,
+  .contents_div .gst-stn td{ display:inline; padding:0; border:0; }
+  .contents_div .gst-stn th + th,
+  .contents_div .gst-stn th + td,
+  .contents_div .gst-stn td + th,
+  .contents_div .gst-stn td + td{ border-left:0; }
+  .contents_div .gst-stn td.gst-stn-no{ margin-right:6px; }
+  .contents_div .gst-stn tbody th{ font-size:calc(var(--fs-info) + 1px); }
+  .contents_div .gst-stn tbody th::after{ content:'\A'; white-space:pre; }   /* 외국어는 다음 줄에 한 줄로 */
+  .contents_div .gst-stn-sub{ display:inline; margin-left:3px; }
+  .contents_div .gst-stn td.gst-stn-lang{ display:inline-block; max-width:100%; vertical-align:top; font-size:calc(var(--fs-info) - 1px); }   /* 언어별 표기가 통째로 줄바꿈 */
+  .contents_div .gst-stn td.gst-stn-lang:not(:last-child)::after{ content:'·'; margin:0 6px; color:#a9b8d3; }
+  .contents_div .gst-stn-more{ min-height:44px; }
+
+  /* 03 */
+  .contents_div .gst-points{ margin-top:22px; }
+  .contents_div .gst-points > li{ padding:18px 0; }
+  .contents_div .gst-point-head{ gap:7px; }
+  .contents_div .gst-point-num{ width:18px; height:18px; }   /* 넘버링은 작게, 남는 폭은 제목에 */
+  .contents_div .gst-points .gst-h3{ white-space:nowrap; font-size:min(calc(var(--fs-h3) + 2px), calc((100cqi - 2 * var(--gut) - 25px) / 18.5)); }   /* 흥미 포인트 제목 한 줄 — 가장 긴 제목 기준으로 다섯 개 같은 크기 */
+  .contents_div .gst-point-body{ padding-left:0; }
+  /* 바뀐 이름 — 한 줄 고정, 두 묶음 사이 | 구분선. 폭이 좁으면 두 줄 모두 같은 비율로 축소 */
+  .contents_div .gst-point-body > .gst-rename{ flex-wrap:nowrap; gap:.57em; margin-top:12px; font-size:min(var(--fs-info), calc((100cqi - 2 * var(--gut)) / 22.2)); }
+  .contents_div .gst-rename-pair{ gap:.43em; }
+  .contents_div .gst-rename-pair + .gst-rename-pair::before{ content:''; flex:0 0 auto; width:1px; height:1.15em; margin-right:.14em; background:#cfc5b2; }
+  .contents_div .gst-rename-from,
+  .contents_div .gst-rename-to{ height:2em; padding:0 .64em; font-size:1em; }
+  .contents_div .gst-rename-arrow{ width:.93em; height:.93em; }
+  .contents_div .gst-vote{ margin-top:12px; }
+  .contents_div .gst-vote thead{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+  .contents_div .gst-vote tbody{ display:block; }
+  .contents_div .gst-vote tr{ display:grid; grid-template-columns:1fr 1fr; grid-template-rows:auto auto; grid-auto-flow:column; gap:4px 16px; padding:12px var(--card-px); border-bottom:1px solid #e6dfd1; }
+  .contents_div .gst-vote th,
+  .contents_div .gst-vote td{ display:block; padding:0; border:0; }
+  .contents_div .gst-vote td.gst-vote-name{ border-left:0; }
+  .contents_div .gst-vote tr{ position:relative; }
+  .contents_div .gst-vote tr::after{ content:''; position:absolute; left:50%; top:12px; bottom:12px; width:1px; background:#e6dfd1; }   /* 확정·경쟁 구분선 */
+  .contents_div .gst-vote [data-label]::before{ content:attr(data-label); display:block; font-size:var(--fs-label); font-weight:700; line-height:1.4; color:var(--c-sub); }
+  .contents_div .gst-vote-pct{ gap:8px; }
+  .contents_div .gst-vbar{ height:6px; }
+
+  .contents_div .gst-tags{ gap:4px 12px; }
+  .contents_div .gst-tags li{ padding:0; border:0; font-weight:400; }   /* 모바일: 캡슐 없이 텍스트만 */
+
+  .contents_div .gst-wrap.is-rv .gst-rv{ transform:translate3d(0,18px,0); }
+}
+@media (max-width:480px){
+  .contents_div .gst-wrap{
+    --fs-nav:clamp(11.5px, calc(11.5px + (100vw - 375px) * 0.0286), 12.5px);
+    --gut:15px;
+  }
+  .contents_div .gst-nav-btn{ min-height:44px; }
+}
+@media (max-width:420px){
+  .contents_div .gst-wrap{
+    --band:40px;
+    --card-py:19px; --card-px:14px;
+  }
+  .contents_div .gst-br--mo-wide{ display:none; }
+  .contents_div .gst-br--m420{ display:inline; }
+  .contents_div .gst-h2{ margin-top:10px; }
+}
+</style>
+
+<article class="gst-wrap">
+
+  <!-- 히어로 -->
+  <div class="gst-hero">
+    <div class="gst-hero-stage">
+      <img class="gst-hero-bg" src="img/히어로배경.webp" width="1600" height="1287" alt="" aria-hidden="true" fetchpriority="high" loading="eager" decoding="async">
+      <div class="gst-hero-board">
+        <img class="gst-hero-paper" src="img/히어로종이.webp" width="1600" height="1287" alt="" aria-hidden="true" fetchpriority="high" loading="eager" decoding="async">
+        <img class="gst-hero-txt gst-hero-txt--top" src="img/히어로텍스트.webp" width="1600" height="1287" alt="2호선 역 이름이 정해졌어요, 우리 동네 역명은 뭘까요?" fetchpriority="high" loading="eager" decoding="async">
+        <img class="gst-hero-txt gst-hero-txt--l1" src="img/히어로텍스트.webp" alt="" aria-hidden="true" loading="eager" decoding="async">
+        <img class="gst-hero-txt gst-hero-txt--l2" src="img/히어로텍스트.webp" alt="" aria-hidden="true" loading="eager" decoding="async">
+        <span class="gst-hero-shine" aria-hidden="true"></span>
+      </div>
+    </div>
+    <nav class="gst-nav" aria-label="본문 바로가기">
+      <button type="button" class="gst-nav-btn" data-go="gst-s1" aria-current="true"><span class="gst-nav-num">01</span>역명 제정</button>
+      <button type="button" class="gst-nav-btn" data-go="gst-s2"><span class="gst-nav-num">02</span>역명 소개</button>
+      <button type="button" class="gst-nav-btn" data-go="gst-s3"><span class="gst-nav-num">03</span>흥미 포인트</button>
+      <button type="button" class="gst-nav-btn" data-go="gst-s4"><span class="gst-nav-num">04</span>앞으로의 일정</button>
+    </nav>
+  </div>
+
+  <!-- 인트로 -->
+  <header class="gst-sec gst-intro">
+    <h1 class="gst-sr">2호선 역 이름이 정해졌어요, 우리 동네 역명은 뭘까요?</h1>
+    <p class="gst-intro-lead">2028년 12월 개통 예정인 <strong>광주도시철도 2호선 1단계 구간</strong>의 역명이 확정되었습니다.<span class="gst-br gst-br--web"></span> 총 20개의 역 중 환승역인 상무역과 남광주역을 제외한 18개 역인데요.<span class="gst-br gst-br--web"></span> 어떤 역명이 탄생했는지 지금부터 소개해 드릴게요.</p>
+    <dl class="gst-facts">
+      <div>
+        <dt>1단계 개통 예정</dt>
+        <dd><time datetime="2028-12">2028년 12월</time></dd>
+      </div>
+      <div>
+        <dt>역명 확정</dt>
+        <dd>18개 역<small>총 20개 역 중 환승역 제외</small></dd>
+      </div>
+    </dl>
+  </header>
+
+  <!-- 01 역명 제정 -->
+  <section class="gst-sec gst-sec--1" id="gst-s1">
+    <div class="gst-kicker-group">
+      <p class="gst-kicker"><span class="gst-kicker-pin" aria-hidden="true"></span><span class="gst-kicker-txt">역명 제정</span></p>
+      <h2 class="gst-h2">18개의 역 이름,<span class="gst-br gst-br--mo"></span> 이렇게 정해졌습니다</h2>
+      <p class="gst-lead">도시철도 2호선 1단계 역명 제정에는 시민 총 <strong>1만 3천 779명</strong>의 의견이 반영되었어요.<span class="gst-br gst-br--web"></span> 지난 3월 역명 의견 조사에 온라인 <strong>1만 1천 293명</strong>, 오프라인 <strong>2천 486명</strong>이 참여했거든요.<span class="gst-br gst-br--web"></span> 최종적으로 시민 의견조사와 지명위원회 심의를 거쳐 정거장 역명이 확정된 것이랍니다.</p>
+
+      <div class="gst-stat">
+        <div>
+          <p class="gst-stat-lb">역명 의견 조사 참여</p>
+          <p class="gst-stat-val">1만 3천 779명</p>
+        </div>
+        <div>
+          <p class="gst-part-bar" aria-hidden="true"><span></span><span></span></p>
+          <dl class="gst-part">
+            <div><dt>온라인</dt><dd>1만 1천 293명</dd></div>
+            <div><dt>오프라인</dt><dd>2천 486명</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <ol class="gst-steps" aria-label="역명 확정 과정">
+        <li><time datetime="2026-03">3월</time>역명 의견 조사</li>
+        <li>시민 의견조사</li>
+        <li>지명위원회 심의</li>
+        <li>역명 확정</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 02 역명 소개 -->
+  <section class="gst-sec gst-sec--2" id="gst-s2">
+    <div class="gst-sec-bg" aria-hidden="true"><img src="img/역명소개배경.webp" alt="" loading="lazy" decoding="async"></div>
+    <div class="gst-kicker-group">
+      <p class="gst-kicker"><span class="gst-kicker-pin" aria-hidden="true"></span><span class="gst-kicker-txt">역명 소개</span></p>
+      <h2 class="gst-h2">광주도시철도 2호선<span class="gst-br gst-br--mo"></span> 1단계 역명을 소개합니다</h2>
+
+      <figure class="gst-map">
+        <div class="gst-fig gst-fig--map gst-mapbox" role="button" tabindex="0" aria-label="광주도시철도 2호선 1단계 역명 노선도 크게 보기">
+          <img class="gst-map-img" src="img/역명노선도.webp" width="968" height="673" alt="광주도시철도 2호선 1단계 역명이 표시된 노선도" loading="lazy" decoding="async">
+          <ol class="gst-map-labels" aria-hidden="true">
+            <li style="--x:28.15%;--y:34.47%">유덕</li>
+            <li style="--x:22.88%;--y:46.95%">시청</li>
+            <li style="--x:22.47%;--y:54.16%">치평</li>
+            <li style="--x:34.87%;--y:64.56%">운천<br>저수지</li>
+            <li style="--x:36.31%;--y:73.85%">금호</li>
+            <li style="--x:35.28%;--y:83.51%">풍금<br>사거리</li>
+            <li style="--x:44.99%;--y:75.63%">월드컵<br>경기장</li>
+            <li style="--x:47.88%;--y:90.19%">풍암<br>호수공원</li>
+            <li style="--x:53.46%;--y:79.72%">금당산<br>입구</li>
+            <li style="--x:59.87%;--y:75.11%">무등<br>시장</li>
+            <li style="--x:65.75%;--y:75.26%">백운<br>광장</li>
+            <li style="--x:71.33%;--y:75.11%">기독병원<br>입구</li>
+            <li style="--x:75.57%;--y:72.81%">방림</li>
+            <li style="--x:85.49%;--y:65.60%">조선대</li>
+            <li style="--x:83.21%;--y:55.94%">법원<br>입구</li>
+            <li style="--x:83.52%;--y:44.65%">산수</li>
+            <li style="--x:78.67%;--y:35.44%">교대</li>
+            <li style="--x:74.43%;--y:33.36%">중흥<br>삼거리</li>
+          </ol>
+          <span class="gst-zoom-btn" aria-hidden="true">크게 보기</span>
+        </div>
+        <figcaption class="gst-map-src">이미지 출처: 광주교통공사</figcaption>
+      </figure>
+
+      <table class="gst-stn" id="gst-stn">
+        <colgroup><col><col><col><col><col></colgroup>
+        <thead>
+          <tr>
+            <th scope="col">구분</th>
+            <th scope="col">한글</th>
+            <th scope="col">영어</th>
+            <th scope="col">중국어</th>
+            <th scope="col">일본어</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="gst-stn-no">238정거장</td><th scope="row">유덕<span class="gst-stn-note">(환승역)</span></th><td class="gst-stn-lang" lang="en">Yudeok</td><td class="gst-stn-lang" lang="zh-CN">柳德</td><td class="gst-stn-lang" lang="ja">ユドク</td></tr>
+          <tr><td class="gst-stn-no">201정거장</td><th scope="row">시청</th><td class="gst-stn-lang" lang="en">City Hall</td><td class="gst-stn-lang" lang="zh-CN">市厅</td><td class="gst-stn-lang" lang="ja">シチョン</td></tr>
+          <tr><td class="gst-stn-no">202정거장</td><th scope="row">치평</th><td class="gst-stn-lang" lang="en">Chipyeong</td><td class="gst-stn-lang" lang="zh-CN">治平</td><td class="gst-stn-lang" lang="ja">チピョン</td></tr>
+          <tr><td class="gst-stn-no">204정거장</td><th scope="row">운천저수지</th><td class="gst-stn-lang" lang="en">Uncheon Reservoir</td><td class="gst-stn-lang" lang="zh-CN">云泉水库</td><td class="gst-stn-lang" lang="ja">ウンチョンジョスジ</td></tr>
+          <tr><td class="gst-stn-no">205정거장</td><th scope="row">금호</th><td class="gst-stn-lang" lang="en">Geumho</td><td class="gst-stn-lang" lang="zh-CN">金湖</td><td class="gst-stn-lang" lang="ja">クムホ</td></tr>
+          <tr><td class="gst-stn-no">206정거장</td><th scope="row">풍금사거리</th><td class="gst-stn-lang" lang="en">Punggeum Sageori</td><td class="gst-stn-lang" lang="zh-CN">枫金十字路口</td><td class="gst-stn-lang" lang="ja">プングムサゴリ</td></tr>
+          <tr><td class="gst-stn-no">207정거장</td><th scope="row">월드컵경기장</th><td class="gst-stn-lang" lang="en">World Cup Stadium</td><td class="gst-stn-lang" lang="zh-CN">世界杯体育场</td><td class="gst-stn-lang" lang="ja">ワールドカップキョンギジャン</td></tr>
+          <tr><td class="gst-stn-no">208정거장</td><th scope="row">풍암호수공원</th><td class="gst-stn-lang" lang="en">Pungam Lake Park</td><td class="gst-stn-lang" lang="zh-CN">枫岩湖水公园</td><td class="gst-stn-lang" lang="ja">プンアムホスゴンウォン</td></tr>
+          <tr><td class="gst-stn-no">209정거장</td><th scope="row">금당산입구</th><td class="gst-stn-lang" lang="en">Geumdangsan</td><td class="gst-stn-lang" lang="zh-CN">金堂山</td><td class="gst-stn-lang" lang="ja">クムダンサンイプク</td></tr>
+          <tr><td class="gst-stn-no">210정거장</td><th scope="row">무등시장</th><td class="gst-stn-lang" lang="en">Mudeung Market</td><td class="gst-stn-lang" lang="zh-CN">无等市场</td><td class="gst-stn-lang" lang="ja">ムドゥンシジャン</td></tr>
+          <tr><td class="gst-stn-no">211정거장</td><th scope="row">백운광장</th><td class="gst-stn-lang" lang="en">Baegungwangjang</td><td class="gst-stn-lang" lang="zh-CN">白云广场</td><td class="gst-stn-lang" lang="ja">ペグングァンジャン</td></tr>
+          <tr><td class="gst-stn-no">212정거장</td><th scope="row">기독병원입구</th><td class="gst-stn-lang" lang="en">Christian Hospital</td><td class="gst-stn-lang" lang="zh-CN">基督教医院</td><td class="gst-stn-lang" lang="ja">キドクピョンウォンイプク</td></tr>
+          <tr><td class="gst-stn-no">213정거장</td><th scope="row">방림<span class="gst-stn-sub">(양림역사문화마을)</span></th><td class="gst-stn-lang" lang="en">Bangnim (Yangnim History and Culture Village)</td><td class="gst-stn-lang" lang="zh-CN">芳林(杨林历史文化村)</td><td class="gst-stn-lang" lang="ja">パンニム(ヤンニム歴史文化村)</td></tr>
+          <tr><td class="gst-stn-no">215정거장</td><th scope="row">조선대</th><td class="gst-stn-lang" lang="en">Chosun Univ.</td><td class="gst-stn-lang" lang="zh-CN">朝鲜大学</td><td class="gst-stn-lang" lang="ja">チョソンデ</td></tr>
+          <tr><td class="gst-stn-no">216정거장</td><th scope="row">법원입구</th><td class="gst-stn-lang" lang="en">Court</td><td class="gst-stn-lang" lang="zh-CN">法院</td><td class="gst-stn-lang" lang="ja">ポボンイプク</td></tr>
+          <tr><td class="gst-stn-no">217정거장</td><th scope="row">산수</th><td class="gst-stn-lang" lang="en">Sansu</td><td class="gst-stn-lang" lang="zh-CN">山水</td><td class="gst-stn-lang" lang="ja">サンス</td></tr>
+          <tr><td class="gst-stn-no">218정거장</td><th scope="row">교대</th><td class="gst-stn-lang" lang="en">Gwangju Nat'l Univ. of Education</td><td class="gst-stn-lang" lang="zh-CN">光州教育大学</td><td class="gst-stn-lang" lang="ja">キョデ</td></tr>
+          <tr><td class="gst-stn-no">219정거장</td><th scope="row">중흥삼거리</th><td class="gst-stn-lang" lang="en">Jungheung Samgeori</td><td class="gst-stn-lang" lang="zh-CN">中兴三岔路口</td><td class="gst-stn-lang" lang="ja">チュンフンサムゴリ</td></tr>
+        </tbody>
+      </table>
+      <button type="button" class="gst-stn-more" aria-controls="gst-stn" aria-expanded="false" hidden><span class="gst-more-on">18개 역 모두 보기</span><span class="gst-more-off">접기</span></button>
+    </div>
+  </section>
+
+  <!-- 03 흥미 포인트 -->
+  <section class="gst-sec gst-sec--3" id="gst-s3">
+    <div class="gst-sec-bg" aria-hidden="true"><img src="img/히어로배경.webp" alt="" loading="lazy" decoding="async"></div>
+    <div class="gst-kicker-group">
+      <p class="gst-kicker"><span class="gst-kicker-pin" aria-hidden="true"></span><span class="gst-kicker-txt">흥미 포인트</span></p>
+      <h2 class="gst-h2">도시철도 2호선 1단계<br>역명의 흥미 포인트 5가지</h2>
+
+      <ol class="gst-points">
+        <li>
+          <div class="gst-point-head"><span class="gst-point-num" aria-hidden="true">1</span><h3 class="gst-h3">광주청사역이 아닌 '시청'으로 확정</h3></div>
+          <div class="gst-point-body">
+            <p>행정통합으로 '광주청사역'을 검토했지만, 시내버스 정류장 이름 등으로 시민에게 친숙한 '시청'을 선택했어요.</p>
+            <p class="gst-rename" aria-hidden="true"><span class="gst-rename-pair"><span class="gst-rename-from">광주청사역</span><span class="gst-rename-arrow"></span><span class="gst-rename-to">시청</span></span></p>
+          </div>
+        </li>
+        <li>
+          <div class="gst-point-head"><span class="gst-point-num" aria-hidden="true">2</span><h3 class="gst-h3">'광주역'이 '중흥삼거리'로, '광주교대'는 '교대'로</h3></div>
+          <div class="gst-point-body">
+            <p>설문에서 지지를 받은 역명은 '광주역'과 '광주교대'였지만, '광주'를 뺀 친숙한 거점 이름을 쓰는 방향에 따라 '중흥삼거리'와 '교대'가 되었어요.</p>
+            <p class="gst-rename" aria-hidden="true"><span class="gst-rename-pair"><span class="gst-rename-from">광주역</span><span class="gst-rename-arrow"></span><span class="gst-rename-to">중흥삼거리</span></span><span class="gst-rename-pair"><span class="gst-rename-from">광주교대</span><span class="gst-rename-arrow"></span><span class="gst-rename-to">교대</span></span></p>
+          </div>
+        </li>
+        <li>
+          <div class="gst-point-head"><span class="gst-point-num" aria-hidden="true">3</span><h3 class="gst-h3">'법원입구'에도 이런 비하인드가</h3></div>
+          <div class="gst-point-body">
+            <p>원래는 검찰청이 들어간 이름이었지만, 검찰청이 공소청·중대범죄수사청으로 바뀌며 '법원입구'가 되었습니다.</p>
+          </div>
+        </li>
+        <li>
+          <div class="gst-point-head"><span class="gst-point-num" aria-hidden="true">4</span><h3 class="gst-h3">이 역들은 박빙이었어요</h3></div>
+          <div class="gst-point-body">
+            <p>시민 투표 결과는 다음과 같았습니다.</p>
+            <table class="gst-vote">
+              <thead>
+                <tr><th scope="col">확정 역명</th><th scope="col">득표율</th><th scope="col">경쟁 역명</th><th scope="col">득표율</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row" data-label="확정 역명">유덕</th><td><span class="gst-vote-pct"><b>40%</b><span class="gst-vbar" style="--v:40%" aria-hidden="true"><i></i></span></span></td><td class="gst-vote-name" data-label="경쟁 역명">버들마을</td><td><span class="gst-vote-pct"><b>39%</b><span class="gst-vbar" style="--v:39%" aria-hidden="true"><i></i></span></span></td></tr>
+                <tr><th scope="row" data-label="확정 역명">치평</th><td><span class="gst-vote-pct"><b>37%</b><span class="gst-vbar" style="--v:37%" aria-hidden="true"><i></i></span></span></td><td class="gst-vote-name" data-label="경쟁 역명">상무지구</td><td><span class="gst-vote-pct"><b>32%</b><span class="gst-vbar" style="--v:32%" aria-hidden="true"><i></i></span></span></td></tr>
+                <tr><th scope="row" data-label="확정 역명">풍암호수공원</th><td><span class="gst-vote-pct"><b>50%</b><span class="gst-vbar" style="--v:50%" aria-hidden="true"><i></i></span></span></td><td class="gst-vote-name" data-label="경쟁 역명">풍암</td><td><span class="gst-vote-pct"><b>42%</b><span class="gst-vbar" style="--v:42%" aria-hidden="true"><i></i></span></span></td></tr>
+              </tbody>
+            </table>
+            <p>유덕, 치평, 풍암호수공원역은 2위 역명과 치열한 다툼을 벌였답니다.</p>
+          </div>
+        </li>
+        <li>
+          <div class="gst-point-head"><span class="gst-point-num" aria-hidden="true">5</span><h3 class="gst-h3">친숙한 지명이 가득해요</h3></div>
+          <div class="gst-point-body">
+            <p>운천저수지, 풍암호수공원, 무등시장, 금당산입구, 방림(양림역사문화마을)처럼 친숙한 지명과 동네 이름이 그대로 역 이름이 되었어요.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 04 앞으로의 일정 -->
+  <section class="gst-sec gst-sec--4" id="gst-s4">
+    <div class="gst-kicker-group">
+      <p class="gst-kicker"><span class="gst-kicker-pin" aria-hidden="true"></span><span class="gst-kicker-txt">시범운행 돌입</span></p>
+      <h2 class="gst-h2">앞으로의 일정</h2>
+      <p class="gst-lead">역명까지 확정되고 나니 광주도시철도 2호선이 더 실감이 나는 것 같죠?<span class="gst-br gst-br--web"></span> 광주도시철도 2호선 1단계 구간은 내년까지 공사를 마치고 시범운행에 돌입할 예정입니다.<span class="gst-br gst-br--web"></span> 광주를 잇는 동그라미! 앞으로도 도시철도 2호선 소식을 발 빠르게 전해드릴게요.</p>
+    </div>
+  </section>
+
+  <!-- 푸터 -->
+  <footer class="gst-sec gst-foot">
+    <ul class="gst-tags">
+      <li>#광주도시철도2호선</li>
+      <li>#2호선역명확정</li>
+      <li>#광주지하철2호선</li>
+      <li>#도시철도2호선1단계</li>
+      <li>#2호선역이름</li>
+      <li>#시청역</li>
+      <li>#풍암호수공원역</li>
+      <li>#월드컵경기장역</li>
+      <li>#지명위원회</li>
+      <li>#전남광주통합특별시</li>
+    </ul>
+  </footer>
+
+</article>
+
+<div class="gst-lightbox" role="dialog" aria-modal="true" aria-label="광주도시철도 2호선 1단계 역명 노선도 크게 보기" tabindex="-1">
+  <p class="gst-lightbox-hint">이미지를 누르면 확대·축소됩니다</p>
+  <div class="gst-lightbox-stage">
+    <div class="gst-mapbox">
+      <img class="gst-lightbox-img" src="img/역명노선도.webp" width="968" height="673" alt="" aria-hidden="true" loading="lazy" decoding="async">
+            <ol class="gst-map-labels" aria-hidden="true">
+              <li style="--x:28.15%;--y:34.47%">유덕</li>
+              <li style="--x:22.88%;--y:46.95%">시청</li>
+              <li style="--x:22.47%;--y:54.16%">치평</li>
+              <li style="--x:34.87%;--y:64.56%">운천<br>저수지</li>
+              <li style="--x:36.31%;--y:73.85%">금호</li>
+              <li style="--x:35.28%;--y:83.51%">풍금<br>사거리</li>
+              <li style="--x:44.99%;--y:75.63%">월드컵<br>경기장</li>
+              <li style="--x:47.88%;--y:90.19%">풍암<br>호수공원</li>
+              <li style="--x:53.46%;--y:79.72%">금당산<br>입구</li>
+              <li style="--x:59.87%;--y:75.11%">무등<br>시장</li>
+              <li style="--x:65.75%;--y:75.26%">백운<br>광장</li>
+              <li style="--x:71.33%;--y:75.11%">기독병원<br>입구</li>
+              <li style="--x:75.57%;--y:72.81%">방림</li>
+              <li style="--x:85.49%;--y:65.60%">조선대</li>
+              <li style="--x:83.21%;--y:55.94%">법원<br>입구</li>
+              <li style="--x:83.52%;--y:44.65%">산수</li>
+              <li style="--x:78.67%;--y:35.44%">교대</li>
+              <li style="--x:74.43%;--y:33.36%">중흥<br>삼거리</li>
+            </ol>
+    </div>
+    <button type="button" class="gst-lightbox-close" aria-label="닫기"></button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var root = document.querySelector('.contents_div');
+  if(!root) return;
+  var wrap = root.querySelector('.gst-wrap');
+  var btns = root.querySelectorAll('.gst-nav-btn');
+
+  /* 노선도 크게 보기 */
+  (function(){
+    var fig = root.querySelector('.gst-fig--map');
+    var lb = root.querySelector('.gst-lightbox');
+    if(!fig || !lb) return;
+    var img = lb.querySelector('.gst-mapbox');
+    var src = fig.querySelector('.gst-map-img');
+    function setAr(){ if(src && src.naturalWidth) lb.style.setProperty('--ar', (src.naturalWidth / src.naturalHeight).toFixed(4)); }
+    if(src){ if(src.complete) setAr(); else src.addEventListener('load', setAr); }
+    var close = lb.querySelector('.gst-lightbox-close');
+    var stage = lb.querySelector('.gst-lightbox-stage');
+    function open(){ lb.classList.remove('is-zoom'); lb.classList.add('is-open'); lb.scrollTop = 0; lb.focus(); }
+    function shut(){ lb.classList.remove('is-open'); fig.focus(); }
+    fig.addEventListener('click', open);
+    fig.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); open(); } });
+    close.addEventListener('click', shut);
+    lb.addEventListener('click', function(e){ if(e.target === lb || e.target === stage) shut(); });
+    lb.addEventListener('keydown', function(e){ if(e.key === 'Escape') shut(); });
+    img.addEventListener('click', function(){ lb.classList.toggle('is-zoom'); });
+  })();
+
+  /* 역명 표 접기·펼치기 (내용은 HTML에 모두 있음, 보이기만 조절) */
+  (function(){
+    var t = root.querySelector('.gst-stn'), b = root.querySelector('.gst-stn-more');
+    if(!t || !b) return;
+    t.classList.add('is-fold'); b.hidden = false;
+    b.addEventListener('click', function(){
+      var open = b.getAttribute('aria-expanded') !== 'true';
+      b.setAttribute('aria-expanded', open ? 'true' : 'false');
+      t.classList.toggle('is-fold', !open);
+      if(!open){
+        var y = t.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop) - 20;
+        if(t.getBoundingClientRect().top < 0) window.scrollTo({ top:y, behavior:'smooth' });
+      }
+    });
+  })();
+
+  /* 히어로 모션: 화면에 들어올 때 재생 */
+  (function(){
+    var hero = root.querySelector('.gst-hero');
+    if(!hero) return;
+    hero.classList.add('is-anim');
+    if(!('IntersectionObserver' in window)){ hero.classList.add('is-play'); return; }
+    var hio = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ hero.classList.add('is-play'); hio.disconnect(); } });
+    }, { threshold: 0.3 });
+    hio.observe(hero);
+  })();
+
+  /* 섹션 상단 배경 높이 = 섹션 맨 위 ~ 첫 블록 세로 중앙 (역명 소개: 노선도 / 흥미 포인트: 첫 번째 포인트) */
+  (function(){
+    var sets = [['.gst-sec--2', '.gst-map'], ['.gst-sec--3', '.gst-points > li']].map(function(p){
+      var sec = root.querySelector(p[0]);
+      return sec ? { sec:sec, bg:sec.querySelector('.gst-sec-bg'), ref:sec.querySelector(p[1]) } : null;
+    }).filter(function(o){ return o && o.bg && o.ref; });
+    if(!sets.length) return;
+    function fit(){
+      sets.forEach(function(o){
+        var y = 0, el = o.ref;
+        while(el && el !== o.sec){ y += el.offsetTop; el = el.offsetParent; }
+        if(el !== o.sec){ y = o.ref.getBoundingClientRect().top - o.sec.getBoundingClientRect().top; }
+        o.bg.style.height = Math.round(y + o.ref.offsetHeight / 2) + 'px';
+      });
+    }
+    fit();
+    if(document.fonts && document.fonts.ready){ document.fonts.ready.then(fit)['catch'](function(){}); }
+    if(window.ResizeObserver){ new ResizeObserver(fit).observe(wrap || root); }
+  })();
+
+  /* 스크롤 이벤트: 히어로 아래 요소가 화면에 들어오면 떠오름 (한 번만) */
+  (function(){
+    if(!wrap || !('IntersectionObserver' in window)) return;
+    if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var fade = [
+      '.gst-intro-lead', '.gst-facts > div',
+      '.gst-sec .gst-kicker', '.gst-sec .gst-h2', '.gst-sec .gst-lead',
+      '.gst-stat', '.gst-steps > li',
+      '.gst-map', '.gst-stn tbody tr',
+      '.gst-points > li', '.gst-vote', '.gst-tags'
+    ];
+    var els = [];
+    fade.forEach(function(sel){
+      wrap.querySelectorAll(sel).forEach(function(el){
+        if(el.closest('.gst-hero')) return;
+        el.classList.add('gst-rv');
+        if(els.indexOf(el) < 0) els.push(el);
+      });
+    });
+    wrap.classList.add('is-rv');
+
+    function show(el, delay){
+      if(delay) el.style.setProperty('--rv-d', delay + 's');
+      el.classList.add('is-shown');
+    }
+    var rio = new IntersectionObserver(function(entries){
+      var k = 0;
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          show(en.target, Math.min(k++ * 0.08, 0.4));
+          rio.unobserve(en.target);
+        } else if(en.boundingClientRect.top < 0){   /* 이미 지나간 위치(새로고침 등)는 바로 표시 */
+          var t = en.target;
+          t.style.transition = 'none';
+          show(t, null);
+          void t.offsetWidth; t.style.transition = '';
+          rio.unobserve(t);
+        }
+      });
+    }, { rootMargin:'0px 0px -5% 0px', threshold:0.12 });
+    els.forEach(function(el){ rio.observe(el); });
+
+    /* 숫자 롤링 — 참여 인원 (한 번만). 자릿수마다 0~9 띠가 굴러가 실제 숫자에서 멈춤 */
+    (function(){
+      var el = wrap.querySelector('.gst-stat-val');
+      if(!el || !el.firstChild || el.firstChild.nodeType !== 3) return;
+      var txt = el.firstChild, src = txt.nodeValue, cols = [], n = 0;
+      var box = document.createElement('span');
+      box.setAttribute('aria-label', src);
+      src.split('').forEach(function(ch){
+        if(!/\d/.test(ch)){ box.appendChild(document.createTextNode(ch)); return; }
+        var w = document.createElement('span'), strip = document.createElement('span');
+        w.className = 'gst-roll'; w.setAttribute('aria-hidden', 'true');
+        strip.className = 'gst-roll-in';
+        for(var r = 0; r < 20; r++){ var d = document.createElement('span'); d.textContent = r % 10; strip.appendChild(d); }
+        w.appendChild(strip); box.appendChild(w);
+        cols.push({ strip:strip, d:+ch, i:n++ });
+      });
+      el.replaceChild(box, txt);
+      var io = new IntersectionObserver(function(en){
+        if(!en[0].isIntersecting) return;
+        io.disconnect();
+        box.getBoundingClientRect();
+        var last = null;
+        cols.forEach(function(c){
+          c.strip.style.transitionDelay = (c.i * 0.07) + 's';
+          c.strip.style.transform = 'translateY(' + (-(10 + c.d) * 1.2) + 'em)';
+          last = c.strip;
+        });
+        function done(){ if(box.parentNode) el.replaceChild(document.createTextNode(src), box); }
+        if(last){ last.addEventListener('transitionend', done); setTimeout(done, 3000); } else done();
+      }, { threshold:0.6 });
+      io.observe(el);
+    })();
+  })();
+
+  /* 섹션 진입 시 키커 핀 애니메이션 */
+  if('IntersectionObserver' in window){
+    var pio = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ en.target.classList.toggle('is-in', en.isIntersecting); });
+    }, { threshold: 0.2 });
+    root.querySelectorAll('.gst-sec[id]').forEach(function(sec){ pio.observe(sec); });
+  }
+
+  if(!btns.length) return;
+
+  btns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var el = root.querySelector('#' + btn.getAttribute('data-go'));
+      if(!el) return;
+      var y = el.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop);
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    });
+  });
+
+  if(!('IntersectionObserver' in window)) return;
+  var map = {};
+  btns.forEach(function(b){ map[b.getAttribute('data-go')] = b; });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(!en.isIntersecting) return;
+      btns.forEach(function(b){ b.removeAttribute('aria-current'); });
+      var b = map[en.target.id];
+      if(b) b.setAttribute('aria-current', 'true');
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  Object.keys(map).forEach(function(id){
+    var s = root.querySelector('#' + id);
+    if(s) io.observe(s);
+  });
+})();
+</script>
+</div>
