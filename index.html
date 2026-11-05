@@ -309,7 +309,7 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
   min-width:4.1cqi; min-height:2.75cqi;   /* 원본 번호 칸(테두리 포함 39×26 / 968) 보다 작아지지 않게 — 밑의 번호 칸이 비치지 않음 */
   padding:.22em .36em; background:#e2232c; color:#fff; border:1px solid #fff; border-radius:max(3px, .6cqi);
   box-shadow:0 1px 3px rgba(0,0,0,.28);
-  font-size:max(10px, 1.25cqi); font-weight:700; line-height:1.15; letter-spacing:-0.04em;
+  font-size:max(10px, 1.25cqi); font-weight:400; line-height:1.15; letter-spacing:-0.04em;
   text-align:center; white-space:nowrap;
 }
 .contents_div .gst-zoom-btn{
@@ -530,6 +530,7 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
   /* 02 */
   .contents_div .gst-map{ margin-top:22px; }
   .contents_div .gst-map-src{ right:8px; top:8px; padding:4px 8px; }
+  .contents_div .gst-map-labels li{ padding:.18em .24em; font-size:clamp(6px, 2.1cqi, 10px); letter-spacing:-0.06em; }   /* 모바일: 역명 라벨을 노선도 폭에 비례해 줄임(웹과 같은 비율감) */
   .contents_div .gst-zoom-btn{ right:8px; bottom:8px; height:30px; padding:0 10px 0 9px; gap:5px; }
   .contents_div .gst-zoom-btn::before{ width:14px; height:14px; }
   .contents_div .gst-lightbox-hint{ left:16px; top:24px; transform:none; }
