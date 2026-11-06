@@ -525,10 +525,18 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
   .contents_div .gst-stat{ grid-template-columns:1fr; gap:12px; margin-top:22px; }
   .contents_div .gst-part-bar{ height:10px; }
   .contents_div .gst-part{ gap:2px 14px; margin-top:10px; }
-  .contents_div .gst-steps{ grid-template-columns:1fr 1fr; gap:6px 22px; margin-top:20px; }
+  /* 확정 과정 — ㄹ자 순서: 1 → 2 ↓ 3(오른쪽 아래) ← 4(왼쪽 아래). 화살표는 배경색 원으로 박스 사이에 겹쳐 놓음 */
+  .contents_div .gst-steps{ grid-template-columns:1fr 1fr; gap:6px; margin-top:20px; }
   .contents_div .gst-steps > li{ min-height:58px; padding:10px 6px; gap:2px; }
-  .contents_div .gst-steps > li + li::before{ left:-18px; width:12px; height:12px; margin-top:-6px; }
-  .contents_div .gst-steps > li:nth-child(3)::before{ display:none; }   /* 줄이 바뀌는 3번째 단계 앞 화살표 없음 */
+  .contents_div .gst-steps > li:nth-child(3){ grid-column:2; grid-row:2; }
+  .contents_div .gst-steps > li:nth-child(4){ grid-column:1; grid-row:2; }
+  .contents_div .gst-steps > li + li::before{
+    z-index:1; width:24px; height:24px; margin:0; border-radius:50%;
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232160e0' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 5l7 7-7 7'/%3E%3C/svg%3E") center/11px 11px no-repeat, var(--c-bg2);
+  }
+  .contents_div .gst-steps > li:nth-child(2)::before{ left:-15px; top:50%; margin-top:-12px; }   /* → */
+  .contents_div .gst-steps > li:nth-child(3)::before{ display:block; left:50%; top:-15px; margin-left:-12px; transform:rotate(90deg); }   /* ↓ */
+  .contents_div .gst-steps > li:nth-child(4)::before{ left:auto; right:-15px; top:50%; margin-top:-12px; transform:rotate(180deg); }   /* ← */
 
   /* 02 */
   .contents_div .gst-map{ margin-top:22px; }
