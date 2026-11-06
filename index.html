@@ -618,9 +618,12 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
   .contents_div .gst-tags li{ padding:0; border:0; font-weight:400; }   /* 모바일: 캡슐 없이 텍스트만 */
 
   .contents_div .gst-wrap.is-rv .gst-rv{ transform:translate3d(0,18px,0); }
-  /* 득표율: 표가 나타난 뒤 살짝 떠오르며 등장 */
-  .contents_div .gst-wrap.is-rv .gst-vote-pct b{ display:inline-block; opacity:0; transform:translateY(8px); transition:opacity .45s ease-out .45s, transform .45s ease-out .45s; }
-  .contents_div .gst-wrap.is-rv .gst-vote.is-shown .gst-vote-pct b{ opacity:1; transform:none; }
+  /* 득표율: 표가 나타난 뒤 십의 자리 → 일의 자리 → % 순서로 한 글자씩 떠오름 */
+  .contents_div .gst-wrap.is-rv .gst-vote-pct b > span{
+    display:inline-block; opacity:0; transform:translateY(8px);
+    transition:opacity .35s ease-out, transform .35s ease-out; transition-delay:calc(.45s + var(--i, 0) * .16s);
+  }
+  .contents_div .gst-wrap.is-rv .gst-vote.is-shown .gst-vote-pct b > span{ opacity:1; transform:none; }
 }
 @media (max-width:480px){
   .contents_div .gst-wrap{
@@ -994,6 +997,16 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
       if(delay) el.style.setProperty('--rv-d', delay + 's');
       el.classList.add('is-shown');
     }
+    /* 득표율 글자 나누기 — 모바일만 (글자는 그대로, 한 글자씩 span으로 감쌈) */
+    if(window.matchMedia && window.matchMedia('(max-width:600px)').matches){
+      wrap.querySelectorAll('.gst-vote-pct b').forEach(function(b){
+        var t = b.textContent; b.textContent = '';
+        t.split('').forEach(function(ch, i){
+          var sp = document.createElement('span'); sp.textContent = ch; sp.style.setProperty('--i', i); b.appendChild(sp);
+        });
+      });
+    }
+
     var rio = new IntersectionObserver(function(entries){
       var k = 0;
       entries.forEach(function(en){
