@@ -128,7 +128,7 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
 }
 @keyframes gst-hero-sway{ 0%,100%{ transform:rotate(-.2deg); } 50%{ transform:rotate(.9deg); } }
 @keyframes gst-hero-txt{
-  0%{ -webkit-mask-position:100% 0; mask-position:100% 0; transform:translateX(-1.5%); }
+  0%{ -webkit-mask-position:81% 0; mask-position:81% 0; transform:translateX(-1.5%); }   /* 문구 왼쪽 끝에서 바로 시작 — 아래 두 줄과 같은 시점에 드러남 */
   100%{ -webkit-mask-position:0 0; mask-position:0 0; transform:translateX(0); }
 }
 .contents_div .gst-hero.is-anim .gst-hero-bg{ transform-origin:50% 35%; animation:gst-hero-bg 6s cubic-bezier(.2,.6,.3,1) both paused; }
@@ -136,7 +136,7 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
 .contents_div .gst-hero.is-anim .gst-hero-txt--top{
   -webkit-mask-image:linear-gradient(100deg, #000 40%, transparent 60%); mask-image:linear-gradient(100deg, #000 40%, transparent 60%);
   -webkit-mask-size:300% 100%; mask-size:300% 100%; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat;
-  animation:gst-hero-txt 1.1s cubic-bezier(.45,.05,.3,1) 1.2s both paused;
+  animation:gst-hero-txt .9s cubic-bezier(.35,.1,.6,1) 1.2s both paused;
 }
 /* 문구 한 장(히어로텍스트.webp)을 기울기(10°)에 맞춰 세 띠로 잘라 각각 움직임 */
 .contents_div .gst-hero-txt--top{ clip-path:polygon(-123.91% -159.67%, 159.22% -221.74%, 190.65% -0.12%, -92.48% 61.95%); }
@@ -341,6 +341,7 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
   transition:transform .15s;
 }
 .contents_div .gst-lightbox.is-zoom .gst-lightbox-close{ position:fixed; top:10px; right:10px; left:auto; }
+.contents_div .gst-lightbox-guide{ display:none; }
 .contents_div .gst-lightbox-hint{
   position:fixed; left:50%; top:20px; transform:translateX(-50%);
   font-size:var(--fs-label); font-weight:600; line-height:1; color:rgba(255,255,255,.75); white-space:nowrap; pointer-events:none;
@@ -417,13 +418,14 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
 .contents_div .gst-vote thead th{ background:var(--c-navy); color:#fff; font-size:var(--fs-label); font-weight:700; }
 .contents_div .gst-vote thead th:nth-child(odd){ width:24%; }
 .contents_div .gst-vote tbody th{ font-weight:800; color:var(--c-navy); }
-.contents_div .gst-vote td.gst-vote-name{ font-weight:600; color:var(--c-sub); border-left:1px solid #e6dfd1; }
+.contents_div .gst-vote td.gst-vote-name{ position:relative; font-weight:600; color:var(--c-sub); }
+.contents_div .gst-vote td.gst-vote-name::after{ content:''; position:absolute; left:0; top:12px; bottom:12px; width:1px; background:#e6dfd1; }   /* 확정·경쟁 구분선 — 위아래 여백 */
 .contents_div .gst-vote-pct{ display:flex; align-items:center; gap:10px; }
 .contents_div .gst-vote-pct b{ flex:0 0 2.8em; font-weight:800; color:var(--c-blue); font-variant-numeric:tabular-nums; }
 .contents_div .gst-vote-name + td .gst-vote-pct b{ color:var(--c-sub); }
 .contents_div .gst-vbar{ flex:1 1 auto; height:8px; border-radius:2px; overflow:hidden; background:var(--c-track); }
 .contents_div .gst-vbar i{ display:block; width:var(--v); height:100%; background:var(--c-blue); }
-.contents_div .gst-vote-name + td .gst-vbar i{ background:var(--c-blue-l); }
+.contents_div .gst-vote-name + td .gst-vbar i{ background:#b3b9c4; }   /* 경쟁 역명 막대는 무채색 */
 
 /* ===== 04 앞으로의 일정 ===== */
 .contents_div .gst-sec--4{ text-align:center; }
@@ -512,6 +514,7 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
   .contents_div .gst-nav-num{ font-size:var(--fs-num); font-weight:600; }
 
   /* 인트로 */
+  .contents_div .gst-intro{ padding-top:calc(var(--band) - 3px); padding-bottom:calc(var(--band) - 3px); }   /* 모바일: 위아래 3px 줄임 */
   .contents_div .gst-facts{ margin-top:31px; }
   .contents_div .gst-facts > div{ padding:14px 0; }
   .contents_div .gst-facts > div + div{ padding-left:14px; }
@@ -533,10 +536,19 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
   .contents_div .gst-map-labels li{ padding:.18em .24em; font-size:clamp(6px, 2.1cqi, 10px); letter-spacing:-0.06em; }   /* 모바일: 역명 라벨을 노선도 폭에 비례해 줄임(웹과 같은 비율감) */
   .contents_div .gst-zoom-btn{ right:8px; bottom:8px; height:30px; padding:0 10px 0 9px; gap:5px; }
   .contents_div .gst-zoom-btn::before{ width:14px; height:14px; }
-  .contents_div .gst-lightbox-hint{ left:16px; top:24px; transform:none; }
+  /* 크게 보기 — 처음부터 크게, 좌우 스크롤. 닫기는 이미지 오른쪽 위, 안내는 이미지 아래 */
+  .contents_div .gst-lightbox-hint{ display:none; }
+  .contents_div .gst-lightbox-stage,
+  .contents_div .gst-lightbox.is-zoom .gst-lightbox-stage{ width:max-content; max-width:none; margin:0; padding:64px 16px 20px; }
+  .contents_div .gst-lightbox .gst-mapbox,
+  .contents_div .gst-lightbox.is-zoom .gst-mapbox{ width:max(600px, min(860px, calc((100vh - 140px) * var(--ar)))); cursor:default; }
+  .contents_div .gst-lightbox .gst-map-labels li{ padding:.22em .36em; font-size:max(10px, 1.25cqi); letter-spacing:-0.04em; }   /* 크게 볼 때는 웹과 같은 비율 */
   .contents_div .gst-lightbox-close,
-  .contents_div .gst-lightbox.is-zoom .gst-lightbox-close{ position:fixed; top:10px; right:10px; left:auto; }
-  .contents_div .gst-lightbox.is-zoom .gst-lightbox-stage{ width:200%; max-width:none; }
+  .contents_div .gst-lightbox.is-zoom .gst-lightbox-close{ position:fixed; top:72px; right:24px; left:auto; width:40px; height:40px; background-size:18px 18px; }
+  .contents_div .gst-lightbox-guide{
+    display:block; position:sticky; left:0; width:100vw; margin:14px 0 0 -16px;
+    text-align:center; font-size:var(--fs-label); font-weight:600; line-height:1.4; color:rgba(255,255,255,.8);
+  }
 
   /* 역명 표 → 역별 블록 */
   .contents_div .gst-stn{ margin-top:20px; }
@@ -574,21 +586,33 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
   .contents_div .gst-rename-arrow{ width:.93em; height:.93em; }
   .contents_div .gst-vote{ margin-top:12px; }
   .contents_div .gst-vote thead{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+  /* 한 줄에 [작은 라벨 / 역명] [득표율] × 2 — 막대 없음 */
   .contents_div .gst-vote tbody{ display:block; }
-  .contents_div .gst-vote tr{ display:grid; grid-template-columns:1fr 1fr; grid-template-rows:auto auto; grid-auto-flow:column; gap:4px 16px; padding:12px var(--card-px); border-bottom:1px solid #e6dfd1; }
+  /* 확정·경쟁 두 칸 너비 같게 — 칸마다 역명은 왼쪽, 득표율은 오른쪽 끝(space-between) */
+  .contents_div .gst-vote tr{
+    container-type:inline-size;   /* 득표율 크기를 행 폭 기준으로 계산 */
+    display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto;
+    column-gap:6px; padding:12px var(--card-px); border-bottom:1px solid #e6dfd1;
+  }
   .contents_div .gst-vote th,
-  .contents_div .gst-vote td{ display:block; padding:0; border:0; }
-  .contents_div .gst-vote td.gst-vote-name{ border-left:0; }
-  .contents_div .gst-vote tr{ position:relative; }
-  .contents_div .gst-vote tr::after{ content:''; position:absolute; left:50%; top:12px; bottom:12px; width:1px; background:#e6dfd1; }   /* 확정·경쟁 구분선 */
-  .contents_div .gst-vote [data-label]::before{ content:attr(data-label); display:block; font-size:var(--fs-label); font-weight:700; line-height:1.4; color:var(--c-sub); }
-  .contents_div .gst-vote-pct{ gap:8px; }
-  .contents_div .gst-vbar{ height:6px; }
+  .contents_div .gst-vote td{ display:flex; flex-direction:column; justify-content:center; padding:0; border:0; }
+  .contents_div .gst-vote tbody th{ font-size:calc(var(--fs-info) + 1px); line-height:1.3; overflow-wrap:anywhere; }
+  .contents_div .gst-vote td.gst-vote-name{ padding-left:8px; border-left:1px solid #e6dfd1; font-size:calc(var(--fs-info) + 1px); font-weight:700; line-height:1.3; }   /* 확정·경쟁 구분선 */
+  .contents_div .gst-vote [data-label]::before{ content:attr(data-label); display:block; margin-bottom:2px; font-size:var(--fs-label); font-weight:700; line-height:1.4; color:var(--c-sub); }
+  .contents_div .gst-vote td.gst-vote-name::after{ display:none; }
+  .contents_div .gst-vote-cand{ position:relative; align-self:flex-start; }
+  .contents_div .gst-vote-cand::after{ content:''; position:absolute; left:-3px; right:-3px; top:52%; height:1px; background:rgba(74,85,104,.75); }   /* 경쟁 역명 가운데 줄 */   /* 경쟁 역명 가운데 줄 */
+  .contents_div .gst-vote td:not([data-label]){ justify-content:flex-end; }   /* 득표율을 역명 줄 높이에 맞춤 */
+  .contents_div .gst-vote-pct b{ flex:none; font-size:min(calc(var(--fs-info) + 4px), calc((50cqi - 9px - (var(--fs-info) + 1px) * 5.9 - 4px) / 2.15 - 2px)); line-height:1.2; }
+  .contents_div .gst-vbar{ display:none; }
 
   .contents_div .gst-tags{ gap:4px 12px; }
   .contents_div .gst-tags li{ padding:0; border:0; font-weight:400; }   /* 모바일: 캡슐 없이 텍스트만 */
 
   .contents_div .gst-wrap.is-rv .gst-rv{ transform:translate3d(0,18px,0); }
+  /* 득표율: 표가 나타난 뒤 살짝 떠오르며 등장 */
+  .contents_div .gst-wrap.is-rv .gst-vote-pct b{ display:inline-block; opacity:0; transform:translateY(8px); transition:opacity .45s ease-out .45s, transform .45s ease-out .45s; }
+  .contents_div .gst-wrap.is-rv .gst-vote.is-shown .gst-vote-pct b{ opacity:1; transform:none; }
 }
 @media (max-width:480px){
   .contents_div .gst-wrap{
@@ -605,6 +629,7 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
   .contents_div .gst-br--mo-wide{ display:none; }
   .contents_div .gst-br--m420{ display:inline; }
   .contents_div .gst-h2{ margin-top:10px; }
+  .contents_div .gst-vote tr{ padding-left:10px; padding-right:10px; }
 }
 </style>
 
@@ -626,7 +651,7 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
       <button type="button" class="gst-nav-btn" data-go="gst-s1" aria-current="true"><span class="gst-nav-num">01</span>역명 제정</button>
       <button type="button" class="gst-nav-btn" data-go="gst-s2"><span class="gst-nav-num">02</span>역명 소개</button>
       <button type="button" class="gst-nav-btn" data-go="gst-s3"><span class="gst-nav-num">03</span>흥미 포인트</button>
-      <button type="button" class="gst-nav-btn" data-go="gst-s4"><span class="gst-nav-num">04</span>앞으로의 일정</button>
+      <button type="button" class="gst-nav-btn" data-go="gst-s4"><span class="gst-nav-num">04</span>앞으로 일정</button>
     </nav>
   </div>
 
@@ -784,9 +809,9 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
                 <tr><th scope="col">확정 역명</th><th scope="col">득표율</th><th scope="col">경쟁 역명</th><th scope="col">득표율</th></tr>
               </thead>
               <tbody>
-                <tr><th scope="row" data-label="확정 역명">유덕</th><td><span class="gst-vote-pct"><b>40%</b><span class="gst-vbar" style="--v:40%" aria-hidden="true"><i></i></span></span></td><td class="gst-vote-name" data-label="경쟁 역명">버들마을</td><td><span class="gst-vote-pct"><b>39%</b><span class="gst-vbar" style="--v:39%" aria-hidden="true"><i></i></span></span></td></tr>
-                <tr><th scope="row" data-label="확정 역명">치평</th><td><span class="gst-vote-pct"><b>37%</b><span class="gst-vbar" style="--v:37%" aria-hidden="true"><i></i></span></span></td><td class="gst-vote-name" data-label="경쟁 역명">상무지구</td><td><span class="gst-vote-pct"><b>32%</b><span class="gst-vbar" style="--v:32%" aria-hidden="true"><i></i></span></span></td></tr>
-                <tr><th scope="row" data-label="확정 역명">풍암호수공원</th><td><span class="gst-vote-pct"><b>50%</b><span class="gst-vbar" style="--v:50%" aria-hidden="true"><i></i></span></span></td><td class="gst-vote-name" data-label="경쟁 역명">풍암</td><td><span class="gst-vote-pct"><b>42%</b><span class="gst-vbar" style="--v:42%" aria-hidden="true"><i></i></span></span></td></tr>
+                <tr><th scope="row" data-label="확정 역명">유덕</th><td><span class="gst-vote-pct"><b>40%</b><span class="gst-vbar" style="--v:40%" aria-hidden="true"><i></i></span></span></td><td class="gst-vote-name" data-label="경쟁 역명"><span class="gst-vote-cand">버들마을</span></td><td><span class="gst-vote-pct"><b>39%</b><span class="gst-vbar" style="--v:39%" aria-hidden="true"><i></i></span></span></td></tr>
+                <tr><th scope="row" data-label="확정 역명">치평</th><td><span class="gst-vote-pct"><b>37%</b><span class="gst-vbar" style="--v:37%" aria-hidden="true"><i></i></span></span></td><td class="gst-vote-name" data-label="경쟁 역명"><span class="gst-vote-cand">상무지구</span></td><td><span class="gst-vote-pct"><b>32%</b><span class="gst-vbar" style="--v:32%" aria-hidden="true"><i></i></span></span></td></tr>
+                <tr><th scope="row" data-label="확정 역명">풍암호수공원</th><td><span class="gst-vote-pct"><b>50%</b><span class="gst-vbar" style="--v:50%" aria-hidden="true"><i></i></span></span></td><td class="gst-vote-name" data-label="경쟁 역명"><span class="gst-vote-cand">풍암</span></td><td><span class="gst-vote-pct"><b>42%</b><span class="gst-vbar" style="--v:42%" aria-hidden="true"><i></i></span></span></td></tr>
               </tbody>
             </table>
             <p>유덕, 치평, 풍암호수공원역은 2위 역명과 치열한 다툼을 벌였답니다.</p>
@@ -855,6 +880,7 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
               <li style="--x:74.43%;--y:33.36%">중흥<br>삼거리</li>
             </ol>
     </div>
+    <p class="gst-lightbox-guide">← 좌우로 스크롤해서 보세요 →</p>
     <button type="button" class="gst-lightbox-close" aria-label="닫기"></button>
   </div>
 </div>
@@ -877,14 +903,14 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
     if(src){ if(src.complete) setAr(); else src.addEventListener('load', setAr); }
     var close = lb.querySelector('.gst-lightbox-close');
     var stage = lb.querySelector('.gst-lightbox-stage');
-    function open(){ lb.classList.remove('is-zoom'); lb.classList.add('is-open'); lb.scrollTop = 0; lb.focus(); }
+    function open(){ lb.classList.remove('is-zoom'); lb.classList.add('is-open'); lb.scrollTop = 0; lb.scrollLeft = Math.max(0, (lb.scrollWidth - lb.clientWidth) / 2); lb.focus(); }
     function shut(){ lb.classList.remove('is-open'); fig.focus(); }
     fig.addEventListener('click', open);
     fig.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); open(); } });
     close.addEventListener('click', shut);
     lb.addEventListener('click', function(e){ if(e.target === lb || e.target === stage) shut(); });
     lb.addEventListener('keydown', function(e){ if(e.key === 'Escape') shut(); });
-    img.addEventListener('click', function(){ lb.classList.toggle('is-zoom'); });
+    img.addEventListener('click', function(){ if(window.matchMedia && window.matchMedia('(max-width:600px)').matches) return; lb.classList.toggle('is-zoom'); });
   })();
 
   /* 역명 표 접기·펼치기 (내용은 HTML에 모두 있음, 보이기만 조절) */
@@ -1009,6 +1035,7 @@ if(location.protocol==='file:'||location.hostname.indexOf('github.io')>-1){
       }, { threshold:0.6 });
       io.observe(el);
     })();
+
   })();
 
   /* 섹션 진입 시 키커 핀 애니메이션 */
